@@ -1,0 +1,40 @@
+<!--pages/member/balance/balance.wxml-->
+ <view class='balance-wrap'>
+     <!--标题  -->
+    <view class='balance-tit'> 
+         
+    </view>
+     <!-- 今日预估收益 -->
+    <view class='myearn-header'>
+       <view class='myearn-header-left'>
+           <view style='font-size:30rpx;color:#333;'>账户可提现金额</view>
+           <view style='margin-top:20rpx;color:#cca96a;font-size:76rpx;'><text style='font-size:32rpx;'>￥</text>16.72</view>
+       </view>
+       <view class='balance-tixian' bindtap='tqcash'>
+           提现
+       </view>
+    </view>
+
+     <!--  -->
+     <!--入账记录和账户余额  -->
+     <view class='balance-record'>
+        <view class='balance-list' style='border-bottom:1rpx solid #EEEEEE' bindtap='outblance'>
+            <image style='width:64rpx;height:60rpx;margin-left:30rpx;margin-top:25rpx;' src='../../../image/jine.png'></image>
+            <view style='line-height:110rpx;font-size:32rpx;color:#666;margin-right:430rpx;'>账户余额</view>
+            <image style='width:14rpx;height:26rpx;margin-right:30rpx;margin-top:40rpx;' src='../../../image/right.png'></image>
+        </view>
+        <view class='balance-list' bindtap='inblance'>
+           <image style='width:64rpx;height:60rpx;margin-left:30rpx;margin-top:25rpx;' src='../../../image/jine.png'></image>
+            <view style='line-height:110rpx;font-size:32rpx;color:#666;margin-right:430rpx;'>入账记录</view>
+            <image style='width:14rpx;height:26rpx;margin-right:30rpx;margin-top:40rpx;' src='../../../image/right.png'></image>
+        </view>
+     </view>   
+
+
+
+
+
+
+     <!--  -->
+ 
+ </view>

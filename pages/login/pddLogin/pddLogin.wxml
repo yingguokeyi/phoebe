@@ -1,0 +1,4 @@
+<!--pages/login/pddLogin/pddLogin.wxml-->
+<!-- <text>pages/login/pddLogin/pddLogin.wxml</text> -->
+
+<web-view src="{{pddUrl}}"></web-view>

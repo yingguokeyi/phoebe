@@ -1,0 +1,30 @@
+/* pages/common/payment/payment.wxss */
+.payment-pay{
+  text-align: center;
+  font-family: "PingFangHK-Regular";
+}
+.payment-pay image{
+  width: 348rpx;
+  height: 318rpx;
+  margin: 60rpx 0 70rpx 0;
+}
+.payment-pay text{
+  font-size: 50rpx;
+  color: #333333;
+}
+.pay-btn{
+  display: flex;
+  margin-top:80rpx; 
+  justify-content: center;
+}
+.pay-btn view{
+  width: 260rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+  background: #cca96a;
+  font-size: 30rpx;
+  color: #ffffff;
+  margin: 0 14rpx;
+  border-radius: 8rpx;
+}

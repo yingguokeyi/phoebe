@@ -1,0 +1,113 @@
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<import src="../../common/nav.wxml"/>
+<import src="../../common/orderbase.wxml"/>
+<scroll-view class='bigWrap' scroll-top="0" scroll-y="" style='height:100%;'>
+  <view class='container' style='margin-top:105rpx;'>
+    <!--导航  -->
+    <view class='order-nav'>
+      <text wx:for="{{navs}}" wx:key='item' bindtap='changeTab' data-index="{{index}}" class="{{index==currentType ?'active':''}}">{{item.name}}</text>
+    </view>  
+    <!--订单内容  -->   
+    <view wx:for="{{orderList}}" wx:key='item'>
+      <!--全部  -->
+      <view wx:if='{{currentType==0}}' class="order-list" >
+          <template is="orderbase" data="{{item}}"/>
+            <!--待支付  --> 
+          <view class='order-list-fourth' wx:if='{{item.status==101 && item.order_type != "PDD"}}'>
+            <button class="goPay" bindtap="goToPay"  data-id='{{item.order_no}}' data-name="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}"  data-type="{{item.order_type}}" data-sku = "{{item.sku_id}}" data-attr="{{item.spu_attribute}}" data-num="{{item.sku_num}}" data-total="{{item.total_price}}" data-image="{{item.image}}" data-spu="{{item.sku_name}}" data-index="{{index}}">去支付</button>
+            <button class="cancel" bindtap='cancelorder' data-id='{{item.order_no}}'>取消</button>
+          </view>
+          <!-- 拼多多订单 -->
+          <view class='order-list-fourth' wx:if='{{item.status==(-1) && item.order_type == "PDD"}}'>
+              <button class="goPay" bindtap="goPddPay"  data-id='{{item.order_no}}' data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" data-index="{{index}}">待付款</button>
+          </view>
+          <!--待收货  -->
+          <view class='order-list-fourth' wx:if="{{item.order_type != 'PDD' && (item.status==102 || item.status==103 || item.status==104 || item.status==105 || item.status==106)}}">
+            <button class="goPay" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" bindtap="confirm">确认收货</button>
+            <button class="cancel" bindtap='findLogisticsMsg'  wx:if="{{item.status == 105 || item.status == 106}}" data-id='{{item.logistics_numbers}}'  data-company="{{item.express_company}}">查看物流</button>
+          </view> 
+          <!-- 拼多多待收货订单 -->
+          <view class='order-list-fourth' wx:if="{{item.order_type == 'PDD' && item.status != (-1) && item.status != 2}}">
+            <button class="goPay" wx:if="{{item.status == 0}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">待收货</button>
+            <button class="goPay" wx:if="{{item.status == 1}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">待收货</button>
+          </view> 
+            <!--已收货  -->
+          <view class='order-list-fourth' wx:if="{{item.order_type != 'PDD' && (item.status==108||item.status==107)}}">
+              <button class="cancel" bindtap='findLogisticsMsg' data-id='{{item.logistics_numbers}}' data-company="{{item.express_company}}">查看物流</button> 
+              <button class="buyAgain"  bindtap="goPay"  data-id='{{item.order_no}}' data-name="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}"  data-type="{{item.order_type}}" data-sku = "{{item.sku_id}}" data-attr="{{item.spu_attribute}}" data-num="{{item.sku_num}}" data-total="{{item.total_price}}" data-image="{{item.image}}" data-spu="{{item.sku_name}}">继续购买</button>
+          </view>
+          <view class='order-list-fourth' wx:if="{{item.order_type == 'PDD' && item.status == 2}}">
+            <button class="goPay" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">已完成</button>
+  
+          </view> 
+      </view> 
+
+      
+      <view wx:if="{{currentType==1}}" class="order-list">
+          <template is="orderbase" data="{{item}}"/>
+          <!--按钮  -->
+          <view class='order-list-fourth'wx:if="{{item.order_type != 'PDD'}}">
+              <button class="goPay" data-id='{{item.order_no}}' data-name="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}"  data-type="{{item.order_type}}" data-sku = "{{item.sku_id}}" data-attr="{{item.spu_attribute}}" data-num="{{item.sku_num}}" data-total="{{item.total_price}}" data-image="{{item.image}}" data-spu="{{item.sku_name}}" data-index="{{index}}" bindtap="goToPay">去支付</button>
+              <button class="cancel" bindtap='cancelorder' data-id='{{item.order_no}}'>取消</button>
+          </view>
+          <view class='order-list-fourth'wx:if="{{item.order_type == 'PDD'}}">
+            <button class="goPay" data-phone="{{item.consignee_tel}}" data-sku = "{{item.sku_id}}" bindtap="goPddPay">待付款</button>
+            
+          </view>
+      </view> 
+      <!--待收货  -->
+      <view wx:if="{{currentType==2}}" class="order-list">
+        <view>
+            <template is="orderbase" data="{{item}}"/>       
+            <view class='order-list-fourth' wx:if="{{item.order_type != 'PDD'}}">
+              <button class="goPay"  data-orderId="{{item.order_no}}" bindtap="confirm" data-id='{{item.logistics_numbers}}'>确认收货</button>
+              <button class="cancel" wx:if="{{item.status==105 || item.status==106}}" bindtap='findLogisticsMsg' data-id='{{item.logistics_numbers}}' data-company="{{item.express_company}}">查看物流</button>
+            </view>
+            <view class='order-list-fourth' wx:if="{{item.order_type == 'PDD'}}">
+              <button class="goPay" wx:if="{{item.status == 0}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">待收货</button>
+              <button class="goPay" wx:if="{{item.status == 1}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">待收货</button>
+              <button class="goPay" wx:if="{{item.status == 2}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">已完成</button>
+              <!-- <button class="cancel" bindtap='findLogisticsMsg' data-id='{{item.logistics_numbers}}' data-company="{{item.express_company}}">查看物流</button> -->
+            </view>
+        </view>
+      </view>
+
+      <!--已收货  -->
+      <view wx:if="{{currentType==3}}" class="order-list">
+        <view>
+            <template is="orderbase" data="{{item}}"/>        
+            <view class='order-list-fourth' wx:if="{{item.order_type != 'PDD'}}">
+              <button class="buyAgain"  data-id='{{item.order_no}}' data-name="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}"  data-type="{{item.order_type}}" data-sku = "{{item.sku_id}}" data-attr="{{item.spu_attribute}}" data-num="{{item.sku_num}}" data-total="{{item.total_price}}" data-image="{{item.image}}" data-spu="{{item.sku_name}}" bindtap="goPay">继续购买</button>
+            </view>
+            <view class='order-list-fourth' wx:if="{{item.order_type == 'PDD'}}">
+              <button class="goPay" wx:if="{{item.status == 2}}" data-id='{{item.logistics_numbers}}' data-orderId="{{item.order_no}}" data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" bindtap="goPddPay">已完成</button>
+            </view>
+        </view>
+      </view>
+      <!--已取消  -->
+      <view wx:if="{{currentType==4}}" class="order-list">
+          <template is="orderbase" data="{{item}}"/>  
+      </view>
+    </view>
+  </view>
+
+<!--取消订单备注  -->
+  <view class="show_modal">
+    <modal hidden="{{modalHidden_cancle}}" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden_cancle}}" mask bindconfirm="modalChange_cancel" bindcancel="modalChange1_cancel" >
+      <view class="section"> 
+        <input type="text" placeholder="请输入取消备注" placeholder-style = "color:#ccc；" value="{{remark_cancel}}" bindinput ="remarkInput"/>
+      </view> 
+    </modal>
+  </view>
+
+  <!-- 申请退款 -->
+  <view class="show_modal">
+    <modal hidden="{{applyHidden_cancle}}" confirm-text="确定" cancel-text="取消" hidden="{{applyHidden_cancle}}" mask bindconfirm="applyChange_cancel" bindcancel="applyChange1_cancel" >
+      <view class="section"> 
+        <input type="text" placeholder="请输入申请备注" placeholder-style = "color:#ccc；" value="{{remark_apply}}" bindinput ="applyInput"/>
+      </view> 
+    </modal>
+  </view>
+
+
+</scroll-view>

@@ -1,0 +1,33 @@
+<!--pages/mine/install/install.wxml-->
+<!-- <text>pages/mine/install/install.wxml</text> -->
+
+<view class="box">
+    <view class="items">
+        <view class="install-item aboutUs" bindtap="aboutus">
+            <view class="leftPic leftPull">
+                <image src="../../../image/new/about.png"></image>
+            </view>
+            <view class="rightCon leftPull">关于我们
+                <image src="../../../image/new/click.png" class="rightPull"></image>
+            </view>
+        </view>
+        <view class="install-item" bindtap="noOpen">
+            <view class="leftPic leftPull">
+                <image src="../../../image/new/share1.png"></image>
+            </view>
+            <view class="rightCon leftPull">分享小程序
+                <image src="../../../image/new/click.png" class="rightPull"></image>
+            </view>
+        </view>
+        <view class="install-item"   wx:if="{{hasLogin}}" bindtap="resetPass">
+            <view class="leftPic leftPull">
+                <image src="../../../image/new/resetPass.png"></image>
+            </view>
+            <view class="rightCon leftPull">修改密码
+                <image src="../../../image/new/click.png" class="rightPull"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="signOut"  wx:if="{{hasLogin}}"  bindtap="logout">退出登录</view>
+</view>

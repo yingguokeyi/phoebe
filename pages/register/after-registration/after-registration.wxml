@@ -1,0 +1,53 @@
+ <!--pages/register/register.wxml-->
+    <!-- 大背景色 -->
+     <view class='register-image'>
+           <image src='../../../image/person/dribs.png'></image> 
+    </view> 
+    <view class = "register-logo">
+            <image mode="aspectFit" src="../../../image/person/palm.png"></image>
+    </view>
+    <view class="content">
+       
+        <form bindsubmit="formSubmit">
+            <view class="input-area">
+            <!-- 短信验证码发送 -->
+                <view class='input-note'>
+                  <view class='input-sub' wx:if="{{showInfo}}">短信验证码即将发送至</view>
+                  <view class='input-num' wx:if="{{showInfo}}">{{phone}}</view>
+                </view>
+                <!-- 请输入验证码 -->
+                  <view class="smsCode">
+                    <input id="smsCode" name="smsCode" maxlength='6' type="text" placeholder="请输入验证码" placeholder-style='color:#999'  bindinput="inputcode" bindblur="codeMove"/>
+                    <button bindtap="getcode" class="getSmsCodeBtn" disabled="{{smsCodeDisabled}}" style="color:{{getSmsCodeBtnColor}};background:{{getSmsCodeBtnBgColor}}">{{smsCodeBtnTxt}}</button> 
+                  </view>
+               <!-- 密码 -->
+                <view class="input-log">  
+                    <input id="password" name="password" maxlength='20'  bindinput ="pwdInput" bindblur="pwdMove" type="{{showType}}" placeholder="请设置6-20位密码" placeholder-style='color:#999'/>
+                </view>
+                  <!--请输入邀请码  -->
+                <view class='piccode'>
+                    <input id="picCode"  name="inviteCode"  maxlength='11' type="text" placeholder="请输入邀请码（选填）" bindblur ="picCodeInput" placeholder-style='color:#999'/>       
+                </view> 
+                  
+                <view class='read-text'>
+                        <view style="font-size:24rpx">继续注册表示已阅读并同意</view>
+                        <view>
+                            <navigator redirect url="Agreement/Agreement" style='background:#fff;margin-top:-4px;'>  
+                                <text class="redad-content" style="font-size:24rpx;">《服务条款》</text>
+                            </navigator>  
+                        </view>
+                </view>
+            </view>
+            <!-- 完成按钮 -->
+             <view class="btn-area">
+                <button class="finshBtn"  disabled="{{registDisabled}}" hover-class="none" style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+            </view>
+
+        </form>
+    </view>
+    <!-- 已有账号？请登录 -->
+     <view class="txt-area">
+        <navigator  url="../../login/login">
+            <text class="register"> 已有账号？请登录</text>
+        </navigator>
+     </view>

@@ -1,0 +1,24 @@
+<!--pages/my/cash/recharge.wxml-->
+<form bindsubmit="submitForm">
+<view class='Order-Image'>
+    <view class="Top-Balance">
+         <view class="money-label">余额</view>
+      <view class="Money-Text">
+        <text>{{cashTotal}}</text>
+      </view>
+    </view>
+
+
+      <view class="Top-Balance">
+        <view class="money-label">金额</view>
+     
+      <view class='writecash'>
+        <input name="money" value="{{ form.money }}" class="Money-Input" type="digit" placeholder="请输入充值金额" class='writecash' focus="{{focus}}" maxlength="4"/>
+      </view>
+      </view>
+</view>
+  <view class="button-sp-area">
+    <button class="mybtn" formType="submit">充值</button>
+  </view>
+</form>
+

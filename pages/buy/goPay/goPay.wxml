@@ -1,0 +1,136 @@
+<!--pages/buy/goPay/goPay.wxml-->
+<!-- <text>pages/buy/goPay/goPay.wxml</text> -->
+
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+
+ <form bindsubmit="submitForm"> 
+
+    <view class='order-message'>
+        <text>收货人信息</text>
+    </view>
+    <view class="order-site"  bindtap="toDeliveryMsg">
+        <view class="order-site-logo">
+            <image src='../../../image/locations.png'></image>
+        </view>
+        <view class="order-site-text">
+            <view class="order-site-title">
+            <view class="order-on-title">
+                <text>收货人:</text>
+                <text class='order-on-name'>{{name}}</text>
+            </view>
+            <view class="order-on-phone">
+                <text>{{phone}}</text>
+            </view>
+            </view>
+            <view class="order-site-list">
+            <text style='padding-right:10rpx;'>收货地点:</text>
+            <text>{{address}}</text>
+            </view>
+        </view>
+        <view class="order-site-right">
+            <image src='../../../image/right.png'></image>
+        </view>
+    </view>
+
+    <view class="fenline"></view>
+    <view class='order-solid'>
+        <text>支付方式</text>
+    </view>
+    <view  wx:for="{{items}}" wx:key="item">
+        <view class='order-pay'>
+            <view class='order-pay-logo'>
+                <image src='{{item.img}}'></image>
+                <text>{{item.value}}</text>
+            </view>
+            <view class='order-pay-icon'>
+                <icon  type="success" size='20' color="{{ item.isSelect ? '#b61c25' : '#DDDDDD' }}" data-index="{{index}}"  bindtap="selectList"/>
+            </view>
+        </view>
+    </view>
+    <view class="fenline"></view>
+    <view class='order-solid'>
+        <text>商品列表</text>
+    </view>
+<!-- 数量 -->
+    <view>
+<!--非会员商品  -->
+        <view class="order-list" wx:if="{{source != 'LB'}}">
+            <view class="order-pro-image">
+                <navigator>
+                    <image src="{{imgSrc}}"></image>
+                </navigator>
+            </view>
+            <view class="order-pro-list">
+            <view style="line-height:30rpx">
+                <text class="order-pro-texts">{{spuName}}</text>
+            </view>
+            <view class="order-pro-state">
+                <text>{{spuAttr}}</text>
+                <!-- <text wx:if="{{order_model != ''}}">/</text>
+                <text>{{order_model}}</text> -->
+            </view>
+            <view>
+                <view class="order-pro-money" style="float:left">
+                    <text class="order-pro-symbol">￥</text>
+                    <text class="order-pro-price">{{order_price}}</text>
+                </view>
+                <view class="order-count-box">
+                    <text class="order-count-down {{num == 1 ?'cantDis':'canDis'}}" bindtap="bindMinus" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="order-count-num">{{num}}</text>
+                    <text class="order-count-add" bindtap="bindPlus" data-index="{{index}}">+</text>
+                </view>
+            </view>
+            </view>
+        </view>
+  <!--会员商品  -->
+        <view class="order-list" wx:if="{{source == 'LB'}}">
+            <view class="order-pro-image">
+                <navigator>
+                    <image src="{{imgSrc}}"></image>
+                </navigator>
+            </view>
+            <view class="order-pro-list">
+            <view>
+                <text class="order-vip-name">会员礼包</text>
+                <text class="order-pro-texts">{{spuName}}</text>
+            </view>
+            <view class="cargo-pro-desc"><text>{{spuAttr}}</text></view>
+            <view class="order-pro-money">
+                <text class="order-pro-symbol">￥</text>
+                <text class="order-pro-price">{{order_price}}</text>
+            </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="fenline"></view>
+    <view class='order-leave'>
+        <view class='leave-text'>买家留言</view>
+        <input placeholder='请输入留言' class='lavae-area' name="textarea" bindinput="getBuyMsg"></input>
+    </view>
+    <view class="fenline"></view>
+    <view class='order-amount'>
+        <view class='order-on-text'>
+                <text class='amount-text'>合计(共<text class='amount-price distance'>{{num}}</text>件商品):</text>
+                <text class='amount-symbol'>￥</text>
+                <text class='amount-price' wx:if='{{price == ""}}'>{{filters.toFix(order_price*num)}}</text>
+                <text class='amount-price' wx:if='{{price != ""}}'>{{filters.toFix(order_price*num)}}</text>
+        </view>
+    </view>
+    <view class="fenline"></view>
+
+<!--合计提交订单-->
+  <view class='order-commit'>
+    <view class='commit-price'>
+      <text class='amount-text'>合计</text>
+      <text class='amount-symbol'>￥</text>
+      <text class='amount-price' wx:if='{{price == ""}}'>{{filters.toFix(order_price*num)}}</text>
+      <text class='amount-price' wx:if='{{price != ""}}'>{{filters.toFix(order_price*num)}}</text>
+    </view>
+    <view class='commit-submit'>
+      <button formType="submit" disabled="{{disabled}}">提交订单</button> 
+    </view>
+  </view>
+
+</form>
+

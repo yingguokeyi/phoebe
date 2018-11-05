@@ -1,0 +1,33 @@
+.logisticsMsg{
+  /* overflow: hidden; */
+  width: 702rpx;
+   /* height: 140rpx;  */
+   /* margin: 5rpx 24rpx 0 24rpx;  */
+  padding:20rpx;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  /* margin:0   20rpx; */
+}       
+
+.text_01{  
+  /*给text设成块级元素*/  
+  font-family:'PingFangHK-Regular'; 
+  font-size:30rpx;
+  color: #999;
+}  
+
+.text_02{  
+  /*给text设成块级元素*/  
+  font-family:'PingFangHK-Regular'; 
+  font-size:22rpx;
+  color: #999;
+}
+.state view{
+  color:#b61c25;
+  font-size:32rpx;
+  padding:30rpx;
+  font-weight:bold;
+  text-align:right;
+  padding-bottom:0;
+
+}

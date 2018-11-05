@@ -1,0 +1,343 @@
+/* pages/buy/submitOrder/submitOrder.wxss */
+
+page{
+ padding-bottom: 167rpx;
+  height: 100%;
+}
+
+.h-head{
+  width: 100%;
+  height: 100%;
+}
+.order-message{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: solid 1rpx #EBEBEB;
+  border-bottom: solid 1rpx #EBEBEB;
+  padding:0 20rpx;
+
+}
+.order-message text{
+  font-family: "PingFangSC-Regular";
+  font-size: 26rpx;
+  color: #333333;
+ additive-symbols: 30rpx;
+}
+.order-solid{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: solid 1rpx #EBEBEB;
+}
+.order-solid text{
+  font-family: "PingFangSC-Regular";
+  font-size: 26rpx;
+  color: #333333;
+  padding-left: 30rpx;
+}
+.order-site{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  font-family: "PingFangSC-Regular";
+  padding-bottom: 20rpx;
+}
+.order-site-logo{
+ display: flex;
+ align-items: center;
+ margin: 0 30rpx;
+}
+.order-site-logo image{
+  width: 34rpx;
+  height: 42rpx;
+}
+.order-site-text{
+  width:100%;
+  margin:26rpx 132rpx 0  0;
+}
+.order-site-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #333333;
+}
+.order-on-name{
+  padding-left: 12rpx;
+}
+.order-site-list{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 10rpx;
+}
+.order-site-right{
+  margin-right: 24rpx;
+}
+.order-site-right image{
+  width: 14rpx;
+  height: 26rpx;
+}
+.order-pay{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1rpx #EBEBEB;
+}
+.order-pay-logo{
+  font-family: "PingFangSC-Regular";
+  font-size: 30rpx;
+  color: #333333;
+}
+.order-pay-logo image{
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  padding:0 18rpx 0 30rpx;
+}
+.order-pay-icon{
+  margin-right: 24rpx;
+}
+/*商品列表*/
+.order-list{
+  width: 100%;
+   display:flex;
+   /*align-items: center;*/
+   border-bottom: solid 1rpx #EBEBEB;
+   padding:20rpx 0;
+    height:200rpx;
+}
+ .order-pro-select,.order-pro-image{
+   display:flex;
+   align-items:center;
+}
+ .order-pro-icon{
+   margin:0 24rpx;
+ }
+.order-pro-image image{
+  width:186rpx;
+  height:186rpx;
+  margin-left: 30rpx;
+}
+.order-pro-list{
+   width: 65%;
+   margin:0 18rpx 0 18rpx; 
+}
+ .order-pro-name{
+  width:60rpx;
+  height:26rpx;
+  line-height:26rpx;
+  text-align:center;
+  background:#f8f5e4;
+  border-radius:2rpx;
+  font-family:"PingFangSC-Regular";
+  font-size:18rpx;
+  color:#c8a200;
+  display:inline-block;
+  margin-right:12rpx;
+}
+.order-vip-name{
+  display:inline-block;
+  padding:0 15rpx;
+  height:48rpx;
+  line-height:48rpx;
+  text-align:center;
+  background:#BB2D2D;
+  border-radius:20rpx;
+  font-family:"PingFangSC-Regular";
+  font-size:26rpx;
+  color:#fff;
+  margin:0 12rpx 10rpx 0;
+}
+.order-pro-texts{
+  font-family:"PingFangHK-Regular";
+  font-size:24rpx;
+  height:36rpx;
+  overflow:hidden;
+  color:#595757;
+}
+.order-pro-state{
+  font-family:"PingFangSC-Regular";
+  font-size:24rpx;
+  color:#999999;
+  margin:10rpx 0 10rpx 0;
+}
+/*价格*/
+.order-pro-symbol,.order-pro-price,.order-pro-explain{
+   font-family:"PingFangSC-Regular";
+   color:#595757; 
+}
+.order-pro-symbol,.order-pro-explain{
+   font-size:24rpx;
+}
+.order-pro-price{
+   font-size:28rpx;
+}
+.order-pro-explain{
+  margin:0 12rpx 0 24rpx;
+  color:#666666;
+}
+/*商品数量加减*/
+ .order-count-box{
+  float:right;
+  border:2rpx solid #cccbcb;
+  border-radius:25rpx;
+}
+ .order-count-box text{
+    display: inline-block;
+    line-height: 52rpx;
+    text-align: center;
+}
+.order-count-down,.order-count-add{
+   width:80rpx;
+   height:60rpx;
+   font-size:44rpx;
+   vertical-align:middle;
+
+}
+.order-count-add{
+    border-radius:0 20rpx 20rpx 0;
+    color:#b61c25;
+
+ }
+ .order-count-down{
+    border-radius:20rpx 0 0 20rpx;	
+ }
+.order-count-num{
+  font-family: "PingFangSC-Semibold";
+  font-size: 26rpx;
+  color: #333;
+  width:70rpx;
+  height:60rpx;
+  border-left:2rpx solid #cccbcb;
+  border-right:2rpx solid #cccbcb;
+  vertical-align:middle;
+
+}
+ .cantDis{
+   color:#cccbcb;
+ }
+ .canDis{
+   color:#e43d3c;
+ }
+ .fenline{
+   width:100%;
+   height:20rpx;
+   background:#f8f8f8;
+   border-top:2rpx solid #f2f2f2;
+   border-bottom:2rpx solid #f2f2f2;
+ }
+
+/*优惠卷*/
+.detail-discounts{
+    width:100%;
+    height:96rpx;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.discounts-left,.discounts-right{
+  margin:0 24rpx;
+}
+.discounts-left image{
+  width:74rpx;
+  height:26rpx;
+  vertical-align: middle;
+  margin-right:20rpx;
+}
+.discounts-left text{
+  font-family: "PingFangSC-Regular";
+  font-size:26rpx;
+  color:#666666;
+}
+.discounts-right image{
+  width:14rpx;
+  height:26rpx;
+}
+.order-leave{
+  width: 100%;
+  height: 96rpx;
+  display:flex;
+  align-items: center;
+ font-family: "PingFangSC-Regular";
+
+}
+.leave-text{
+  width: 20%;
+  font-size: 26rpx;
+  color: #666666;
+  margin-left:30rpx; 
+}
+.lavae-area{
+  width: 75%;
+  font-size: 24rpx;
+  color: #999999;
+}
+/*付款金额*/
+.order-amount{
+ width: 100%;
+ height: 100rpx;
+ font-family: "PingFangSC-Regular";
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+}
+.order-on-text{
+  width: 100%;
+  margin-right: 30rpx;
+  text-align: right;
+}
+.amount-text{
+  font-size: 26rpx;
+  color: #333333;
+}
+.amount-symbol{
+  font-size: 24rpx;
+  color: #b61c25;
+  padding: 0 4rpx 0 12rpx;
+}
+.amount-price{
+  font-size: 34rpx;
+  color: #b61c25;
+}
+.distance{
+  padding: 0 12rpx;
+}
+/*提交*/
+.order-commit{
+  width: 100%;
+  height: 120rpx;
+ font-family: "PingFangSC-Regular";
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background: #ffffff;
+  align-items: center;
+  bottom: -3rpx;
+  
+
+}
+.commit-price,.commit-submit{
+  margin: 0 30rpx;
+}
+.commit-submit button{
+    width: 168rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #ffffff;
+    background: #b61c25;
+
+}
+
+.cargo-pro-desc{
+  font-size:24rpx;
+  color:#acacac;
+  height:30rpx;
+   overflow: hidden; 
+   text-overflow: ellipsis;
+   line-height:35rpx;
+
+}

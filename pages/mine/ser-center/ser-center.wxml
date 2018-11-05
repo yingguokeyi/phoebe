@@ -1,0 +1,21 @@
+<!--pages/mine/ser-center/ser-center.wxml-->
+<view class='ser-wrap'>
+<!--联系客服  -->
+   <view class='ser-li' bindtap='tellService'>
+       <image style='width:40rpx;height:40rpx;margin-left:26rpx;' src='../../../image/tellkf.png'></image>
+       <view style='color:#333;font-size:30rpx;margin-right:450rpx;'>联系客服</view>
+       <image style='width:14rpx;height:26rpx;margin-right:26rpx;' src='../../../image/right.png'></image>
+   </view>
+ <!-- 帮助中心 -->
+  <view class='ser-li' bindtap='tohelp'>
+       <image style='width:40rpx;height:40rpx;margin-left:26rpx;' src='../../../image/help.png'></image>
+       <view style='color:#333;font-size:30rpx;margin-right:450rpx;'>帮助中心</view>
+       <image style='width:14rpx;height:26rpx;margin-right:26rpx;' src='../../../image/right.png'></image>
+   </view>
+   <!--关于我们  -->
+  <view class='ser-li' bindtap='toaboutus'>
+       <image style='width:40rpx;height:40rpx;margin-left:26rpx;' src='../../../image/about.png'></image>
+       <view style='color:#333;font-size:30rpx;margin-right:450rpx;'>关于我们</view>
+       <image style='width:14rpx;height:26rpx;margin-right:26rpx;' src='../../../image/right.png'></image>
+   </view>
+</view>

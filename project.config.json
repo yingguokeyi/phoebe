@@ -1,0 +1,56 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wxf2da843fe3bd9967",
+	"projectname": "newzhangda",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "扫码进入",
+					"pathName": "pages/common/common",
+					"query": "pid=8165",
+					"scene": "1048"
+				},
+				{
+					"id": -1,
+					"name": "下单进入",
+					"pathName": "pages/pddCommon/pddCommon",
+					"query": "goods_id=2328859289&pid=1881311_23542647&cpsSign=CCe0828fbd3f2bb33cd4c3bbee14e9443f&duoduo_type=2",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wx32540bd863b27570",
+						"extraData": "{\"goods_id\":2328859289,\"pid\":188131123542647,\"cpsSign\":\"CCe0828fbd3f2bb33cd4c3bbee14e9443f\",\"duoduo_type\":2}"
+					}
+				}
+			]
+		}
+	}
+}

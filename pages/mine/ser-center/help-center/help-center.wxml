@@ -1,0 +1,21 @@
+<!--pages/mine/ser-center/help-center/help-center.wxml-->
+<view class='help-wrap'>
+    <view class='help-list first'>
+        <text style='margin-left:24rpx;'>1. 订单已提交成功，什么时候可以送到？</text>
+    </view>
+    <view class='help-list'>
+        <text style='margin-left:24rpx;'>2. 我的商品是否可以退换货？</text>
+    </view>
+    <view class='help-list'>
+        <text style='margin-left:24rpx;'>3. 订单已提交成功，什么时候可以送到？</text>
+    </view>
+    <view class='help-list'>
+        <text style='margin-left:24rpx;'>4. 订单已提交成功，什么时候可以送到？</text>
+    </view>
+    <view class='help-list'>
+        <text style='margin-left:24rpx;'>5. 订单已提交成功，什么时候可以送到？</text>
+    </view>
+
+
+
+</view>

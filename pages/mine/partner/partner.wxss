@@ -1,0 +1,14 @@
+/* pages/mine/partner/partner.wxss */
+.container>image{
+    width:750rpx;
+}
+.foot image{
+    width:698rpx;
+    height:96rpx;
+    margin:0 26rpx;
+}
+.foot{
+    position: fixed;
+    bottom: 10rpx;
+    left:0
+}

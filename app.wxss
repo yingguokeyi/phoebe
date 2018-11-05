@@ -1,0 +1,33 @@
+/**app.wxss**/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+view{
+   font-family: "PingFang-SC-Medium";
+   font-size:32rpx;
+   color:rgb(114,113,113);
+}
+.hasWidth{
+  display:inline-block;
+}
+.setPadding{
+  padding:0 30rpx;
+}
+.proName{
+  text-align:center;
+  color:rgb(114,113,113);
+}
+
+
+.leftPull{
+  float:left;
+}
+.rightPull{
+  float:right;
+}
+.textColor{
+  color:#b61c25;
+}
+

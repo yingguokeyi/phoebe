@@ -1,0 +1,68 @@
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<!--头部月份 -->
+   <view class='myearn-header'>
+          <view class='moon' >{{time}}</view>
+          <date-picker id="date-picker" value="{{datePickerValue}}" isShow="{{datePickerIsShow}}"  bindsureclick="datePickerOnSureClick" bindcancelclick="datePickerOnCancelClick" />
+   </view>
+   <!-- 空白间隔 -->
+   <view class='sky'></view>
+   <!-- 今日预估收益 -->
+  <view wx:if='{{result!=""  &&  showDetails==false}}'>
+        <view class='estimator'>
+            <view class='estimator-left'>
+                <view style='font-size:26rpx;color:#333;'>
+                  今日预估收益:<text style='font-size:26rpx;color:#e40012'>￥{{filters.toFix(wallet/100)}}</text>
+                </view>
+            </view>
+            <view class='estimator-right'>
+                  <view style='font-size:26rpx;color:#333;margin-left:43px;'>
+                      今日收益订单量:<text style='font-size:26rpx;color:#333333'> {{count}}</text>
+                  </view>
+            </view>
+        </view>
+
+  <view wx:for="{{result}}" wx:key='item'>
+        <!-- 佣金收益 -->
+        <view class='commission'  wx:if="{{item.status == 1}}">
+          <view class='commission-left'>
+              <view class='circle'><text >订单返佣</text></view>
+              <view class='article'>
+                <view class='article-top' >{{item.custom_parameters}} 购买商品</view>
+                
+                <view class='article-bottom'>{{item.order_create_time}}</view>
+              </view>
+          </view>
+          <view class='commission-right'>
+              <view class='share-topp' wx:if="{{item.order_status == 2 || item.order_status == 0 || item.order_status == 1}}">+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-tops' wx:if="{{item.order_status == 3 || item.order_status == 5}}" >+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-topt' wx:if="{{item.order_status == 4 || item.order_status == 10 || item.order_status == 1}}">+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-bottom'wx:if="{{item.order_status == 3 || item.order_status == 5}}">已转入可提现金额</view> 
+               <view class='share-bottom'wx:if="{{item.order_status == 4 || item.order_status == 10}}">审核未通过</view> 
+          </view>
+        </view>
+       
+        <!-- 粉丝奖励 -->
+        <view class='commission'  wx:if="{{item.status == 2}}">
+          <view class='commission-left'>
+              <view class='circle'><text >粉丝奖励</text></view>
+              <view class='article'>
+                <view class='article-top'>{{item.custom_parameters}} 购买商品</view>            
+                <view class='article-bottom' >{{item.order_create_time}}</view>
+              </view>
+          </view> 
+          <view class='commission-right'>
+              <view class='share-topp' wx:if="{{item.order_status == 2 || item.order_status == 0 || item.order_status == 1}}">+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-tops' wx:if="{{item.order_status == 3 || item.order_status == 5}}" >+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-topt' wx:if="{{item.order_status == 4 || item.order_status == 10 || item.order_status == 1}}">+ {{filters.toFix(item.commission/100)}}</view>
+              <view class='share-bottom'wx:if="{{item.order_status == 3 || item.order_status == 5}}">已转入可提现金额</view> 
+              <view class='share-bottom'wx:if="{{item.order_status == 4 || item.order_status == 10}}">审核未通过</view>
+          </view>
+        </view>
+       
+   </view>
+</view>
+
+  <view class='boxx'  wx:if='{{result == ""   &&  showDetails==true}}'>
+    <view class='writing'>今天还没有收入哟！</view>
+    <view class='case' bindtap='boxx'>去赚钱</view>
+  </view>

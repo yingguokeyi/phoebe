@@ -1,0 +1,44 @@
+<!--pages/mine/basicmsg/basicmsg.wxml-->
+<view class='basicmsg-container'>
+  <!--顶部头像  -->
+  <view class='basicmsg-top'>
+  
+    <view class='basicmsg-pic'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+  </view>
+  <!--  -->
+  <view class='basicmsg-bottom'>
+    <view class='li'>
+      <text>用户名</text>
+      <text class='li-mes'>{{userInfo.nickName}}</text>
+      <!-- <text class='jiantou'>></text> -->
+    </view>
+    <view class='li' bindtap='changeGender'>
+      <text>性别</text>
+      <text class='li-mes'>{{gender}}</text>
+      <!-- <text class='jiantou'>></text> -->
+    </view>
+    <view class='li'>
+      <text>生日</text>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <!-- <view class='li-date'> -->
+        <view class='li-mes'>
+          {{date}}
+        </view>
+      </picker>
+      <!-- <text class='jiantou'>></text> -->
+    </view>
+    <view class='li'>
+      <text>手机号</text>
+      <text class='li-mes'>{{phone}}</text>
+      <!-- <text class='jiantou'>></text> -->
+    </view>
+    <view class='liadd' bindtap='tomyaddress'>
+      <text>我的收货地址</text>
+      <image class='jiantou' src='../../../image/right.png'></image>
+    </view>
+  </view>
+
+  <!--  -->
+</view>

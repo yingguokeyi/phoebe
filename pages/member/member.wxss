@@ -1,0 +1,657 @@
+/* pages/member/member.wxss */
+/* page{ */
+  /* background-color: #F9F9F9;  */
+/* } */
+.member-container{
+  width: 100%;
+  height: 100%;
+  font-size:31rpx;
+
+}
+.memberTop{
+  width:690rpx;
+  /* height:440rpx; */
+  padding:30rpx 30rpx 0;
+  background:#fff;
+  border-bottom:20rpx solid #f9f9f9;
+
+  /* position:absolute; */
+
+}
+/* .memberPic{ */
+    /* width:210rpx;
+    height:210rpx; */
+
+/* } */
+.memberPic image {
+    width:110rpx;
+    height:110rpx;
+    border-radius:50%;
+    margin-right:20rpx
+}
+.memberName{
+  float:left;
+  /* width:287rpx; */
+  /* padding-top:63rpx; */
+  line-height:50rpx;
+}
+.memberName text{
+  display:inline-block;
+  vertical-align:middle
+}
+.behave{
+  height:110rpx;
+  text-align:center;
+  width:690rpx;
+  box-sizing:border-box;
+  position:absolute;
+  bottom:0;
+  right:0;
+
+
+}
+.behave view{
+  display:inline-block;
+  width:49%;
+  line-height:110rpx;
+  color:#b61c25;
+  border-top:2rpx solid #f3f3f3;
+}
+
+
+.member-top{
+  width: 100%;
+  height: 140rpx;
+  background:#fff;
+  margin-top: 22rpx;
+}
+.member-top1{
+  width: 100%;
+  height: 140rpx;
+  background:#fff;
+}
+ .member-top-inner{
+  width: 690rpx;
+  height: 140rpx;
+  background: linear-gradient(90deg,#FDEAC8,#CDA96C);
+  border-radius: 4rpx;
+  margin-left: 30rpx;
+} 
+
+.member-msg{
+  display:flex;
+   align-items:center;  
+  /* justify-content: space-between;  */
+}
+.member-pic{
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+}
+.member-pic image{
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+}
+.header-Text{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color:#333;
+}
+.header-Text image{
+  position: relative;
+  left:300rpx;
+  bottom:35rpx;
+}
+.menber-commission{
+  position: relative;
+   left:120rpx; 
+  bottom:20rpx;
+}
+.member-getall{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+}
+.getmenoy-left{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.getmenoy-right{
+  /* width: 30%; */
+  float:right;
+  position: relative;
+  top:45rpx;
+}
+.member-tixian{
+  display: inline-block;
+  width: 65rpx;
+  height: 30rpx;
+  border:1px solid #A5772C;
+  border-radius: 6rpx;
+  color:#A5772C;
+  line-height: 30rpx;
+  text-align: center;
+  margin-left: 15rpx;
+  font-size: 24rpx;
+  position: relative;
+  bottom:6rpx;
+}
+.member-count{
+  width: 100%;
+  height: 174rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.list{
+  width: 33.333333%;
+  height: 174rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.list image{
+   width: 46rpx;
+   height: 44rpx;
+   margin-top:25rpx;
+}
+.member-share{
+  width: 100%;
+  height: 190rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-top:1px solid #fff;
+  
+}
+.member-wrap{
+  width: 690rpx;
+  height:160rpx;
+  background:#E9CFA1;
+  border-radius: 8rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-weight: blod;
+}
+.back-money{
+  width: 50%;
+  height: 160rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+}
+.get-money{
+  width: 50%;
+  height: 160rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+}
+.my-income{
+  width: 100%;
+  height: 100rpx;
+  background:#fff;
+  text-align: center;
+  line-height: 100rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.my-income-wrap{
+  width: 100%;
+  height: 182rpx;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+}
+.income-list{
+  width: 24%;
+  height: 182rpx;
+  border-right: 1px solid #ebebeb;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+/*非会员显示  */
+.head-info{
+  width:691rpx;
+  height:281rpx;
+  margin: 20rpx auto;
+  padding:25rpx 0;
+  background:rgb(239,85,78);
+  border-radius:20rpx;
+}
+.head-info .buy{
+  width:300rpx;
+  height:80rpx;
+  line-height:80rpx;
+  background:rgb(182,28,37);
+  color:rgb(255,255,255);
+  font-family:PingFang-SC-Bold;
+  text-align:center;
+  margin: 40rpx 195rpx;
+  font-size:48rpx;
+  border-radius:20rpx;
+}
+.all .line{
+  display:inline-block;
+  width:280rpx;
+  height:40rpx;
+  border-bottom:2rpx solid #eaebeb;
+}
+.all .recommend{
+  display:inline-block;
+  width:190rpx;
+  height:80rpx;
+  line-height:60rpx;
+  font-size:26rpx;
+  text-align:center;
+}
+
+.head-pic{
+  width: 100%;
+  height: auto;
+  margin-top: 22rpx;
+  position: relative;
+}
+.free-vip{
+  position: absolute;
+  top:20rpx;
+  font-size: 34rpx;
+  color:#f1e9df;
+  left:40rpx;
+}
+.vip-examine{
+  /* width: 100%; */
+  /* height: auto; */
+  /* background: #fff; */
+  float:right;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  font-size: 24rpx;
+  color:#f1e9df;
+  /* padding: 30rpx 0; */
+  text-align:right;
+  margin-top: 103rpx;
+  margin-right: -16rpx;
+
+}
+
+.bottom-pic{
+  width: 100%;
+  height: 300rpx;
+  position: fixed;
+  bottom:0;
+}
+.item-wrap{
+  width:100%;
+  background-color: #fff;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.goodslist{
+  width: 100%;
+  height:auto;
+  margin-top: 20rpx;
+  background: #fff;
+}
+ .novip-head{
+  width: 100%;
+  height: 442rpx;
+} 
+
+.item-list{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #F2F2F2;
+}
+.item-list-pic{
+  width: 20%;
+  height: 152rpx;
+  margin-left: 30rpx;
+}
+.item-list-mes{
+  width: 70%;
+  height: 152rpx;
+  margin-right: 30rpx;
+}
+
+.text-Shows{
+    font-family:'PingFangSC-Regular'; 
+    font-size:24rpx;
+    color:#333;
+    display: -webkit-box; 
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.cargo-pro-desc{
+    font-size:26rpx;
+}
+.textLB{
+     display: inline-block; 
+     font-size:26rpx;
+     color:#fff;
+     width:  110rpx;
+     height: 48rpx;
+     line-height: 48rpx; 
+     text-align: center;
+     border-radius: 16rpx;
+     position: relative;
+     bottom: 3rpx;
+     right:6rpx;
+     transform:scale(0.78);
+     background:rgb(239,85,78);
+}
+
+
+.text-price{
+  width: 100%; 
+  height:auto;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color:rgb(182,28,37);
+  display: flex;
+  justify-content:space-between;
+}
+.buy{
+   width:100rpx;
+   height: 54rpx;
+   display: inline-block;
+   background: rgb(182,28,37); 
+   color:#fff;
+   text-align: center;
+   line-height: 54rpx;
+   border-radius: 15rpx;
+   position: relative;
+   bottom: 10rpx;
+}
+
+.noMember .title image{
+  width:32rpx;
+  height:32rpx;
+  margin-right:18rpx;
+  vertical-align:middle;
+}
+.title{
+  text-align:center;
+  height:80rpx;
+  line-height:80rpx;
+  border-bottom:2rpx solid #ebebeb;
+  color:#b61c25;
+}
+
+.share{
+  color:#8897b4;
+  border-radius:25rpx;
+  line-height:50rpx;
+  height:50rpx;
+  border:2rpx solid #8897b4;
+  float:right;
+  text-align:center;
+  width:107rpx;
+  margin:120rpx 0 0 30rpx;
+  padding:0;
+  
+
+}
+.income{
+   border-bottom:20rpx solid #f9f9f9;
+}
+ .caozuo{ 
+   border-bottom:20rpx solid #f8f8f8; 
+  /* height:210rpx; */
+  /* padding:25rpx 0;  */
+
+ } 
+.caozuo image{
+  width:70rpx;
+  height:68rpx;
+}
+.caozuo text,.earnMoney text{
+   display:block;
+}
+.clickNum,.orderNum,.moneyNum,.shareCash{
+  display:inline-block;
+  width:186rpx;
+  height: 210rpx;
+  text-align:center; 
+  box-sizing:border-box;
+  padding:25rpx 0;
+}
+.item-titlie{
+   font-size:32rpx;
+   color:#bdbdbd;
+   font-family:PingFangSC-Bold;
+}
+.itemNum{
+   font-size:28rpx;
+   color:#999;
+   font-family:PingFangSC-Medium;
+   margin-top:14rpx;
+}
+/* .backCash,.shareCash{
+  display:inline-block;
+  width:50%;
+  height:92rpx;
+  text-align:center;
+  border-right:2rpx solid #f2f2f2;
+  box-sizing:border-box;
+  margin:48rpx 0;
+
+} */
+
+.earnMoney{
+  border-bottom:20rpx solid #f8f8f8;
+}
+.earnMoney .item-title{
+  color:#333;
+  font-size:26rpx;
+}
+.caozuo  .item-title{
+  color:#333;
+  font-size:24rpx;
+
+}
+/* .caozuo .itemNum{
+  
+} */
+.earnMoney .itemNum{
+  color:#595757;
+  font-size:38rpx;
+}
+.income>view:first-child{
+   text-align:center;
+   border-top:2rpx solid #f7f7f7;
+   border-bottom:2rpx solid #f7f7f7;
+   height:80rpx;
+   line-height:80rpx;
+   color:595757;
+   font-size:32rpx;
+   font-family:PingFangSC-Bold;
+}
+
+.caozuo>view:first-child{
+   text-align:center;
+   border-top:2rpx solid #f7f7f7;
+   border-bottom:2rpx solid #f7f7f7;
+   height:80rpx;
+   line-height:80rpx;
+   color:595757;
+   font-size:32rpx;
+   font-family:PingFangSC-Bold;
+}
+
+.incomeAll text{
+  text-align:center;
+  color:#595757;
+   font-family:PingFangSC-Medium;
+   display:block;
+   font-size:28rpx;
+}
+
+.todayEarn,.month,.allIncome,.todayEarn,.backCash,.actualincome{
+  display:inline-block;
+  width:250rpx;
+  height: 180rpx;
+  /* border:2rpx solid #f7f7f7; */
+  border-top: 2rpx solid #f7f7f7;
+  border-right: 2rpx solid #f7f7f7;
+  box-sizing:border-box;
+  padding:30rpx 0;
+}
+.backPic{
+  position:relative;
+  margin-top:26rpx;
+
+}
+.backPic>image{
+  width:690rpx;
+  height:286rpx;
+}
+.actItem{
+  width:590rpx;
+  height:286rpx;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0 50rpx;
+  font-family:PingFangSC-Medium;
+}
+.actItem .leftPull{
+  padding-top:50rpx;
+}
+.actItem .rightPull{
+  /* padding:40rpx 0; */
+  padding:35rpx 0;
+  margin-right: -25rpx;
+}
+
+.actItem .leftPull .cash{
+  float:left;
+  width:130rpx;
+  height:42rpx;
+  font-size:24rpx;
+  border-radius:14rpx;
+  text-align:center;
+  line-height:42rpx;
+  font-family:PingFangSC-Medium;
+  margin-top: 40rpx;
+}
+.actItem .rightPull .cash,.actItem .rightPull .brokerage{
+  float:right;
+  width:130rpx;
+  height:42rpx;
+  font-size:24rpx;
+  border-radius:14rpx;
+  text-align:center;
+  line-height:42rpx;
+  font-family:PingFangSC-Medium;
+}
+.actItem .leftPull .cash{
+  background:#f1e9df;
+  color:#d24647;
+
+}
+.actItem .rightPull .brokerage{
+ margin-right: 27rpx;
+  color:#d24647;
+  /* margin-top:28rpx; */
+  background:#f1e9df;
+  margin-top: 41rpx;
+}
+
+/* 分享 */
+.memberName .shares{
+  display: inline-block;
+  width:68rpx;
+  height:27rpx;
+  border-radius: 6rpx;
+  border:2rpx solid #576b95;
+  line-height:27rpx; 
+  text-align: center;
+  color: #576b95;
+  font-size: 24rpx;
+  font-family:PingFangSC-Medium;
+  padding:3rpx 0;   
+  margin-left: 10rpx;  
+  margin-bottom:-94rpx;
+
+}
+
+/* 预计可提现金额和回填单累计收益 */
+.predict{
+  height: 188rpx;
+  background: #fff;
+
+}
+.predict-internet{
+  width: 690rpx;
+  height: 188rpx;
+  display: flex;
+  flex-direction: row;
+}
+.predict-left{
+  width: 339rpx;
+  display: flex;
+  flex-direction:column;
+}
+ .Withdraw-top{
+    width: 235rpx;
+    font-size: 26rpx;
+    color: #666666;
+    margin-top: 31rpx;
+    margin-left: 63rpx;
+} 
+.Withdraw-bottom{
+  width: 190rpx;
+  height: 62rpx;
+  font-size:30rpx;
+  color: #b61c25; 
+  margin-top: 27rpx;
+  margin-left: 63rpx;
+}
+.predict-wire{
+  width: 2rpx;
+  height: 99rpx;
+  background: #efefef;
+   margin-top: 44rpx;
+}
+.predict-right{
+  width: 350rpx;
+}
+.predict-top{
+    width: 235rpx;
+    font-size: 26rpx;
+    color: #666666;
+    margin-top: 31rpx;
+    margin-left: 96rpx;
+} 
+.predict-bottom{
+  width: 190rpx;
+  height: 62rpx;
+  font-size:30rpx;
+  color: #b61c25; 
+  margin-top: 27rpx;
+  margin-left: 96rpx;
+}

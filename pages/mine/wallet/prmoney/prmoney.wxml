@@ -1,0 +1,114 @@
+<!--pages/mine/wallet/prmoney/prmoney.wxml-->
+    <wxs module="filters" src="../../../../utils/addmul.wxs"></wxs>
+    <!-- <view class='myearn-header'>
+        <view class='moon' bindtap="showDatePicker">{{date}}
+            <view style='width:25rpx;height:20rpx;' bindtap="showDatePicker">
+            <image src='../../../../image/person/down.png' style='width:22rpx;height:18rpx;'></image>
+            </view>
+        </view>
+        <date-picker id="date-picker" value="{{datePickerValue}}" isShow="{{datePickerIsShow}}"  bindsureclick="datePickerOnSureClick" bindcancelclick="datePickerOnCancelClick" />
+    </view> -->
+    
+    <!--收益  -->
+    <view class="earnBox" wx:if="{{isHasRecord == true}}" wx:for="{{detail}}" wx:key="item">
+        <!-- 审核中 -->
+        <view class="earnItem" wx:if="{{item.status == 1 || item.status == 2}}">     
+            <view class='myearn-share'> 
+                <view class='myearn-msg'>
+                    <view class='myearn-msg-list'>微信提现</view> 
+                    <view style="color:#666">{{item.created_date}}</view>
+                </view>
+                <view class='myearn-share-top'>
+                    <view style="color:#e40012">-{{filters.toFix(item.amount/100)}}</view>
+                    <view style="color:#333">审核中</view>
+                </view>
+            </view>
+            <view class="tqInfo">温馨提示 : 您的提现正在审核，正常最迟3个工作日到账。请耐心等待</view>
+        </view>
+
+         <!-- 提现失败 后台没有通过审核-->
+         <view class="earnItem" wx:if="{{item.status == 3}}">
+            <view class='myearn-share'> 
+                <view class='myearn-msg'>
+                    <view class='myearn-msg-list'>微信提现</view> 
+                    <view style="color:#666">{{item.created_date}}</view>
+                </view>
+                <view class='myearn-share-top'>
+                    <view style="color:#e40012;text-align:right">-{{filters.toFix(item.amount/100)}}</view>
+                    <view style="color:#333">提现失败</view>
+                </view>
+            </view>
+            <view class="tqInfo">您的该笔订单存在异常，钱已经返回您的账户</view>
+        </view>
+
+         <!-- 提现成功 -->
+         <view class="earnItem" wx:if="{{item.status == 5}}">
+            <view class='myearn-share'> 
+                <view class='myearn-msg'>
+                    <view class='myearn-msg-list'>微信提现</view> 
+                    <view style="color:#666">{{item.created_date}}</view>
+                </view>
+                <view class='myearn-share-top'>
+                    <view style="color:#e40012;text-align:right">-{{filters.toFix(item.amount/100)}}</view>
+                    <view style="color:#333">提现成功</view>
+                </view>
+            </view>
+            <view class="tqInfo">温馨提示 : 您的提现已提现成功</view>
+        </view>
+
+        <!-- 提现失败 通过审核提现参数有问题 -->
+         <view class="earnItem" wx:if="{{item.status == 6}}">
+            <view class='myearn-share'> 
+                <view class='myearn-msg'>
+                    <view class='myearn-msg-list'>微信提现</view> 
+                    <view style="color:#666">{{item.created_date}}</view>
+                </view>
+                <view class='myearn-share-top'>
+                    <view style="color:#e40012">-{{filters.toFix(item.amount/100)}}</view>
+                    <view style="color:#333">提现失败</view>
+                </view>
+            </view>
+            <view class="tqInfo">{{item.err_code_des}}</view>
+        </view>     
+
+
+    </view>
+
+
+    <view class='boxx' wx:if="{{isHasRecord == false}}">
+        <view class='writing'>暂时还没有提现记录哦！</view>
+        <view class='case' bindtap='boxx'>去赚钱</view>
+    </view>    
+        
+
+    <!-- 无收益状态 -->
+       <!-- <view class='myearn-share'> 
+            <view class='myearn-msg'>
+            <view class='myearn-msg-list'>
+                <text style='color:#333333'>提现</text>
+            </view> 
+            </view>
+            <view class='myearn-share-top'>
+                <view style='line-height:30px;font-size:24px;color:#666;margin-left:30rpx;'>
+                    <text style='font-size:28rpx;'>2018-06-05 16:25:12</text>
+                </view>
+                <text style='line-height:30px;font-size:32rpx;color:#e40012;margin-right:40rpx;'>-50.00</text>
+            </view>
+        </view>-->
+
+        <!--收益  -->
+        <!-- <view class='myearn-share'>  
+            <view class='myearn-msg'>
+            <view class='myearn-msg-list'>
+                <text style='color:#333333'>提现</text>
+            </view> 
+            </view>
+            <view class='myearn-share-top'>
+                <view style='line-height:30px;font-size:24px;color:#666;margin-left:30rpx;'>
+                    <text style='font-size:28rpx;'>2018-06-05 16:25:12</text>
+                </view>
+                <text style='line-height:30px;font-size:32rpx;color:#e40012;margin-right:40rpx;'>-50.00</text>
+            </view>
+        </view> -->
+
+  <!-- </view> -->

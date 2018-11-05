@@ -1,0 +1,35 @@
+<!--pages/index/newsPublish/newsPublish.wxml-->
+<!-- <text>pages/index/newsPublish/newsPublish.wxml</text> -->
+
+
+<view class="container">
+    <view class="publishBox">
+        <view class="publishTitle">发布内容</view>
+    </view>
+    <view class="publishCon">
+        <textarea placeholder="请在这里详细描述一下您要发布的内容" maxlength="1000" bindinput="getCon" placeholder-style="color:#999;font-size:24rpx;"></textarea>
+        <view class="picList" wx:if="{{isShowPic}}">
+            <block wx:for="{{picList}}" wx:key="item">
+                <image style="display:inline-block"  src="{{item}}"></image>
+            </block>
+        </view>
+        <view class="publishAct">
+            <view class="leftPull" bindtap="Location">
+                <image src="../../../image/new/pubLocation.png"></image>
+                <text>{{city}}</text>
+            </view>
+            <view class="rightPull" bindtap="addPic">
+                <image src="../../../image/new/addphoto.png"></image>
+                <text>添加照片</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="pubPhone">
+        <text>您的联系方式</text>
+        <input type="number" placeholder="请输入您的联系方式" placeholder-style="font-size:24rpx;color:#999" />
+    </view>
+</view>
+
+<!-- 发布按钮 -->
+<button class="pubSub" disabled="{{isCanSub}}" style="color:{{pubColor}};background:{{pubBack}}" hover-class="none" bindtap="goSub">发布</button>

@@ -1,0 +1,21 @@
+<!--pages/mine/ser-center/aboutus/aboutus.wxml-->
+<view class="about-container">
+    <!--<view class='traDemark'><image style="width:110rpx;height:110rpx" src="../../../../image/u183.jpg"></image></view>
+    <view class='versionNumber'></view>
+
+    <view class="weui-cell__hd">
+        <view>领有惠———中国领先的渠道整合服务商，以“惠及天下百姓”为己任，积极响应国家“智慧城市”建设，强势推出智慧便利连锁(陆)、本地化B2B2C电子商务（空）及商业联盟生态圈(海)，有效的利用互联网+模式，推动传统产业转型升级，以“便利店+电子商务+移动智能终端+会员体系”的商业模式建立起社区的零售和服务终端。
+        </view>
+        <view class='Paragraph-distance'>
+        未来公司将通过整合商场、超市、便利店等业态，利用三位一体的全新模式在全国范围内布点，打造最大的社区便利店连锁、本地最大的电商龙头企业、最大的商业联盟生态圈，预计所提供的服务可覆盖逾数亿人。
+        </view>
+        <view class='Paragraph-distance'>
+        截止2016年5月，全国共计380家分公司，15000多家连锁便利店。未来五年内打造线下30万家便利店，打造大居家领域3600个民族品牌，本地生活服务领域360个连锁品牌，缩短厂家（商家）与消费端距离，为老百姓提供优质、便利、贴心的服务，真正做到惠及天下百姓。
+        </view>
+    </view>
+    <view class="weui-cell__brand">Copyright  © 2012-2017 </view> -->
+
+   <!-- <image src="https://jiangshidi.top/hestia//goods/201804/25/106001001/106001001101/show/1524655997120.png" mode="widthFix" style="width:750rpx"></image> -->
+   <image src="https://jiangshidi.top/hestia/zxl/zhangxiaolong.png" mode="widthFix" style="width:750rpx"></image>
+</view>
+

@@ -1,0 +1,29 @@
+<!--pages/mine/news/news.wxml-->
+<!-- <text>pages/mine/news/news.wxml</text> -->
+
+<view class="box">
+
+
+    <view class="news" data-id="XT" bindtap="systemNew">
+        <image src="../../../image/person/news.png"></image>
+        <view class="rightCon">
+            <view>
+                <view class="title">消息通知</view>
+                <view class="desc">{{system}}</view>
+            </view>
+            <image src="../../../image/person/dis.png"></image>
+        </view>
+    </view>
+
+     <view class="news" data-id="YH" bindtap="systemNew">
+        <image src="../../../image/person/act.png"></image>
+        <view class="rightCon">
+            <view>
+                <view class="title">优惠活动</view>
+                <view class="desc">{{youhui}}</view>
+            </view>
+            <image src="../../../image/person/dis.png"></image>
+        </view>
+    </view>
+</view>
+ 

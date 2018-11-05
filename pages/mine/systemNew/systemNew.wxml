@@ -1,0 +1,32 @@
+<!--pages/mine/newsList/newsList.wxml-->
+<!-- <text>pages/mine/newsList/newsList.wxml</text> -->
+<view wx:if="{{newType == 'XT'}}">
+    <view class="systemList" wx:for="{{list}}" wx:key="item">
+        <view class="time">{{item.publish_time}}</view>
+        <view class="newCon">
+            <view class="title">
+                <image src="../../../image/hand.png"></image>
+                <view>{{item.message_name}}</view>
+            </view>
+            <view class="desc">{{item.message_context}}</view>
+        </view>
+    </view>
+</view>
+
+
+<view class="cuponAct" wx:if="{{newType == 'YH'}}">
+    <view class="favorList" wx:for="{{list}}" wx:key="item" data-link="{{item.link_address}}" bindtap="goLink">
+        <view class="time">{{item.publish_time}}</view>
+        <view class="favorItem">
+            <image mode="aspectFill" src="{{item.imgPath}}"></image>
+            <view class="title">{{item.message_name}}</view>
+            <view class="desc">{{item.message_context}}</view>
+        </view>
+    </view>
+</view>
+
+
+<view class="noNews" wx:if="{{hasNew == false}}">
+    <image src="../../../image/person/noNew.png"></image>
+    <view>暂无消息</view>
+</view>

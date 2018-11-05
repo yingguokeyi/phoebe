@@ -1,0 +1,60 @@
+<!--pages/index/newSquare/newSquare.wxml-->
+<view class="itemList">
+    <view class="itemSingle">
+        <view class="pubInfo">
+            <image src="https://jiangshidi.top/hestia/goods/201806/19/106001001/106001001101/show/1529388909092.jpg"></image>
+            <view class="nickInfo">
+                <view class="time">
+                    <text class="leftPull" style="font-size:26rpx;">暮雪昵称</text>
+                    <text class="rightPull" style="font-size:22rpx;">30分钟前</text>
+                </view>
+                <view>
+                    <image src="../../../image/new/pubLocation.png"></image>
+                    <text style="font-size:22rpx;vertical-align:middle">泰安市</text>
+                </view>
+            </view>
+        </view>
+        <view class="newsCon">北京时间昨天，中国足协和国家体育总局同时公布了印尼雅加达亚运会的U23国足名单，但却出现了两个不同的版本。权健队刘奕鸣确定入围，而张修维则仅仅出现在了国家体育总局的20人版本中，这是怎么回事？</view>
+        <view class="newsPic">
+            <image src="https://jiangshidi.top/hestia/goods/201805/15/106003002/106003002101/show/1526357741275.jpg"></image>
+        </view>
+    </view>
+    <view class="itemSingle">
+        <view class="pubInfo">
+            <image src="https://jiangshidi.top/hestia/goods/201806/19/106001001/106001001101/show/1529388909092.jpg"></image>
+            <view class="systemInfo time">
+                <text class="leftPull">通知</text>
+                <text class="rightPull">45分钟前</text>
+            </view>
+        </view>
+        <view class="newsCon">系统维护中，如有不便，敬请谅解。</view>
+    </view>
+    
+    <view class="itemSingle">
+        <view class="pubInfo">
+            <image src="https://jiangshidi.top/hestia/goods/201805/10/106003004/106003004101/show/1525941013193.jpeg"></image>
+            <view class="nickInfo">
+                <view class="time">
+                    <text class="leftPull" style="font-size:26rpx;">暮雪昵称</text>
+                    <text class="rightPull" style="font-size:22rpx;">30分钟前</text>
+                </view>
+                <view>
+                    <image src="../../../image/new/pubLocation.png"></image>
+                    <text style="font-size:22rpx;vertical-align:middle">泰安市</text>
+                </view>
+            </view>
+        </view>
+        <view class="newsCon">北京时间昨天，中国足协和国家体育总局同时公布了印尼雅</view>
+        <view class="newsPic">
+            <image src="https://jiangshidi.top/hestia/goods/201805/15/106003002/106003002101/show/1526357741275.jpg"></image>
+            <image src="https://jiangshidi.top/hestia/goods/201805/10/106003004/106003004101/show/1525941013193.jpeg"></image>
+            <image src="https://jiangshidi.top/hestia/goods/201805/10/106003004/106003004101/show/1525941013193.jpeg"></image>   
+        </view>
+    </view>
+</view>
+
+
+<!-- 发布按钮 -->
+<view class="publish" bindtap="goPublish">
+    <image src="../../../image/new/publish.png"></image>
+</view>

@@ -1,0 +1,63 @@
+<!--pages/mine/orderArea/orderArea.wxml-->
+
+<view class="container">
+    <!-- 填写订单号 -->
+    <view class="orderTitle">
+        <text>填写回填单信息：</text>
+        <input placeholder="请输入掌达赚订单号" type="number" maxlength="18"  placeholder-style="color:#b3b3b3" value="{{orderNo}}" bindinput="orderInput" bindblur="orderMove"/>
+         <view class="selectGood">
+            <!-- <view class="title">选择商品：</view> -->
+            <view class="selectAll">
+                <view class="selectInput" bindtap="showSelect">
+                    <view class="selectedCon" style="color:#b3b3b3;" wx:if="{{isAuto == false}}">请选择商品</view>
+                    <view class="selectedCon" style="color:#333" wx:if="{{isAuto == true}}">{{selectGood}}</view>
+                    <view class="rightPull">
+                        <image src="../../../image/new/selectIcon.png"></image>
+                    </view>
+                </view>
+                <view class="selecting" hidden="{{showSelect}}">
+                    <scroll-view scroll-y style="max-height:600rpx;">
+                        <block  wx:for="{{goodsList}}" wx:key="item">
+                                <view class="option" bindtap="selectSure" data-con="{{item.sku_name}}" data-sku="{{item.id}}">
+                                    <view>{{item.sku_name}}</view>
+                                </view>
+                        </block>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+    </view>
+   
+    
+    <!-- 上传图片 -->
+    <view style="background:#fff;padding-bottom:22rpx;"> 
+        <view class="title">上传回填单截图：</view>
+        <view class="upContent">
+            <view class="upBox leftPull"  bindtap="upImg">
+                <image src="../../../image/new/autoLoad.png" mode="aspectFit" class="autoImg" wx:if="{{!isChoose}}"></image>
+                <image src="{{choosePic}}" mode="widthFix" class="chooseImg" wx:if="{{isChoose}}"></image>
+            </view>
+            <view class="leftPull">
+                <view>1、格式必须为png,bmp,jpeg,jpg,gif</view>
+                <view>2、大小不可大于2M</view>
+                <view>3、建议使用png格式图片</view>
+                <view>4、上传截图不允许涉及政治敏感与色情</view>
+                <view>5、上传成功后不支持修改，请检查确认</view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="writeInfo">填写信息和上传截图添加任意一项即可</view>
+    <!-- 添加备注 -->
+     <view class="selectGood">
+        <view class="title">添加备注：</view>
+        <view class="noteInput" hidden="{{showArea}}">
+             <textarea placeholder="最多可添加200个字符哦" placeholder-style="font-size:28rpx;color:#999" selection-start="{{toStart}}" maxlength="200" value="{{note}}" name="textarea" bindblur="noteSave"/>
+        </view>
+    </view>
+
+  
+    <button class="btn" disabled="{{subDisable}}" style="background:{{backColor}};color:{{fontColor}}" bindtap="goSubmit">提交</button>
+
+</view>
+ 

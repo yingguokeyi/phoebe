@@ -1,0 +1,343 @@
+<!--pages//common/common.wxml-->
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+
+<scroll-view style="height:100%;" class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}"   bindscroll="scroll">
+  <view class="all" style="{{choose_modal == 'block' || share_modal == 'block' ? 'position:fixed;top:0;left:0;right:0;bottom:0;' : '' }}">
+      <!-- 基本信息 -->
+      <view class="{{selected?'show':'hidden'}}">
+        <view class="container">
+          <!-- 轮播图-->
+          <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" indicator-color="transparent" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height:750rpx;">
+            <block wx:for="{{imgList}}" wx:key="item">
+              <swiper-item>
+                <image style="width:100%;height:750rpx;"  src="{{item.image_path}}" data-index="{{index}}" mode="aspectFit" bindtap="clickImage"></image>
+              </swiper-item>
+            </block>
+          </swiper>
+
+          <!-- 限时秒抢的标题栏 -->
+          <view class='redSeal' wx:if="{{plan_group == 1 }}">
+             <view class='redmark-left'>
+               <text class='rightDown'>限时秒杀：</text>
+               <text class='symbol'>￥</text>
+               <text class='wallet'>{{filters.toFix(marke_price/100)}}</text>
+             </view>
+             <view class='redmark-right' wx:if="{{columnShow==1}}">
+               <text class='finish'>离开始还有：</text>
+               <text class='endTime'>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+             </view>
+              <view class='redmark-right' wx:if="{{columnShow==2}}">
+               <text class='finish'>离结束还有：</text>
+               <text class='endTime'>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+             </view>                  
+          </view>
+
+          <!-- 商品介绍 -->
+        <view>
+        <view class="detail-pro-title">
+          <view class="detail-pro-left">
+            <text class="detail-pro-texts">{{goods_data.spu_name}}</text>
+          </view>
+        </view>
+            <!-- 价格显示 -->
+        <view class='detail-money'>
+          <view class="detailMon" style="display:flex;">
+            <view>
+              <text class='money-symbol'>￥</text>
+              <text class='money-price' wx:if='{{contrast[0].market_price != "" && contrast[0] != null}}'>{{filters.toFix(goods_price/100)}}</text>
+              <text class='money-price' wx:if='{{contrast[0].market_price == "" || contrast[0] == null}}'></text>
+            </view> 
+            <view style='font-size:28rpx;line-height:90rpx;margin-left:60rpx'>
+              <text style='margin-right:15rpx;' wx:if='{{contrast[0].market_price >= contrast[0].original_price && memberLevel>0 && contrast[0].member_self != 0}}'>
+                <text style='color:#595757;font-size:30rpx'>返现</text>
+                <text class='cash_back' style="#b61c25">￥{{filters.toFix((contrast[0].market_price-contrast[0].original_price) *contrast[0].member_self/10000)}}</text>
+              </text>
+              <!-- <text style='margin-right:15rpx;'>
+                <text style='color:#595757;font-size:30rpx'>返现</text>
+                <text class='cash_back' style="#b61c25">￥{{filters.toFix((contrast[0].market_price-contrast[0].original_price) *contrast[0].member_self/10000)}}</text>
+              </text> -->
+              <text style='margin-right:15rpx;' wx:if='{{contrast[0].market_price >= contrast[0].original_price && memberLevel==0 && contrast[0].outsider_self != 0}}'>
+                <text style=' color:#595757;font-size:30rpx'>返现</text>
+                <text class="cash_back" style="color:#b61c25">￥{{filters.toFix((contrast[0].market_price-contrast[0].original_price)*contrast[0].outsider_self/10000)}}</text>
+              </text>     
+            </view>
+          </view>
+          <!-- 快递 -->
+          <view class='detail-express'>
+            <view>快递:￥0.00</view>
+            <view>库存 {{repertory}}</view> 
+          </view>
+        </view>
+      </view>
+          <!-- border样式 -->
+      <view style="height:15rpx;background:#f8f8f8;border-top:2rpx solid #f2f2f2;border-bottom:2rpx solid #f2f2f2;"></view>
+        <!-- 数量 -->
+        <view class='detail-nomber'>
+          <view class='detail-count-title'>
+            <text>数量</text>
+            <text wx:if='{{contrast[0].buyconfine != 0}}'>(限购</text>
+            <text wx:if='{{contrast[0].buyconfine != 0}}'>{{contrast[0].buyconfine}}件)</text> 
+          </view>
+
+          <view class="detail-count-box">
+            <view class="detail-count-down {{num == 1 ? 'cantDis':'canDis'}}" bindtap="bindMinus" data-obj="{{obj}}" data-index="{{index}}">-</view>
+            <view class="detail-count-num">{{num}}</view>
+            <view class="detail-count-add" bindtap="bindPlus" data-index="{{index}}">+</view>
+          </view>
+        </view>
+        <!-- 优惠券 -->
+        <!-- <view class='detail-discounts' bindtap="getDis">
+          <view class='discounts-left'>
+            <image src='../../image/common/discounts.png'></image>
+          
+          </view>
+          <view class='discounts-right'>
+            <text>领取优惠券</text>
+            <image src='../../image/common/next.png'></image>
+          </view>
+        </view>  -->
+            <!-- border样式 -->
+        <view style="height:25rpx;background:#f8f8f8;border-top:2rpx solid #f2f2f2;border-bottom:2rpx solid #f2f2f2;"></view>
+
+        <!-- 配送说明 -->
+        <view wx:if="{{delivery !=''}}" >
+          <view class='detail-delivery'>
+              <view class='detail-word'>
+                  <text>配送说明</text>
+              </view>
+              <view class='detail-accountfor'>
+                  <view class='ne-zi'>{{delivery}}</view>
+              </view>
+          </view>
+       
+          <!-- border样式 -->
+          <view style="height:25rpx;background:#f8f8f8;border-top:2rpx solid #f2f2f2;border-bottom:2rpx solid #f2f2f2;"></view>
+        </view>
+
+        <!-- 新增商品属性 -->
+          
+        <view class="pro-style">
+            <view class="detailTitle ">
+              <view class="line"></view>
+              <view class="centerText">商品属性</view>
+              <view class="line"></view>
+            </view>
+            <view class="detailInfo ">
+              <view  wx:for="{{pro_attr}}" wx:key="item">
+                <view class="proStyle leftPull">
+                  <text>{{item.name}}</text> 	
+                </view>
+                <view class="styleAtt leftPull">
+                  <text>{{item.value}}</text>
+                </view>
+              </view>
+            </view>
+        </view> 
+
+          <!-- 商品详情图片 -->
+        <view class="pro-detail">
+            <view class="detailTitle">
+              <view class="line"></view>
+              <view class="centerText">商品详情</view>
+              <view class="line"></view>
+            </view>
+            <view wx:for="{{detail_Imgs}}" wx:key="img">
+            <image src="{{item.image_path}}" mode="widthFix"  style='width:750rpx;display:block;'></image>
+          </view>
+        </view>
+          
+        <view style='width:100%;height:20rpx;background:#f9f9f9; '></view>     
+        </view>
+      </view>
+      <!-- 商品详情 -->
+      <view class="{{selected1?'show':'hidden'}}">
+        <view class='tab-Image'>
+          <view wx:for="{{detail_Imgs}}" wx:key="img">
+            <image src="{{item.image_path}}" mode="widthFix"  style='width:750rpx;display:block;'></image>
+          </view>
+        </view> 
+        <view style='width:100%;height:20rpx;background:#f9f9f9; '></view>
+      </view>
+
+      <!-- 底部栏 -->
+      <view class="footer-box">
+        <button class="commision leftPull" open-type="share">
+          <image src="../../image/new/share2.png"></image>
+          <text style="vertical-align:top" wx:if='{{contrast[0].market_price >= contrast[0].original_price && memberLevel > 0 && contrast[0].member_parent != 0}}'>佣金 ￥{{filters.toFix((contrast[0].market_price-contrast[0].original_price) *contrast[0].member_parent/10000)}}</text>
+          <text style="vertical-align:top" wx:if='{{contrast[0].market_price >= contrast[0].original_price && memberLevel == 0 && contrast[0].outsider_parent != 0}}'>佣金 ￥{{filters.toFix((contrast[0].market_price-contrast[0].original_price) *contrast[0].outsider_parent/10000)}}</text>
+        </button>
+        <view class="now-buy leftPull" style="float:right" >
+          <button class="btn"  bindtap="modal_show" disabled="{{canBuy}}" style="color:#{{fontColor}}">立即购买</button>
+        </view>
+
+      </view>
+  </view>
+
+
+   <!-- 回到顶部 -->
+  <view class="goTop" bindtap="goTop" wx:if="{{floorstatus}}"> 
+    <image src="../../image/new/gotop.png"></image>
+  </view>  
+</scroll-view>
+
+
+
+
+
+<!--遮层-->
+<view class='mask' style="display:{{choose_modal}}"></view>
+<!--属性规格选择栏-->
+<view class="choose" style="display:{{choose_modal}}">
+  <!-- 商品logo -->
+  <view class="spec_img_container">
+    <view>   
+      <image src="{{imgList[0].image_path}}"></image>
+    </view>
+
+    <view class="goods-container">
+      <view class="goods-price" wx:if="{{RunningStatus ==1 || RunningStatus==3 || RunningStatus=='' || enabled==0  }}">
+        <text class='goods-on-symbol'>￥</text>
+        <text class='goods-on-price'>{{filters.toFix(list_price/100)}}</text>
+        <!-- <text class='goods-on-text'>返现</text>
+        <text class='goods-on-symbol'>￥</text>
+        <text class='goods-on-price'>0.10</text> -->
+      </view>
+      <view class="goods-price" wx:if="{{enabled==1 && RunningStatus ==2}}">
+        <text class='goods-on-symbol'>￥</text>
+        <text class='goods-on-price'>{{filters.toFix(sprice/100)}}</text>
+        <view class="original-price" style="margin-top:-17px;">(￥{{filters.toFix(list_price/100)}})</view>
+        <view class="map"> <image class="seconds-kill" src="../../image/member/Secondskill.png"></image></view>
+      </view>
+  
+       <view class="goods-number">
+        <text>库存{{repertory}}件</text>
+      </view> 
+    </view>
+
+    <icon class="goods-icon" type='clear' size='15' bindtap="modal_none"></icon>
+  </view>
+   <view>
+      <scroll-view scroll-y scroll-top="200" style="height:650rpx">
+              <!--选择开始 -->
+        <view class="spec_view_container">
+          <!-- 已选属性展示 -->
+          <view class="modal_spec">
+            <view class="modal_spec_name">{{goods_data.first_attribute}}：</view>
+            <view class="modal_spec_group">
+              <view wx:for="{{goods_list}}" wx:if="{{item.position=='1'}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{datasetid === item.id?'on':''}}"   data-paramg="{{item.attribute_value}}">{{item.attribute_value}}</view>
+            </view>
+          </view>
+          <!-- 已选属性展示 -->
+          <view class="modal_spec" wx:if="{{numberid != 0}}">
+            <view class="modal_spec_name">{{goods_data.second_attribute}}：</view>
+            <view class="modal_spec_group">
+              <view wx:for="{{nextAttr}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="buyTab" class="cate-list {{numberid === item.id?'on':''}}"  data-species="{{item.attribute_value}}">{{item.attribute_value}}</view>
+            </view>
+          </view>
+
+
+        </view>
+      
+        <!--选择结束 -->
+        <view class="buy_num">
+          <view class="font_num">购买数量：</view>
+          <view class="stepper">
+            <!-- 减号 -->
+            <view class="delNum {{num == 1 ? 'disabled':''}} {{minusStatus}}" bindtap="bindMinus">-</view>
+            <!-- 数值 -->
+            <text>{{num}}</text>
+            <!-- 加号 -->
+            <view class="normal" bindtap="bindPlus">+</view>
+          </view>   
+        </view>
+      <view style="height:25rpx;background:#f8f8f8;border-top:2rpx solid #f2f2f2;border-bottom:2rpx solid #f2f2f2;"></view>  
+        <!-- 配送说明 -->
+         <view wx:if="{{delivery !=''}}" >
+          <view class='detail-delivery'  style='margin-bottom:42px;'>
+              <view class='detail-word'>
+                  <text>配送说明</text>
+              </view>
+              <view class='detail-accountfor'>
+                  <view class='ne-zi'>{{delivery}}</view>
+              </view>
+              <view style="height:25rpx;background:#f8f8f8;border-top:2rpx solid #f2f2f2;border-bottom:2rpx solid #f2f2f2;"></view>
+          </view>
+        </view>
+        
+      </scroll-view>
+   </view>
+
+  <block>
+    <view class="modal_button_two">
+      <button class="modal_buy" bindtap="buyMinus">确认</button>
+    </view>
+  </block>
+</view>
+
+<view class='mask' style="display:{{share_modal}}"></view>
+<view class="share" style="display:{{share_modal}}">
+  <view class="header">
+     <text>分享</text>
+     <image src="../../image/new/delete.png"  bindtap="cancel"></image>
+  </view>
+  <view class="shareItem">
+     <view class="product">
+        <button class="btn" hover-class="none"  open-type="share">
+          <image src="../../image/new/wechat.png"></image>
+          <text>分享给好友</text>
+      </button>
+     </view>
+     <view class="code" bindtap="showShare">
+        <button class="btn" hover-class="none">
+          <image src="../../image/new/friend.png"></image>
+          <text>分享朋友圈</text>
+      </button>
+     </view>
+     <view class="code" bindtap="goodShare">
+        <button class="btn" hover-class="none">
+          <image src="../../image/new/code.png"></image>
+          <text>分享二维码</text>
+      </button>
+     </view>
+  </view>
+</view>
+
+  <!-- 回到首页 -->
+<view class="goHome" bindtap="goHome"> 
+  <image src="../../image/new/home.png"></image>
+</view>
+
+<!-- 收藏商品 -->
+<!-- <view class="collect" bindtap="Collecting"> 
+  <image src="../../image/new/nocoll.png"></image>
+</view> -->
+
+
+<!-- 分享到朋友圈 -->
+<view class='mask' style="display:{{album_mask}}"></view>
+<view class="shareModal" style="display:{{album_mask}}">
+  <view class="shareTitle">
+    <text>分享到朋友圈</text>
+    <image class="rightPull" src="../../image/new/delete.png" bindtap="noneModal"></image>
+  </view>
+  <canvas canvas-id='shareCanvas' class="canvas" disable-scroll="true" bindtouch="touchStart" bindtouchmove="touchMove"></canvas>
+  <view style="text-align:center;font-size:24rpx;">保存图片到手机后，您可到朋友圈分享</view>
+  <view class="saveImage" bindtap="radioToImage">保存图片</view>
+</view>
+
+<!-- 分享商品二维码 -->
+
+<view class='mask' style="display:{{good_mask}}"></view>
+<view class="shareModal" style="display:{{good_mask}}">
+  <view class="shareTitle">
+    <text>分享商品二维码</text>
+    <image class="rightPull" src="../../image/new/delete.png" bindtap="noGoodModal"></image>
+  </view>
+
+  <canvas canvas-id='goodCanvas' class="canvas goodsCode" disable-scroll="true" bindtouch="touchStart" bindtouchmove="touchMove"></canvas>
+
+  <view style="text-align:center;font-size:24rpx;">保存图片到手机后，您可到朋友圈分享</view>
+  <view class="saveImage" bindtap="rectToImage">保存图片</view>
+</view>
+
+

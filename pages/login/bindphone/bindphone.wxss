@@ -1,0 +1,213 @@
+/* pages/register/register.wxss */
+
+
+
+/* .register-image image{
+  width:100%;
+  height:100%; 
+  position:absolute;
+  z-index:9;
+} */
+/* 新改版的注册页面----头部背景图 */
+.register-image image{
+  width:625rpx;
+  height:314rpx; 
+  position:absolute;
+  z-index:9;
+  left: 63rpx;
+}
+.content {
+  width: 650rpx;
+  /* height: 1000rpx; */
+  /* background:rgba(210,206,200,0.8); */
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  /* top: 56rpx; */
+  top: 350rpx;
+  transform: translate(-50%,0);
+  z-index:88;
+  border-radius: 14rpx;
+}
+/*logo*/
+/* .register-logo {
+margin:62rpx 0 66rpx 0;
+} */
+
+.register-logo image {
+  width: 136rpx;
+  height: 136rpx;
+  margin-left:326rpx;
+  margin-top:92rpx;
+
+}
+/* 短信即将收到验证码 */
+.input-note{
+  width: 566rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  /* background: #a5772c; */
+}
+.input-sub{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* background:#b61c25; */
+  float:left;
+  overflow:hidden;
+  margin-left:34rpx;
+  color: #333333;
+
+}
+.input-num{
+  width: 203rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* background: #b3b0ac; */
+  color: #b61c25;
+  float:left;
+  margin-left:14rpx;
+  overflow: hidden;
+  /* margin-left:18rpx; */
+
+}
+#password{
+  width:460rpx;
+  margin-left: 20rpx;
+}
+/*中间控制input*/
+.input-area {
+  width: 566rpx;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.input-area input {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  /* color: #333333; */
+  color: #b61c25;
+  margin-left: 20rpx;
+}
+#picCode{
+  width:297rpx;
+  margin-left: 20rpx;
+}
+/*input框*/
+.input-log{
+  height: 86rpx;
+  width: 566rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  opacity: 1;
+  /* border-radius: 8rpx; */
+  border-radius: 23rpx;
+  margin-bottom: 30rpx;
+  border:1rpx solid #dedede;
+
+}
+/*图片验证码  */
+.piccode{
+  height: 86rpx;
+  width: 566rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  opacity: 1;
+  /* border-radius: 8rpx; */
+  border-radius:23rpx;
+  margin-bottom: 30rpx;
+  border:1rpx solid #dedede;
+}
+.Imgcode{
+  width: 250rpx;
+  height: 70rpx;
+}
+/*中间input*/
+.smsCode {
+  height: 86rpx;
+  width: 566rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  opacity: 1;
+  border:1rpx solid #dedede;
+  border-radius: 23rpx;
+  margin-bottom: 27rpx;
+}
+.smsCode input {
+  width: 336rpx;
+  margin-left: 20rpx;
+  color: #b61c25;
+}
+/*按钮*/
+ .getSmsCodeBtn {
+  width: 218rpx;
+  color:#a5772c;
+  font-size:30rpx;
+  margin-right:30rpx;
+  line-height: 67rpx;
+  text-align: center;
+  background-color:#fff;
+  padding-left:0;
+  padding-right:0;
+  border-radius:0;
+}
+
+.getSmsCodeBtn::after{
+  border:0;
+}
+button[disabled]{
+  background:#fff;
+}
+/*图标*/
+.userinfo-logIcon{
+  width: 69rpx;
+  height: 36rpx;
+  vertical-align: middle;
+  margin: 0 24rpx;
+}
+
+/*完成*/
+.btn-area {
+  width: 556rpx;
+  margin: 0 90rpx; 
+
+}
+
+.btn-area button {
+  width:566rpx;
+  margin-top: 52rpx; 
+  font-size: 36rpx;
+  margin-left:-50rpx;
+  border-radius: 23rpx;
+}
+.read-text{
+  font-family: "PingFangSC-Regular";
+  font-size: 18rpx;
+  color: #333333;
+  display: flex;
+  margin: 20rpx 0 50rpx 0;
+}
+.redad-content{
+  color: #f8222d;
+}
+.txt-area {
+  position: absolute;
+  left: 50%;
+  bottom: 50rpx;
+  transform: translate(-50%,0);
+  z-index: 99;
+  color: #b3b0ac;
+  font-size: 24rpx;
+}
+
+
+.forgot-password:active, .register:active {
+  opacity: 0.7;
+}

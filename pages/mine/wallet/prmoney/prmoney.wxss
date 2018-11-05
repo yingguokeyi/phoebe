@@ -1,0 +1,131 @@
+page{
+  min-height:100%;
+  background: #f9f9f9;
+}
+view{
+  font-size:30rpx;
+}
+.myearn-wrap{
+  width: 100%;
+  height: 80rpx;
+  background: #F9F9F9;
+}
+/* 头部月份 */
+.myearn-header{
+  width: 100%;
+  height:80rpx;
+  border-bottom:20rpx solid #f8f8f8;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.myearn-header .moon{
+  width:200rpx;
+  height: 80rpx;
+  font-size:30rpx;
+  color:#333;
+  line-height: 80rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.myearn-header .account{
+  width: 179rrpx;
+  height: 80rpx;
+   line-height: 80rpx;
+   color:#333;
+   font-size:30rpx;
+   margin-right:46rpx;
+
+}
+/* 收益 */
+.sum{
+  height: 100%;
+}
+/* s */
+
+/* .myearn-share-top{
+  width: 100%;
+  height: 67rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.myearn-msg{
+  width: 100%;
+  padding-top:15rpx;
+}
+.myearn-msg-list{
+  width: 30%;
+
+  line-height: 60rpx;
+  margin-left:30rpx;
+  text-align: left;
+  color: #333;
+} 
+/* 灰色间距 */
+.box{
+  width: 100%;
+  height: 15rpx;
+  background: #f8f8f8;
+}
+
+.myearn-share{
+  padding:0 30rpx;
+  height:114rpx;
+  border-bottom:2rpx solid #ebebeb;
+  line-height:50rpx;
+}
+.myearn-msg{
+  text-align:left;
+  float:left;
+}
+.myearn-share-top{
+  float:right;
+  text-align:right;
+}
+
+.earnItem{
+  background:#fff;
+  width:750rpx;
+  padding:30rpx 0 0 0;
+  margin-bottom:15rpx;
+}
+.earnItem:after{
+  content:'';
+  display:table;
+  clear:both;
+}
+.tqInfo{
+  padding:30rpx;
+  color:#999;
+  font-size:28rpx;
+}
+.myearn-msg-list{
+  color:#333;
+}
+
+.boxx{
+  /* height: 319rpx; */
+  height: 463rpx;
+  text-align: center;
+}
+.writing{
+  height: 31rpx;
+  color: #999999;
+  font-size: 24rpx;
+  margin-top:150rpx;
+
+}
+.case{
+  width: 240rpx;
+  height: 78rpx;
+  background: #b61c25;
+  color: #fff;
+  border-radius: 6rpx;
+  font-size: 36rpx;
+  line-height: 78rpx;
+  margin-left:264rpx;
+  text-align: center;
+  margin-top:64rpx;
+}

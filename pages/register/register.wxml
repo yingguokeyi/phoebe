@@ -1,0 +1,122 @@
+<!--pages/register/register.wxml-->
+    <!-- 大背景色 -->
+    <!-- <view class='register-image'>
+           <image src='../../image/bac4.png'></image> 
+    </view> -->
+    <!-- <view class="content">
+        <view class = "register-logo">
+            <image mode="aspectFit" src="../../image/login.png"></image>
+        </view>
+        <form bindsubmit="formSubmit">
+            <view class="input-area">
+                <view class="input-log">  
+                  <image class="userinfo-logIcon" src="{{logIcon}}"></image>  
+                  <input id="username" name="username" maxlength='11' type="number" placeholder="手机号" bindinput ="userNameInput" placeholder-style='color:#999'/>
+                </view>  
+                <view class="input-log">  
+                    <image class="userinfo-logIcon" src="{{pwdIcon}}"></image>  
+                    <input id="password" name="password" maxlength='20' bindinput ="pwdInput" type="password" placeholder="密码(大于6位的字母和数字)" placeholder-style='color:#999'/>
+                  </view> -->
+                  <!--图片验证码  -->
+                    <!-- <view class='piccode'>
+                         <image class="userinfo-logIcon" src="{{pwdIcon}}"></image>
+                         <input id="picCode" name="picCode"  maxlength='6' type="text" placeholder="图片验证码" bindinput ="picCodeInput" placeholder-style='color:#999'/> -->
+
+                        <!-- <image bindtap='changeCode' class='Imgcode' src="https://jiangshidi.top/user?method=getImgCode&key={{key}}"></image>          -->
+                         <!-- <image bindtap='changeCode' class='Imgcode' src="https://jiangshidi.top/user?method=getImgCode&key={{key}}"></image>      -->
+                       <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.61:8080/uranus/user?method=getImgCode&key={{key}}"></image> 
+                    </view> -->
+<!-- 
+                        <image bindtap='changeCode' class='Imgcode' src="https://jiangshidi.top/user?method=getImgCode&key={{key}}"></image>         
+                           <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.61:8080/uranus/user?method=getImgCode&key={{key}}"></image>    
+                    </view> -->
+                  <!--  -->
+                  <!-- <view class="smsCode">
+                    <image class="userinfo-logIcon" src="{{pwdIcon}}"></image>
+                    <input id="smsCode" name="smsCode" maxlength='6' type="text" placeholder="短信验证码" placeholder-style='color:#999'/> -->
+                    <!-- <button bindtap='getcode' disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}"   class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</button> -->
+                    
+                    <!-- <button bindtap="getcode" class="getSmsCodeBtn" disabled="{{smsCodeDisabled}}" style="color:{{getSmsCodeBtnColor}};background:{{getSmsCodeBtnBgColor}}">{{smsCodeBtnTxt}}</button> 
+                  </view>
+
+                <view class='read-text'>
+                        <view>继续注册表示已阅读并同意</view>
+                        <view>
+                            <navigator redirect url="Agreement/Agreement">  
+                                <text class="redad-content">《服务条款》</text>
+                            </navigator>  
+                        </view>
+                </view>
+            </view>
+            <view class="btn-area">
+                <button  disabled="{{registDisabled}}" style="background-color:{{registBtnBgBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+            </view>
+        </form>
+
+    </view> -->
+    <!-- 已有账号？请登录 -->
+     <!-- <view class="txt-area">
+             <navigator  url="../login/login">
+                     <text class="register"> 已有账号？请登录</text>
+            </navigator>
+     </view> -->
+
+
+
+   <!--新改版的注册页面--> 
+  <!--pages/register/register.wxml-->
+    <!-- 大背景色 -->
+     <view class='register-image'>
+        <image src='../../image/person/dribs.png'></image> 
+    </view> 
+    <view class = "register-logo">
+            <image mode="aspectFit" src="../../image/person/palm.png"></image>
+    </view>
+     <view class="content">
+        
+        <form bindsubmit="formSubmit">
+        <!-- 手机号，密码，图片验证码 -->
+            <view class="input-area">
+            <!-- 手机号 -->
+                <view class="input-log" >  
+                  <!-- <image class="userinfo-logIcon" src="{{logIcon}}"></image>   -->
+                  <input id="username"  name="username" maxlength='11' type="number" placeholder="请输入手机号" bindblur="mobil" bindinput ="phoneInput" placeholder-style='color:#999'/>
+                </view>  
+                  <!--图片验证码  -->
+                <view class='piccode'>
+                        <!-- <image class="userinfo-logIcon" src="{{pwdIcon}}"></image> -->
+                        <input id="picCode" name="picCode"  maxlength='6' type="number" placeholder="请输入图片验证码" bindblur="picInput" bindinput ="picCodeInput" placeholder-style='color:#999'/>
+                        <image bindtap='changeCode' class='Imgcode' src="https://jiangshidi.top/user?method=getImgCode&key={{key}}"></image>                 
+                          <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.0.23:8084/uranus/user?method=getImgCode&key={{key}}"></image>            -->
+                          <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.0.112:80/uranus/user?method=getImgCode&key={{key}}"></image>       -->
+                          <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.74:8056/uranus/user?method=getImgCode&key={{key}}"></image>       -->
+                            <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.96:8084/uranus/user?method=getImgCode&key={{key}}"></image>        -->
+                             <!-- <image bindtap='changeCode' class='Imgcode' src="http:///10.1.0.19:8055/uranus/user?method=getImgCode&key={{key}}"></image>        -->
+
+                        
+                </view>
+
+                <view class='read-text'>
+                    <view style="font-size:24rpx;">继续注册表示已阅读并同意</view>
+                    <view style="font-size:24rpx;">
+                        <navigator redirect url="Agreement/Agreement">  
+                            <text class="redad-content">《服务条款》</text>
+                        </navigator>  
+                    </view>
+                </view>
+            </view>
+            <view class="btn-area">
+                <button class="nextBtn"  disabled="{{registDisabled}}" hover-class="none"  style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+            </view>
+        </form>
+
+    </view>
+    <!-- 已有账号？请登录 -->
+      <!-- <view class="txt-area">
+        <navigator  url="../login/login" style="background:#fff">
+            <text class="register"> 已有账号？请登录</text>
+        </navigator>
+     </view>  -->
+      <view class="txt-area" bindtap='skip'>
+            <text class="register"> 已有账号？请登录</text>
+     </view> 

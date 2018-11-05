@@ -1,0 +1,39 @@
+/* pages/my/cash/recharge.wxss */
+
+.Order-Image{
+  background:#FFFFFF;
+}
+
+.Top-Balance{
+display:flex;
+height:110rpx;
+align-items:center;
+margin-left:30rpx;
+border-bottom:solid 1rpx #e4e4e4;
+
+}
+.money-label{
+  font-family:"PingFangTC-Regular";
+  font-size:34rpx;
+  color:#333333;
+  margin-right:30rpx;
+}
+.Money-Text{
+  font-family:"ArialMT";
+  font-size:34rpx;
+  color:#F3630A;
+}
+.Money-Input{
+  font-size:30rpx;
+  font-family:"PingFangTC-Regular";
+  color:#999999;
+}
+.mybtn{
+  width: 80%;
+  background: #CCA96A;
+  color:white;
+  margin: 90rpx auto;
+}
+.writecash{
+  font-size: 36rpx;
+}

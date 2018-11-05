@@ -1,0 +1,109 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/switchcity/switchcity",
+    "pages/index/flashSale/flashSale",
+    "pages/member/member",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/login/forget-pass/forget-pass",
+    "pages/login/find-password/find-password",
+    "pages/login/bindphone/bindphone",
+    "pages/register/register",
+    "pages/register/Agreement/Agreement",
+    "pages/register/after-registration/after-registration",
+    "pages/buy/goodslist/goodslist",
+    "pages/buy/submitOrder/submitOrder",
+    "pages/mine/basicmsg/basicmsg",
+    "pages/member/clickCount/clickCount",
+    "pages/member/orderCount/orderCount",
+    "pages/member/myearnings/myearnings",
+    "pages/member/totalearn-order/totalearn-order",
+    "pages/member/balance/balance",
+    "pages/member/tqcash/tqcash",
+    "pages/member/accum-income/accum-income",
+    "pages/member/vipitems/vipitems",
+    "pages/member/balance/inbalance/inbalance",
+    "pages/member/balance/outbalance/outbalance",
+    "pages/member/incomeData/incomeData",
+    "pages/member/dailyData/dailyData",
+    "pages/mine/myaddress/myaddress",
+    "pages/mine/add-address/add-address",
+    "pages/mine/ser-center/ser-center",
+    "pages/mine/invite/invite",
+    "pages/mine/wallet/wallet",
+    "pages/mine/order-list/order-list",
+    "pages/mine/order-details/order-details",
+    "pages/mine/wallet/prmoney/prmoney",
+    "pages/mine/ser-center/aboutus/aboutus",
+    "pages/mine/ser-center/help-center/help-center",
+    "pages/mine/wallet/Recharge/Recharge",
+    "pages/mine/wallet/accountingRecords/accountingRecords",
+    "pages/mine/invite-phone/invite-phone",
+    "pages/common/common",
+    "pages/common/payment/payment",
+    "pages/classify/classify",
+    "pages/classify/Search/Search",
+    "pages/logs/logs",
+    "pages/mine/logistics/logistics",
+    "pages/mine/resetPass/resetPass",
+    "pages/mine/install/install",
+    "pages/mine/news/news",
+    "pages/buy/goPay/goPay",
+    "pages/mine/orderArea/orderArea",
+    "pages/index/newSquare/newSquare",
+    "pages/index/newsPublish/newsPublish",
+    "pages/index/vacancy/vacancy",
+    "pages/login/pddLogin/pddLogin",
+    "pages/pddCommon/pddCommon",
+    "pages/mine/memberLevel/memberLevel",
+    "pages/mine/fans/fans",
+    "pages/mine/systemNew/systemNew",
+    "pages/mine/partner/partner"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b61c25",
+    "navigationBarTitleText": "掌小龙",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#b61c25",
+    "borderStyle": "#ebebeb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/new/首页2@2x.png",
+        "selectedIconPath": "image/new/首页@2x.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "image/new/分类@2x.png",
+        "selectedIconPath": "image/new/分类2@2x.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "iconPath": "image/new/会员@2x.png",
+        "selectedIconPath": "image/new/会员2@2x.png",
+        "text": "会员"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "image/new/我的@2x.png",
+        "selectedIconPath": "image/new/我的2@2x.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,113 @@
+/* pages/member/myearnings/myearnings.wxss */
+page{
+  background: #f8f8f8;
+}
+.myearn-wrap{
+  width: 100%;
+  height: 80rpx;
+  background: #F9F9F9;
+}
+/* 头部月份 */
+.myearn-header{
+  width: 100%;
+  height:80rpx;
+  border-bottom:1px solid #ebebeb;
+  background: #fff;
+  
+}
+.myearn-header .moon{
+  width:167rpx;
+  height: 80rpx;
+  font-size:30rpx;
+  color:#333;
+  line-height: 80rpx;
+  margin-left: 280rpx;
+
+
+}
+/* 收益 */
+.sum{
+  height: 100%;
+}
+.myearn-share{
+  width: 100%;
+  /* height:156rpx; */
+  height:159rpx;
+  background: #fff;
+}
+
+.myearn-share-top{
+  width: 100%;
+  height: 67rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.myearn-msg{
+  width: 100%;
+}
+.myearn-msg-list{
+  width: 30%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left:30rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+/* 灰色间距 */
+.box{
+  width: 100%;
+  height: 10rpx;
+  background: #f8f8f8;
+}
+
+
+.boxx{
+  height: 319rpx;
+  text-align: center;
+}
+.writing{
+  width: 246rpx;
+  height: 31rpx;
+  color: #999999;
+  font-size: 24rpx;
+  margin-left:264rpx;
+  margin-top:150rpx;
+
+}
+.case{
+  width: 240rpx;
+  height: 78rpx;
+  background: #b61c25;
+  color: #fff;
+  border-radius: 6rpx;
+  font-size: 36rpx;
+  line-height: 78rpx;
+  margin-left:264rpx;
+  text-align: center;
+  margin-top:64rpx;
+}
+
+/* 本月没有收入 */
+/* .admonish{
+  width:338rpx;
+  height:30rpx;
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  text-align: center;
+  margin-top:90rpx;
+  margin-left:212rpx;
+
+  } */
+ .reminder{
+   width: 100%;
+   height: 80rpx;
+   text-align: center;
+   line-height: 80rpx;
+   background: #fff;
+   border-bottom: 1rpx solid  #ebebeb ;
+   font-size: 24rpx;
+   color: #999999;
+
+ }

@@ -1,0 +1,9 @@
+<template name="nav">
+    <view class="weui-flex topbar">      
+      <block wx:for="{{ navs }}" wx:key="">
+        <view data-type="{{ item.name }}" data-index="{{ index }}" class="weui-flex__item" catchtap="changeTab">
+        	<view class="topbar-item {{index==currentType ?'active':''}}">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+</template>

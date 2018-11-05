@@ -1,0 +1,52 @@
+/* pages/mine/news/news.wxss */
+.box image{
+   /* width:122rpx;
+   height:122rpx;
+   margin-top:180rpx;  */
+}
+page{
+    background: #f8f8f8;
+}
+  
+.box{
+    padding:0 24rpx;
+    background: #fff;
+    padding-right:0;
+}
+.news{
+    display: flex;
+    align-items: center;
+    height:140rpx;
+}
+.news image{
+    width:80rpx;
+    height:80rpx;
+    margin-right:24rpx;
+}
+.rightCon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2rpx solid #f2f2f2;
+    width:630rpx;
+    height:140rpx;
+
+}
+.rightCon>image{
+
+    width:16rpx;
+    height:30rpx;
+}
+.title{
+    color:#333;
+    line-height:40rpx;
+    font-size:26rpx;
+}
+.desc{
+    width: 500rpx;
+    color:#666;
+    font-size:22rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,150 @@
+/* pages/mine/orderArea/orderArea.wxss */
+page{
+
+    font-size:52rpx;
+   
+
+}
+view{
+    font-family: PingFangHK-Regular;
+}
+.orderTitle{
+    height:200rpx;
+    background:#fff;
+    padding:0 30rpx;
+    color:#333;
+    padding:34rpx 30rpx;
+    border-bottom:20rpx solid #f9f9f9;
+}
+
+.orderTitle input{
+    width:690rpx;
+    height:95rpx;
+    color:#333;
+    border-bottom:2rpx solid #ebebeb;
+
+}
+.title{
+    color:#333;
+    margin:0 0 22rpx 0;
+    margin-left:30rpx;
+    width:690rpx;
+    padding-top:22rpx;
+}
+.selectInput{
+    width:690rpx;
+    background:#fff;
+    height:80rpx;
+    border-radius:10rpx;
+}
+.selectInput view image{
+    width:26rpx;
+    height:15rpx;
+    vertical-align:middle;
+    margin:45rpx 15rpx;
+}
+.selectedCon{
+    display:inline-block;
+    width:600rpx;
+    line-height:90rpx;
+    height:90rpx;
+    vertical-align:middle;
+    overflow: hidden;
+
+}
+textarea{
+    width:642rpx;
+    height:112rpx;
+    background:#fff;
+    margin:0 30rpx;
+    border-radius:10rpx;
+    border:2rpx solid #ebebeb;
+    overflow:hidden;
+    z-index:10;
+    padding:24rpx;
+    color:#666;
+}
+.btn{
+    displayl:inline-block;
+    background:#ebebeb;
+    width:240rpx;
+    height:80rpx;
+    border-radius:10rpx;
+    font-size:30rpx;
+    margin:0 auto;
+    margin-top:80rpx;
+    color:#b3b3b3;
+    
+}
+button[class="btn"]:after{
+    border:0;
+
+}
+.selecting{
+    width:690rpx;
+    position:absolute;
+    top:95rpx;
+    left:0;
+    background:#fff;
+    border:2rpx solid #ebebeb;
+    max-height:600rpx;
+    z-index:1000;
+}
+.selectAll{
+    position:relative;
+}
+.selecting .option{
+    width:650rpx;
+    height:100rpx;
+    display:flex;
+    align-items:center;
+    overflow: hidden; 
+    padding:0 20rpx;
+    border-bottom:2rpx solid #ebebeb;
+   
+}
+.option view{
+    vertical-align:middle;
+    line-height:43rpx;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.upBox{
+    margin-left:30rpx;
+    width: 180rpx;
+    height:180rpx;
+    border:2rpx dashed #d6d5d9;
+    border-radius: 2rpx;
+    background: #fff;
+    margin-right:20rpx;
+    overflow:hidden;
+}
+.autoImg{
+    width:56rpx;
+    height:56rpx;
+    margin:62rpx;
+}
+.chooseImg{
+    width:180rpx;
+    height:180rpx;
+}
+.upContent:after{
+    content:'';
+    display: table;
+    clear:both;
+}
+.upContent .leftPull view{
+    color:#999;
+    font-size:24rpx;
+    line-height:35rpx;
+}
+.writeInfo{
+    width:750rpx;
+    height:70rpx;
+    line-height:70rpx;
+    text-align:center;
+    color:#999;
+    background:#f9f9f9;
+    font-size:24rpx;
+}

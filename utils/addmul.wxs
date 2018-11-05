@@ -1,0 +1,34 @@
+var filters = {
+  toFix: function (value) {
+    return value.toFixed(2)//此处2为保留两位小数
+  },
+
+  insert_item:function(t, item, index) {  //例如将180604转换成06年04
+    console.log(t)
+    var newstr = "";             //初始化一个空字符串
+    t = t.slice(2);
+    var tmp = t.substring(0, index);
+    var estr = t.substring(index, t.length);
+    newstr += tmp + item + estr;
+    return newstr;
+  },
+  inser_date: function (disp, item, index){
+    var newstr = ""; 
+    var tmp = disp.substring(0, index);
+    var estr = disp.substring(index, disp.length);
+    newstr += tmp + item + estr;
+    return newstr;
+    
+  },
+
+
+  
+}
+module.exports = {
+  toFix: filters.toFix,
+  insert:filters.insert_item,
+  inser: filters.inser_date,
+  arrive: filters.arrive_time,
+
+
+}

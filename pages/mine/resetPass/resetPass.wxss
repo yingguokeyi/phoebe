@@ -1,0 +1,47 @@
+/* pages/mine/resetPass/resetPass.wxss */
+.box{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#f9f9f9;
+}
+
+.oldInput image{
+    width:40rpx;
+    height:40rpx;
+    margin:25rpx 20rpx 0 0;
+    vertical-align: top;
+}
+.pass{
+    height:90rpx;
+    width:650rpx;
+    border:2rpx solid #ebebeb;
+    border-radius:10rpx;
+    line-height:90rpx;
+    background:#fff;
+    margin-left:30rpx;
+    padding-left:20rpx;
+}
+.title{
+    margin:42rpx 0 22rpx 50rpx;
+    color:#333;
+
+}
+.pass input{
+    display:inline-block;
+    height:90rpx;
+    width:300rpx;
+}
+.finish button{
+    background:#ebebeb;
+    width:240rpx;
+    height:84rpx;
+    line-height:84rpx;
+    color:#b3b3b3;
+    margin-top:80rpx;
+}
+button[class="btn"]:after{
+    border:0;
+}

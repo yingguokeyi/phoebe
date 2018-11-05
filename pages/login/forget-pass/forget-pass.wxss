@@ -1,0 +1,183 @@
+/* 新改版的注册页面----头部背景图 */
+.register-image image{
+  width:583rpx;
+  height:335rpx;
+  position:absolute;
+  z-index:9;
+  left: 83rpx;
+  /* top:20rpx; */
+}
+/*logo*/
+.register-logo {
+  width:583rpx;
+  height:335rpx;
+  position:relative;
+  margin-bottom:20rpx;
+}
+.register-logo image {
+  width: 136rpx;
+  height: 136rpx;
+  position:absolute;
+  top:100rpx;
+  left:53%;
+}
+.content {
+  text-align: center;
+   width: 650rpx;
+  /* height: 1000rpx; */
+}
+.forget-tit{
+  width: 100%;
+  height: 88rpx;
+  color:#b61c25;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-left:52rpx;
+
+}
+.userinfo {
+  margin-top: 100rpx;
+  margin-bottom: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-logIcon{
+  width: 28rpx;
+  height: 36rpx;
+   margin: 30rpx 20rpx;
+}
+
+.userinfo-verifiIcon{
+  width: 28rpx;
+  height:36rpx;
+   margin: 30rpx 20rpx; 
+}
+
+.input-log{
+  display: flex;
+  /* border-bottom: 1px solid #ddd; */
+  flex-direction: row;
+  width:566rpx;
+  height:86rpx;
+  border:1rpx solid #ddd;
+  border-radius:23rpx;
+  align-content:center;
+  margin-left:90rpx;
+
+
+}
+.piccode{
+  display: flex;
+  /* border-bottom: 1px solid #ddd; */
+  flex-direction: row;
+   width:566rpx;
+  height:86rpx;
+  border:1rpx solid #ddd;
+  border-radius:23rpx;
+  align-content:center;
+  margin-top:16px;
+  margin-left:90rpx;
+
+}
+.Imgcode{
+  width: 250rpx;
+  height: 70rpx;
+  margin-top:8rpx;
+  
+}
+.input-area {
+  background-color: #fff;
+  text-align: left;
+  /* border-top: 1px solid #ddd; */
+}
+
+.input-area input {
+  height: 86rpx;
+  width: 265rpx;
+  line-height: 86rpx;
+  font-size: 30rpx;
+  margin-left: 25rpx;
+  color: #b61c25;
+}
+
+.btn-area {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-area button {
+  margin-top: 40rpx;
+  color: #fff;
+}
+
+.txt-area {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.forgot-password {
+  color: #888;
+}
+
+.register {
+  color: #f90;
+}
+
+.forgot-password:active, .register:active {
+  opacity: 0.7;
+}
+
+
+.smsCode {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+
+}
+.input-log input {
+   width: 600rpx;
+   margin-left: 20rpx;
+   color: #b61c25;
+}
+.smsCode input {
+   width: 350rpx;
+   margin-right: 100rpx;
+}
+.next-btn{
+  margin-top: 80rpx;
+  width: 566rpx;
+  height: 86rpx;
+  background: #b61c25;
+  border-radius: 23rpx;
+  margin-left: 95rpx;
+  color:#fff;
+  outline:none;
+}
+
+.getSmsCodeBtn{
+  width: 218rpx;
+  color:#a5772c;
+  font-size:30rpx;
+  margin-right:30rpx;
+  line-height: 102rpx;
+  text-align: center;
+  background:#fff;
+}
+.getSmsCodeBtn::after{
+  border:0;
+}
+button[class="next-btn"]::after {
+  border: 0;
+} 

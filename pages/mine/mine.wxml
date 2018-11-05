@@ -1,0 +1,245 @@
+<view class="myContainer">
+  <!-- 头部 -->
+  <view class="header-Top">
+
+    <!-- 用户已经登录而且已经授权的信息 -->
+    <view class='header-Datum' wx:if="{{hasLogin == true && isAuth == true}}">
+      <!-- 用户头像 -->
+      <view class='header-Image'>
+        <image class="userinfo-avatar"  bindtap='basicinfo' src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <!-- <image wx:if="{{!hasLogin}}" class="userinfo-avatar" bindtap="goLogin" src="../../image/person/autoPic.png" background-size="cover"></image> -->
+      </view>
+      <!-- 用户信息 -->
+      <view class='header-Text'>
+        <view class='header-userName'>
+           <view  bindtap='basicinfo'>
+               <text style="display:block;color:#fff">{{userInfo.nickName}}</text>
+               <text class='header-phone'>邀请码 ：{{phone}}</text>
+               <text class="copy" catchtap="copy">复制</text>
+           </view>
+           <view class="goinfor" bindtap="goLevel">
+              <text wx:if="{{mLevel == 1}}">普通会员</text>
+              <text wx:if="{{mLevel == 2}}">小掌柜</text>
+              <text wx:if="{{mLevel == 3}}">大掌柜</text>
+              <image src="../../image/new/goinfor.png"></image>
+           </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 用户没有登录也没有授权的信息 -->
+    <view class='header-Datum' wx:if="{{hasLogin == false}}">
+      <view class='header-Image'>
+        <image class="userinfo-avatar" bindtap="goLogin" src="../../image/person/autoPic.png" background-size="cover"></image>
+      </view>
+      <!-- 用户信息 -->
+      <view class='header-Text'>
+        <view class='header-userName' bindtap='goLogin'  wx:if="{{hasLogin == false}}">
+          <view>
+            <text style="display:block;color:#fff">登录注册</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <!-- 用户没有授权而且已经登录的信息 -->
+    <button class='header-Datum' wx:if="{{isAuth == false && hasLogin == true}}"  hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      <!-- 用户头像 -->
+      <view class='header-Image'>
+        <image class="userinfo-avatar" bindtap="goLogin" src="../../image/person/hasAuth.png" background-size="cover"></image>
+      </view>
+      <!-- 用户信息 -->
+      <view class='header-Text'>
+         <view class='header-userName'>
+           <view  bindtap='basicinfo'>
+               <text style="display:block;color:#fff">{{phone}}</text>
+               <text class='header-phone'>邀请码 ：{{phone}}</text>
+               <text class="copy" catchtap="copy">复制</text>
+           </view>
+           <view class="goinfor" bindtap="goLevel">
+              <text wx:if="{{mLevel == 1}}">普通会员</text>
+              <text wx:if="{{mLevel == 2}}">小掌柜</text>
+              <text wx:if="{{mLevel == 3}}">大掌柜</text>
+              <image src="../../image/new/goinfor.png"></image>
+           </view>
+        </view>
+      </view>
+
+    </button>
+
+     <!--收藏，钱包，优惠卷-->
+     <!-- <view class='collect'>
+       <view class='collect-inner'>
+        <view class='collect-about' bindtap="no">
+          <image src='../../image/person/collect.png'></image>
+          <view style='margin-top:10rpx;font-size:24rpx;font-weight:bold;color:#fff;'>收藏</view>
+        </view>
+        <view class='collect-about' bindtap="towallet">
+          <image src='../../image/person/wallet.png'></image>
+          <view style='margin-top:10rpx;font-size:24rpx;font-weight:bold;color:#fff;'>钱包</view>
+        </view>
+        <view class='collect-about' bindtap="no">
+          <image src='../../image/person/kfc.png'></image>
+          <view style='margin-top:10rpx;font-size:24rpx;font-weight:bold;color:#fff;'>优惠券</view>
+        </view>
+      </view>
+     </view> -->
+
+  </view>
+  <view class="r_metter">
+        <!-- 我的订单 -->
+      <view class='order'>
+          <view class='order-inner'>
+              <view class='or_li' bindtap="goAll">
+              <view>
+                <text style='margin-left:30rpx;'>我的订单</text>
+              </view>
+              <view>  
+                <text style='font-size:26rpx;color:#999999;margin-right:10rpx;margin-top:2rpx;'>查看全部</text>
+                <image class='or_jiantou' src='../../image/right.png'></image>
+                </view>
+              </view>   
+          </view>
+      </view> 
+  
+  <!--订单  -->
+  <view class='myOrder'>
+    <view class='myOrder-inner'>
+      <view class='order-about' wx:for="{{tabs}}" wx:key="item" data-index="{{index+1}}" bindtap='toorderList'>
+        <image src='{{item.imgUrl}}'></image>
+        <view style='margin-top:10rpx;font-size:24rpx;font-weight:bold'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的粉丝 -->
+  <view class="myFans">
+    <view class="fansTitle" bindtap="toMyFans">
+      <view>我的粉丝</view>
+      <view>
+        <text class="lookDetail">查看详细</text>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class="fansLevel">
+      <view class="simple" data-id="1" bindtap="fanDetail">
+        <text>{{simpleNum}}人</text>
+        <text>普通会员</text>
+      </view>
+      <view class="smallCab" data-id="2" bindtap="fanDetail">
+        <text>{{smallNum}}人</text>
+        <text>小掌柜</text>
+      </view>
+      <view class="bigCab" data-id="3" bindtap="fanDetail">
+        <text>{{bigNum}}人</text>
+        <text>大掌柜</text>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <!-- <view class='my-bottom'>
+   <view class='li orderArea' bindtap="orderArea" style="margin-bottom:20rpx;">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/zhangdaz.png'></image>
+        <text>掌达赚回填单</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view> -->
+  <view class='my-bottom'>
+   <view class='li orderArea' bindtap="partner">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/hehuo.png'></image>
+        <text>成为合伙人</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap='toinvite' style="margin-bottom:20rpx;">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/friend.png'></image>
+        <text>邀请好友</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap="goNews">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/xx.png'></image>
+        <text> 消息</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap="towallet">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/wallet1.png'></image>
+        <text> 钱包</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    
+    <view class='li li_friend' bindtap='tohelp'>
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/help.png'></image>
+        <text>帮助中心</text>
+      </view>
+      <view>
+       <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap='no'>
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/service.png'></image>
+        <text>联系客服</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap="no">
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/accuse.png'></image>
+        <text>投诉建议</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <view class='li' bindtap='install'>
+      <view class='newDiv'>
+        <image class='news'  src='../../image/person/set.png'></image>
+        <text>设置</text>
+      </view>
+      <view>
+        <image class='jiantou' src='../../image/right.png'></image>
+      </view>
+    </view>
+    <!--<view class='li' bindtap='towallet'>
+      <text>我的钱包</text>
+      <image class='jiantou' src='../../image/right.png'></image>
+    </view>
+     <view class="li"  bindtap="install">
+      <text>设置</text>
+      <image class='jiantou' src='../../image/right.png'></image>  
+    </view>  -->
+    <!-- <view class="li" wx:if="{{hasLogin}}" bindtap="logout">
+      <text>退出登录</text>
+      <image class='jiantou' src='../../image/right.png'></image>  
+    </view>  -->
+
+    <!-- <view class="bottom-area" wx:if="{{hasLogin}}">
+      <button class="logout" bindtap="logout">退出登录</button>    
+    </view>  -->
+  </view>
+
+</view>
+  <!--  -->
+ 
+</view>

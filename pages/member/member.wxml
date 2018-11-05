@@ -1,0 +1,171 @@
+<!--pages/member/member.wxml-->
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+
+<view class='member-container'>
+<!-- 顶部信息 -->
+
+    <view>
+       
+        <view class="memberTop">
+            <view>
+                <view class="memberPic" style="float:left">
+                       <image src="{{userInfo.avatarUrl}}"></image>   
+                     
+                </view>
+                <view class="memberName">
+                     
+                      <text style="color:#333;font-size:26rpx;width:143px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{userInfo.nickName}}</text> 
+                    <text style="color:#333;font-size:26rpx;margin-bottom:-94rpx;margin-left:-144px;">邀请码：{{invitecodehide}}</text>
+                    <text class='shares'>分享</text>
+                </view>
+               
+                <view style="clear:both"></view>
+                
+            </view>
+            
+    
+        <view class="backPic">
+            <image src="../../image/red.png"></image>
+            <view class="actItem">
+               
+                <view class="leftPull">
+                    <view style="font-size:48rpx;color:#f1e9df;">￥{{filters.toFix(canPutForward/100)}}</view>
+                    <view style="font-size:24rpx;color:#f1e9df;margin-top:21rpx;">可提现金额</view>
+                    <view class="cash" bindtap='tqcash'>去提现</view>
+                </view>
+                <view class="rightPull">
+                    
+                     <view class='vip-examine member'  bindtap='getearnings'>
+                        <text style='margin-right:27rpx;'>全部收入数据</text>
+                        <image style='width:16rpx;height:26rpx;margin-right:27rpx;margin-bottom:-3rpx;' src='../../image/yellow.png'></image>
+                    </view>
+                     <view style="clear:both"></view> 
+                    <view class="brokerage" bindtap='unopened'>去赚钱</view>
+                </view>
+            </view>
+        </view>  
+        <!-- 预计可提现金额和回填单累计收益   -->
+        <view class='predict'>
+            <view class='predict-internet'>
+              <view class='predict-left'>
+                 <view class='Withdraw-top'>预计可提现金额</view>
+                 <view class='Withdraw-bottom'><text style='font-size:50rpx;color:#b61c25;'>￥{{filters.toFix(totalPreIncome/100)}}</text></view>
+              </view>
+              <view class='predict-wire'></view>
+              <view class='predict-right'>
+                 <view class='predict-top'>累计收益</view>
+                 <view class='predict-bottom'><text style='font-size:50rpx;color:#b61c25;'>￥{{filters.toFix( totalIncome/100)}}</text></view>
+              </view>
+            </view>
+        </view>
+
+           
+        </view>
+        
+    </view> 
+
+
+<!--为您推荐  -->
+<!--<view class="all" style="background:#fff;height:60rpx;">
+    <view class="line"></view>
+    <view class="recommend">为您推荐</view>
+    <view class="line"></view>
+</view>-->
+
+
+  
+</view>
+
+<!-- 分享 -->
+
+
+<!--具体项  -->
+<view style="display:none">   
+  <view class='member-top1'>
+       <view class="member-top-inner">
+            <!--收益  -->
+           <view class='member-getall'>
+               <view class='getmenoy-left'>
+                    <text bindtap='tqcash'>
+                             <text style='font-size:28rpx;'>￥</text>
+                             <text style='font-size:36rpx;' wx:if='{{balance != 0}}'>{{balance/100}}</text>
+                             <text style='font-size:36rpx;' wx:if='{{balance == 0}}'>0.00</text>
+                             <text class='member-tixian'>提现</text>
+                    </text>
+                    <text bindtap='accimIncome' style='font-weight:bold'>累计收益(元)</text>
+               </view>
+               <view class='getmenoy-right;' bindtap='getearnings'>
+                     全部收入数据
+               </view>
+           </view>
+       </view>
+   </view>
+
+  <view class='member-count'>
+     <view style='margin-left:50rpx;' class='list' bindtap='clickcount'>
+         <image src='../../image/member/dianji.png'></image>
+         <view style="color:#666;font-family: PingFangSC-Regular;font-size: 28rpx;">点击量</view>
+         <view style="color:#999;font-family: PingFangSC-Regular;font-size: 24rpx;">未开放</view>
+     </view>
+     <view class='list' bindtap='ordercount'>
+         <image src='../../image/member/ddl.png'></image>
+         <view style="color:#666;font-family: PingFangSC-Regular;font-size: 28rpx;">订单量</view>
+         <view style="color:#999;font-family: PingFangSC-Regular;font-size: 24rpx;">未开放</view>
+     </view>
+     <view style='margin-right:50rpx;' class='list'>
+         <image src='../../image/member/ddje.png'></image>
+         <view style="color:#666;font-family: PingFangSC-Regular;font-size: 28rpx;">订单金额</view>
+         <view style="color:#999;font-family: PingFangSC-Regular;font-size: 24rpx;">未开放</view>
+     </view> 
+  </view>
+<!-- 分享赚钱 -->
+  <view class='member-share'>
+     <view class='member-wrap'>
+          <view class='back-money' bindtap='unopened'> 
+             <text style='margin:25rpx 0 10rpx;font-size:28rpx;color:#333;'>返现</text>
+             <text wx:if='{{selfCommission != 0}}'><text style='font-size:28rpx;'>￥</text>{{selfCommission/100}}</text>
+              <text wx:if='{{selfCommission == 0}}'><text style='font-size:28rpx;'>￥</text>0.00</text>
+          </view>
+          <view class='get-money' bindtap='unopened'>
+             <text style='margin:30rpx 0 10rpx;font-size:28rpx;color:#333;'>分享赚钱</text>
+             <text style='font-size:28rpx;color:#999;'>未开放</text>
+          </view>
+     </view>
+  
+  </view>
+<!--我的收入标题  -->
+    <view class='my-income'>
+         — 我的收入 —
+    </view>
+
+<!--我的收入  内容  -->
+    <view class='my-income-wrap'>
+        <view class='income-list' bindtap='totalearn_today'>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0 6rpx;' wx:if='{{todayCommission != 0}}'>￥{{todayCommission/100}}</text>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0 10rpx;' wx:if='{{todayCommission == 0}}'>￥0.00</text>
+           <text style='font-size:30rpx;color:#666'>今日</text>
+           <text style='font-size:30rpx;color:#666'>预估收入</text>
+        </view>
+
+        <view class='income-list' bindtap='totalearn_month'>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0 6rpx;color:#999;'>未开放</text>
+           <text style='font-size:30rpx;color:#666'>本月</text>
+           <text style='font-size:30rpx;color:#666'>预估收入</text>
+        </view>
+
+        <view class='income-list' bindtap='totalearn'>
+        <text style='font-size:24rpx;color:#333;margin:20rpx 0 6rpx;' wx:if='{{commission != 0}}'>￥{{commission/100}}</text>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0 10rpx;' wx:if='{{commission == 0}}'>￥0.00</text>
+      
+           <text style='font-size:30rpx;color:#666'>累计</text>
+           <text style='font-size:30rpx;color:#666'>预估收入</text>
+        </view>
+
+        <view class='income-list' bindtap="tixian">
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0 6rpx;color:#999;'>未开放</text>
+           <text style='font-size:30rpx;color:#666'>可</text>
+           <text style='font-size:30rpx;color:#666'>提现金额</text>
+        </view>
+    </view>
+</view>
+

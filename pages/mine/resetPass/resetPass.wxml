@@ -1,0 +1,23 @@
+<!--pages/mine/resetPass/resetPass.wxml-->
+<!-- <text>pages/mine/resetPass/resetPass.wxml</text> -->
+<view class="box">
+    <view class=" oldPass">
+        <view class="title">输入现在的密码</view>
+        <view class="pass oldInput">
+            <image src="../../../image/new/resetPass.png"></image>
+            <input placeholder="请输入现在的密码" password="{{true}}" maxlength="20" type="text" bindblur="oldValue" bindinput="oldvaluing" />
+        </view>
+    </view>
+     <view class=" newPass">
+        <view class="title">输入新的密码</view>
+        <view class="pass oldInput">
+            <image src="../../../image/new/resetPass.png"></image>
+            <input placeholder="请输入6-20位的密码" password="{{true}}" maxlength="20" type="text" bindblur="newValue" bindinput="valuing" />
+        </view>
+    </view>
+
+
+    <view class="finish">
+        <button class="btn" hover-class="none" disabled="{{finishDisabled}}" style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}">完成</button>
+    </view>
+</view>

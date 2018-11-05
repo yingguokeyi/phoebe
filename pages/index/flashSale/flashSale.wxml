@@ -1,0 +1,126 @@
+<!-- <wxs module="filters" src="../../../utils/addmul.wxs"></wxs> -->
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view>
+<!-- 限时购规则 -->
+<view class='rule'>
+  <text style='font-size:24rpx;color:#333;margin-left:26rpx;'>限时购规则：</text>限时购商品抢完即止， <text style='font-size:22rpx;color:#666666;'>不参与其他优惠活动。</text>
+</view>
+<!-- 限时抢购时间 -->
+<view class='time' >
+    <view class="time_left {{seckillId == id1?'red':'default'}}"  bindtap="selected" data-price="{{id1}}" data-status="{{RunningStatus1}}" >
+        {{startTime}}
+        <text style='color:#fff;font-size:27rpx;'>开抢</text>
+    </view>
+
+    <view class="time_right {{seckillId == id2?'red':'default'}} " bindtap="selected1" data-price="{{id2}}" data-status="{{RunningStatus2}}">
+        {{laterTime}}
+        <text style='color:#fff;font-size:27rpx;'>开抢</text>
+    </view>
+
+</view>
+<scroll-view  class="{{selected?'show':'hidden'}}"  style=" width:100%;" scroll-y="true" bindscrolltolower="onPullDownRefresh" lower-threshold="6">
+ <view wx:for="{{result}}" wx:key="item" wx:if="{{result !=''}}">
+     <view class="cargo-list" data-id="{{item.spu_id}}" bindtap="tocommon" data-source="{{item.source_code}}">
+         <view class="cargo-pro-image">
+             <image src="{{item.image}}"></image>
+          </view>
+          <view class="cargo-solid">
+
+             <view class="cargo-pro-list">
+                <view class="cargo-pro-title">
+                  <text class="cargo-pro-texts">{{item.spu_name}}</text>
+                </view>
+                <view class="cargo-pro-desc">
+                  <text> {{item.first_attribute}} {{item.second_attribute}}</text>
+                </view>
+                <view class="cargo-pro-money">
+                   <text class="cargo-pro-price">￥ {{filters.toFix(item.market_price/100)}}</text>
+                   <text class='cargo-pro-cancel'>￥{{filters.toFix(item.original_price/100)}}</text>
+                    <!-- <text class='cargo-pro-backtrack'>返现</text>
+                    <text class="cargo-pro-price">￥ 10.00</text> -->
+                </view>
+                <!-- 按钮 -->
+                  <!-- <view class='keypads' wx:if="{{runningStatus==1}}">未到时间</view>
+                  <view class='keypad' wx:if="{{runningStatus==2 && item.stock != 0}}">立即购买</view>
+                  <view class='keypads' wx:if="{{runningStatus==2 && item.stock == 0}}">已售完</view>
+                  <view class='keypads' wx:if="{{runningStatus==3}}">已结束</view> -->
+               </view>
+                   <view class='keypads' wx:if="{{runningStatus==1}}">未到时间</view>
+                  <view class='keypad' wx:if="{{runningStatus==2 && item.stock != 0}}">立即购买</view>
+                  <view class='keypads' wx:if="{{runningStatus==2 && item.stock == 0}}">已售完</view>
+                  <view class='keypads' wx:if="{{runningStatus==3}}">已结束</view>
+             </view>
+             <!-- 售完遮罩层 -->
+              <!-- <view class='blank' wx:if="{{runningStatus==2 && item.stock == 0}}" >
+               <image  src='../../../image/new/common/blank.png'></image>
+             </view>  -->
+           </view>
+        <!-- <view class="cargo-list" wx:if="{{stock == 0}}">
+            <view class="cargo-pro-image">
+              <image src="{{item.image}}"></image>
+            </view>    
+            <view class="cargo-solid">
+              <view class="cargo-pro-list">
+              <view class="cargo-pro-title">
+              <text class="cargo-pro-texts">{{item.spu_name}}</text>
+            </view>
+            <view class="cargo-pro-desc">
+                <text>{{item.first_attribute}} {{item.second_attribute}}</text>
+            </view>
+            <view class="cargo-pro-money">
+                  <text class="cargo-pro-price">￥  {{item.markey_price}}</text>
+                  <text class='cargo-pro-cancel'>(￥{{item.original_price}})</text>
+            </view>
+              <view class='keypads'>已售完</view>
+            </view>
+          </view>
+             <view class='blank'>
+               <image  src='../../../image/new/common/blank.png'></image>
+             </view> 
+            
+        </view>   -->
+    </view>      
+</scroll-view>
+
+
+<scroll-view  class="{{selected1?'show':'hidden'}}"  style="width:100%;" scroll-y="true" bindscrolltolower="onPullDownRefresh" lower-threshold="6">
+     <view class="cargo-list" wx:for="{{result}}" wx:key="item" data-id="{{item.spu_id}}" bindtap="tocommon" wx:if="{{result !=''}}">
+            <view class="cargo-pro-image">
+              <image src="{{item.image}}"></image>
+            </view>    
+            <view class="cargo-solid">
+              <view class="cargo-pro-list">
+              <view class="cargo-pro-title">
+              <text class="cargo-pro-texts">{{item.spu_name}}</text>
+            </view>
+            <view class="cargo-pro-desc">
+                <text>{{item.first_attribute}} {{item.second_attribute}}</text>
+            </view>
+            <view class="cargo-pro-money">
+                  <text class="cargo-pro-price">￥ {{filters.toFix(item.market_price/100)}}</text>
+                  <text class='cargo-pro-cancel'>￥{{filters.toFix(item.original_price/100)}}</text>
+                  <!-- <text class='cargo-pro-backtrack'>返现</text>
+                  <text class="cargo-pro-price">￥ 10.00</text> -->
+              </view>
+              
+                <!-- 按钮 -->
+                <!-- <view class='keypads' wx:if="{{runningStatus==1}}">未到时间</view>
+                <view class='keypad' wx:if="{{runningStatus==2 && item.stock != 0}}">立即购买</view>
+                <view class='keypads' wx:if="{{runningStatus==2 && item.stock == 0}}">已售完</view>
+                <view class='keypads' wx:if="{{runningStatus==3}}">已结束</view>  -->
+            </view>
+                <view class='keypads' wx:if="{{runningStatus==1}}">未到时间</view>
+                <view class='keypad' wx:if="{{runningStatus==2 && item.stock != 0}}">立即购买</view>
+                <view class='keypads' wx:if="{{runningStatus==2 && item.stock == 0}}">已售完</view>
+                <view class='keypads' wx:if="{{runningStatus==3}}">已结束</view> 
+          </view>
+           <!-- 售完遮罩层 -->
+           <!-- <view class='blank' wx:if="{{runningStatus==2 && item.stock == 0}}" >
+            <image  src='../../../image/new/common/blank.png'></image>
+          </view>  -->
+        </view>                
+</scroll-view>
+</view>
+<view class="boring" wx:if="{{result ==''}}">
+      本场次下暂时没有活动商品哦！
+</view>

@@ -1,0 +1,125 @@
+.wxSearch{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  /* border-top: 1px #eee solid; */
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.wxSearchInner{
+  background-color: #fff;
+  height: 100%;
+}
+.wxSearch-section{
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px #eee solid;
+}
+/*搜索框*/
+.inportWrap{
+  height: 60rpx;
+  margin:20rpx 44rpx 20rpx 44rpx;
+  border-radius: 8rpx;
+  background: #f5f5f5;
+  display:flex;
+  align-items:center;
+}
+.wxSearch-input{
+  width: 400rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: left;
+  margin-left: 12rpx;
+  font-size:28rpx;
+  color:#999999;
+  float:left;
+}
+.wxSearch-button{
+  height:60rpx;
+  float:right;
+}
+
+
+/*历史记录列表*/
+.wxSearchHistory{
+  padding-top:20rpx;
+}
+.wxSearchHistoryList{
+ display:flex;
+ flex-wrap:wrap;
+ margin:0 30rpx 10rpx 30rpx; 
+}
+.wxSearchHistoryItem{
+  line-height:64rpx;
+  padding: 0 12rpx;
+  font-size:26rpx;
+  border: 1rpx solid #ebebeb;
+  border-radius:8rpx;
+  background:#f5f5f5;
+  color:#999999;
+ /* margin:0 10rpx 20rpx 10rpx; */
+ margin:0 10rpx 170rpx 10rpx;
+}
+.wxSearchHistoryItemDel{
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+/*热门搜索*/ 
+.wxSearchKey{
+  margin-top:20rpx;
+} 
+.wxSearch-hot{
+   display:flex;
+   justify-content:space-between;
+}
+.wxSearch-Title{
+  font-family: "PingFangSC-Regular";  
+  font-size: 30rpx;
+  color: #333333;
+  display: block;
+  padding: 0 0 40rpx 30rpx;
+}
+.wxSearch-change{
+  width:90rpx;
+  height:38rpx;
+  line-height:38rpx;
+  text-align:center;
+  font-family: "PingFangSC-Regular";
+  font-size:22rpx;
+  color:#b61c25;
+  border:solid 1rpx #b61c25;
+  border-radius:6rpx;
+  margin-right:24rpx;
+}
+.wxSearchKeyList{
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 30rpx 10rpx 30rpx; 
+}
+.wxSearchKeyItem{
+  line-height:64rpx;
+  padding: 0 12rpx;
+  font-size:26rpx;
+  border: 1rpx solid #ebebeb;
+  border-radius:8rpx;
+  background:#f5f5f5;
+  color:#999999;
+  margin:0 10rpx 20rpx 10rpx; 
+}
+/*清空历史搜索*/
+.wxSearchDeleteAllBtn{
+  height:96rpx;
+  line-height:96rpx;
+  margin:0 30rpx;
+  text-align: center;
+ /* background:#b61c25;*/
+  border-radius:8rpx;
+  font-family: "PingFangHK-Regular";
+  font-size:36rpx;
+  color:#999999;
+}

@@ -1,0 +1,257 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<!-- <view bindtouchstart="touchStart" bindtouchend="touchEnd"> -->
+<!--首页轮播  -->
+  <swiper class="swiper-box" style="width:100%;height:380rpx" indicator-dots="{{indicatorDots}}" indicator-color="transparent" indicator-active-color="rgb(182,28,37)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <view wx:if='{{isHasBanner==false}}' wx:for="{{imgUrls}}" wx:key="item" bindtap='togood' id='{{item.category}}' data-uri='{{item.url_link}}'>
+      <swiper-item>
+        <image  src="{{item.image}}" class="slide-image" style="width:100%;height:380rpx"/>
+      </swiper-item>
+    </view>
+    <view wx:if='{{isHasBanner==true}}' style="width:100%;height:380rpx"></view>
+  </swiper>
+
+
+ <view id="limitBuy">
+     <!-- 限时秒抢-->
+  <view class='deseno' wx:if="{{ message == 1}}">
+      <view class='ms' wx:if='{{result!= ""}}' bindtap='products'>
+          <!-- 开抢时间 -->
+          <view class='bonus' >
+            <image class='img'  src='{{imagePath}}'></image>
+            <view class='bonus_s'>{{sekillStartTime}}开抢</view>  
+          </view>  
+          <!-- 倒计时时间 -->
+          <view class='countdown'> 
+            <view class='chance'>{{countDownHour}}</view>
+              <view class='partition'>
+                <view class='partition_a'></view>
+                <view class='partition_b'></view>
+              </view>
+              <view class='point'>{{countDownMinute}}</view>
+              <view class='partition'>
+                <view class='partition_a'></view>
+                <view class='partition_b'></view>
+              </view>
+              <view class='sec'>{{countDownSecond}}</view>
+          </view>
+      </view> 
+      <!-- 商品列表 -->
+      <view class='setMeal' >
+        <view class='setMeal-inner'>
+          <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
+            <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products' id='{{item.category}}' data-uri='{{item.uri}}'> 
+                  <image src='{{item.image}}' mode='aspectFit'></image>
+                  <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
+                  <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
+            </view>     
+          </scroll-view>     
+          <!--分割线  -->
+          <view class='line'></view>
+        </view>
+      </view> 
+  </view>     
+
+  <!-- 限时秒抢今天场次结束 -->
+  <view class='deseno'  wx:if="{{ message == 2}}">
+      <view class='ms' wx:if='{{result!= ""}}'>
+          <!-- 开抢时间 -->
+          <view class='bonus' >
+            <image class='img'  src='{{imagePath}}'></image>
+            <view class='over' >今日场次已结束</view>  
+          </view>  
+      </view> 
+      <!-- 商品列表 -->
+      <view class='setMeal' >
+        <view class='setMeal-inner'>
+          <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
+            <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products2' data-id="{{item.seckillId}}"  id='{{item.category}}' data-uri='{{item.uri}}'> 
+                  <image src='{{item.image}}' mode='aspectFit'></image>
+                  <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
+                  <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
+            </view>     
+          </scroll-view>     
+          <!--分割线  -->
+          <view class='line'></view>
+        </view>
+      </view> 
+  </view>
+ </view>      
+
+<!-- 限时秒抢所有场次结束 -->
+<view class='deseno'  wx:if="{{ message == 3}}">
+    <view class='ms' wx:if='{{result!= ""}}' bindtap='products'>
+        <!-- 开抢时间 -->
+        <view class='bonus' >
+          <image class='img'  src='{{imagePath}}'></image>
+          <view class='bonus_s'>{{sekillStartTime}}开抢</view>  
+        </view>  
+        <!-- 倒计时时间 -->
+        <view class='countdown'> 
+         <view class='chance'>{{countDownHour}}</view>
+            <view class='partition'>
+              <view class='partition_a'></view>
+              <view class='partition_b'></view>
+            </view>
+            <view class='point'>{{countDownMinute}}</view>
+            <view class='partition'>
+              <view class='partition_a'></view>
+              <view class='partition_b'></view>
+            </view>
+            <view class='sec'>{{countDownSecond}}</view>
+        </view>
+    </view> 
+    <!-- 商品列表 -->
+    <view class='setMeal'>
+      <view class='setMeal-inner'>
+        <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
+          <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products' id='{{item.category}}' data-uri='{{item.uri}}'> 
+                <image src='{{item.image}}' mode='aspectFit'></image>
+                <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
+                <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
+          </view>     
+        </scroll-view>     
+        <!--分割线  -->
+        <view class='line'></view>
+      </view>
+    </view> 
+</view>      
+
+  <!-- 社区服务中心 -->
+  <!-- <view class='community'>
+    <view class='community_caput'>
+      <view class='community_left'>
+        <image style=' width: 216rpx;height: 48rpx;' src='../../image/new/common/service.png'></image>
+        <view class='community_tit' > 社区服务中心</view> 
+      </view>
+      <view class='community_right'>
+        <text style='font-size:22rpx;color:#333;'>查看更多</text>
+        <image src='../../image/new/cashAuth.png' style='width:12rpx;height:18rpx;margin-left:12rpx;'></image>
+      </view>
+    </view> -->
+    <!-- 广告内容-轮播 -->
+    <!--<view class='scroll'>
+      <view class='content'>
+        <view class='matter'>
+            <view class='recruit'>
+              <view class='recruit_top'>
+                    <view class='tit_left'>招聘</view>
+                    <view class='tit_right'>年代初计算呢都比较被精神病的并插进宿管部有五个波纹管服务价格吧复位杆</view>
+              </view>
+              <view class='recruit_top'>
+                    <view class='tit_left'>通知</view>
+                    <view class='tit_right'>年代初计算呢都比较被精神病的并插进宿管部有五个波纹管服务价格吧复位杆</view>
+              </view>
+              <view class='recruit_top'>
+                    <view class='tit_left'>通知</view>
+                    <view class='tit_right'>年代初计算呢都比较被精神病的并插进宿管部有五个波纹管服务价格吧复位杆</view>
+              </view>
+            </view>
+          
+        </view>
+      </view>
+    </view> -->
+  <!-- <swiper autoplay="{{autoplay}}" interval="{{interval}}" style="width:100%;height:200rpx;background: #fff;" duration="{{duration}}" vertical="{{vertical}}" current="{{current}}" circular="true" >      
+        <swiper-item  >
+            <view class='recruit_top'>
+              <view class='tit_left'>招聘</view>
+              <view class='tit_right'>亲眼见证法国队获胜 看台上的马克龙乐开了花</view>
+            </view>
+            <view class='recruit_top'>
+                  <view class='tit_left'>通知</view>
+                  <view class='tit_right'>亲眼见证法国队获胜 看台上的马克龙乐开了花复位杆</view>
+            </view>
+            <view class='recruit_top'>
+                  <view class='tit_left'>通知</view>
+                  <view class='tit_right'>亲眼见证法国队获胜 看台上的马克龙乐开了花价格吧复位杆</view>
+            </view> 
+        </swiper-item> 
+      </swiper> -->
+      <!-- 遮罩层 -->
+      <!-- <view class='ward'></view>
+  </view>   -->
+
+  <!--分割线  -->
+  <view class='line'></view>
+  <!-- 商品分类及商品  -->
+  <view class="allGoods">
+    <view id="affix" class="navList {{isFixNav == true  ? 'active':''}}">
+        <scroll-view class="scroll-view_H" scroll-x style="width: 100%" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
+          <view class="navItem {{navNow == item.opt_id?'active':''}}" wx:for="{{navList}}" wx:key="item" data-index="{{index}}"  data-id="{{item.opt_id}}" bindtap="selectNav">{{item.opt_name}}</view>                  
+        </scroll-view>
+    </view>
+      <view class="goodsList" id="goodList">  
+        <view class='item-mes' wx:for="{{pddGoods}}" wx:key="item" bindtap="toDetail" data-source="{{item.source_code}}" data-id="{{item.goods_id}}" data-count="{{item.coupon_discount}}" data-endTime="{{item.coupon_end_time}}" data-minOrder="{{item.coupon_min_order_amount}}" data-start="{{item.coupon_start_time}}" data-name="{{item.goods_name}}" data-gPrice="{{item.min_group_price}}" data-nPrice="{{item.min_normal_price}}" data-sold="{{item.sold_quantity}}" data-image="{{item.goods_thumbnail_url}}" data-desc="{{item.goods_desc}}" data-swiper="{{item.goods_gallery_urls}}">
+          <view class='item-mes-pic '>
+            <image src='{{item.goods_thumbnail_url}}'></image>
+          </view>
+          <view class='item-mes-dec '>
+            <view>{{item.goods_name}}</view>
+            <view style='display:flex;align-items:center;justify-content:space-between'>
+              <view style="font-size:22rpx;margin-right:20rpx;">券后
+                <text style='color:#e40012;font-size:22rpx;'>￥</text>
+                <text style='font-weight: bold;color:#e40012;font-size:28rpx;'>{{filters.toFix((item.min_group_price-item.coupon_discount)/100)}}</text>
+              </view>
+              <view class='oriPrice'>原价 ￥{{filters.toFix(item.min_group_price/100)}}</view>
+              
+            </view>
+            <view class="coupon">
+              <view>
+                <image src="../../image/new/quan.png"></image>
+                <text class="couponWords">{{item.coupon_discount/100}}元券</text>
+              </view>
+              <view class='buyNum'>{{item.sold_quantity}}人购买 </view>
+            </view>
+          </view>
+        </view>  
+      </view>
+
+
+  </view>
+
+
+  <!-- 你的朋友还买了 -->
+  <!-- <view class='discount '>
+      <view class='discount-tit '>
+        <image class='image_right' src="{{friendImage}}"></image>
+      </view>
+      <view class='item-list'>
+        <view class='item-mes ' wx:for="{{discount}}" wx:key="item" bindtap='togoodList' id='{{item.category}}' data-uri='{{item.uri}}'>
+          <view class='item-mes-pic '>
+            <image src='{{item.image}}'></image>
+          </view>
+          <view class='item-mes-dec '>
+            <view>{{item.title}}</view>
+            <view style='display:flex;justify-content: space-between;'>
+              <text style='font-weight: bold;color:#e40012;font-size:22rpx;margin-top:11rpx;'>￥{{filters.toFix(item.market_price/100)}}</text>
+              <text style='margin-right:15rpx;' >
+                <text style='font-weight: bold;color:#999999;font-size:18rpx;text-decoration:line-through'>￥{{filters.toFix(item.original_price/100)}}</text>
+              </text>
+            </view>
+          </view>
+        </view>     
+    
+      </view>
+  </view>     -->
+
+  <!--分割线  -->
+  <view class='line'></view>     
+     <!-- 回到顶部 -->
+  <view class="goTop" bindtap="goTop" wx:if="{{floorstatus}}"> 
+    <image src="../../image/new/gotop.png"></image>
+  </view>  
+<!-- </view> -->
+
+
+<!--搜索  -->
+<view class='search'>
+  <view class='search-city' bindtap="Location">
+    <image style='width:40rpx;height:40rpx;margin-left:15rpx; ' src='../../image/new/dingwei.png '></image>
+    <text style='font-size:28rpx;color:#fff; position: relative;left:10rpx;bottom:10rpx; '>{{city}}</text>
+  </view>
+  <view class='search-input ' bindtap='tosearch'>
+    <image style="width:35rpx;height:35rpx;margin-left:20rpx" src='../../image/new/1@2x.png'></image>
+    <image style='width:30rpx;height:30rpx;margin-left:20rpx; ' src='../../image/new/search.png '></image>
+    <text style='font-size:26rpx;color:rgb(135,135,135);margin-left:20rpx; '>输入商品名称 搜索商品</text>
+  </view>
+  <image src="../../image/new/new.png" bindtap='toxiaoxi' style="width:40rpx;height:40rpx;margin:30rpx;"></image>
+</view>

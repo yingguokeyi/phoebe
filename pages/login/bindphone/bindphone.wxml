@@ -1,0 +1,34 @@
+<!--pages/register/register.wxml-->
+    <!-- 大背景色 -->
+     <view class='register-image'>
+           <image src='../../../image/person/dribs.png'></image> 
+    </view> 
+    <view class = "register-logo">
+            <image mode="aspectFit" src="../../../image/person/palm.png"></image>
+    </view>
+    <view class="content">
+       
+        <form bindsubmit="formSubmit">
+            <view class="input-area">
+            <!-- 手机号 -->
+              <view class="input-log">  
+                 <input wx:if="{{mobile == 'undefined'}}" name="username" maxlength='11' type="number" placeholder="请输入手机号" bindblur="mobil" bindinput ="phoneInput" placeholder-style='color:#999' disabled="disabled"/>
+                 <input wx:if="{{mobile}}" name="username" maxlength='11' type="number" value="{{mobile}}" bindblur="mobil" bindinput ="phoneInput" disabled="disabled"/>
+              </view> 
+                <!-- 请输入验证码 -->
+                  <view class="smsCode">
+                     <input id="smsCode" name="smsCode" maxlength='6' type="text" placeholder="请输入验证码" placeholder-style='color:#999'  bindinput="inputcode" bindblur="codeMove"/>
+                    <button bindtap="getcode" class="getSmsCodeBtn" disabled="{{smsCodeDisabled}}" style="color:{{getSmsCodeBtnColor}};background:{{getSmsCodeBtnBgColor}}">{{smsCodeBtnTxt}}</button>
+                  </view>
+                   <!--请输入邀请码  -->
+                     <view class='piccode'>
+                         <input id="picCode" name="inviteCode"  maxlength='11' type="text" placeholder="请输入邀请码（选填）" bindblur ="picCodeInput" placeholder-style='color:#999'/>         
+                    </view> 
+            </view>
+            <!-- 完成按钮 -->
+             <view class="btn-area">
+                <button  disabled="{{registDisabled}}" hover-class="none" style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+            </view>
+
+        </form>
+    </view>

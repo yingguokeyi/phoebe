@@ -1,0 +1,126 @@
+<!--pages/mine/memberLevel/memberLevel.wxml-->
+<!-- <text>pages/mine/memberLevel/memberLevel.wxml</text> -->
+
+<view class="container">
+    <view class="topAll">
+        <view class="topBack"></view>
+        <view class="topBox">
+            <image src="../../../image/person/levelback.png"></image>
+        </view>
+        <!-- 当前会员图片 -->
+        <view class="memberLevel">
+            <image src="../../../image/person/pttop.png" wx:if="{{memberType ==1 }}"></image>
+            <image src="../../../image/person/xzgtop.png" wx:if="{{memberType == 2}}"></image>
+            <image src="../../../image/person/xzgtop.png" wx:if="{{memberType == 3}}"></image>
+        </view>
+        <view class="memberback">
+            <image src="../../../image/person/sun.png"></image>
+        </view>
+        <view class="borderline"></view>
+        <view class="userLevel">
+            <view wx:for="{{tabs}}" wx:key="item" data-index="{{index+1}}" class="simple {{tabIndex == index+1?'active':''}}" bindtap="currentLevel">
+                <image src="{{item.imgUrl}}"></image>
+                <view>{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    
+    <view wx:if="{{tabIndex == 1}}">
+     <!-- 会员权益 -->
+        <view class="benefits">
+            <view class="topTitle">会员权益</view>
+                <view class="benefitsCon">
+                    <view class="list">
+                        <image src="../../../image/person/youhui.png"></image>
+                        <view class="description">
+                            <view>海量优惠券</view>
+                            <view>购物即可领取内部优惠券，享受极地的券后价</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{tabIndex == 2}}">
+         <!-- 晋升机制 -->
+        <view class="topRule">
+            <view class="topTitle">晋升机制</view>
+            <view class="topCon">
+                <text style="font-size:24rpx;color:#666;">自购完成一单,(订单过了退换期),并且发展5个粉丝</text>
+                <text class="apply" bindtap="apply">立即申请</text>
+            </view>
+        </view>
+
+         <!-- 会员权益 -->
+        <view class="benefits">
+            <view class="topTitle">小掌柜权益</view>
+            <view class="benefitsCon">
+                <view class="list">
+                    <image src="../../../image/person/youhui.png"></image>
+                    <view class="description">
+                        <view>海量优惠券</view>
+                        <view>购物即可领取内部优惠券，享受极地的券后价</view>
+                    </view>
+                </view>
+
+                <view class="list">
+                    <image src="../../../image/person/zg.png"></image>
+                    <view class="description">
+                        <view>自购返佣</view>
+                        <view>自购商品完成订单后，即可获得50%返佣！</view>
+                    </view>
+                </view>
+
+                <view class="list">
+                    <image src="../../../image/person/fanyong.png"></image>
+                    <view class="description">
+                        <view>粉丝购物返佣</view>
+                        <view>若自己的粉丝是普通会员，它购买完成订单以后，即可获得10%返佣！</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <view wx:if="{{tabIndex == 3}}">
+         <!-- 晋升机制 -->
+        <view class="topRule">
+            <view class="topTitle">晋升机制</view>
+            <view class="topCon">
+                <text style="font-size:24rpx;color:#666;">发展100个粉丝，其中包含5个小掌柜</text>
+                <text class="apply" bindtap="tellService">联系客服</text>
+            </view>
+        </view>
+
+         <!-- 会员权益 -->
+        <view class="benefits">
+            <view class="topTitle">大掌柜权益</view>
+            <view class="benefitsCon">
+                <view class="list">
+                    <image src="../../../image/person/youhui.png"></image>
+                    <view class="description">
+                        <view>海量优惠券</view>
+                        <view>购物即可领取内部优惠券，享受极地的券后价</view>
+                    </view>
+                </view>
+
+                <view class="list">
+                    <image src="../../../image/person/zg.png"></image>
+                    <view class="description">
+                        <view>自购返佣</view>
+                        <view>自购商品完成订单后，即可获得50%返佣！</view>
+                    </view>
+                </view>
+
+                <view class="list">
+                    <image src="../../../image/person/double.png"></image>
+                    <view class="description">
+                        <view>双重返佣</view>
+                        <view>若自己的粉丝是普通会员，它购买完成订单以后，即可获得20%返佣！</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>

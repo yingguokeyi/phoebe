@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#b61c25",
+  "navigationBarTitleText": "入账记录",
+  "navigationBarTextStyle": "#fff",
+  "usingComponents": {
+    "date-picker": "../../../../components/date-picker/date-picker"
+  }
+}

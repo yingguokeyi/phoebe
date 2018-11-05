@@ -1,0 +1,48 @@
+/* pages/mine/install/install.wxss */
+.box{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#f8f8f8;
+    padding-top:20rpx;
+}
+.items{
+    background:#fff;
+}
+.install-item{
+    padding-left:30rpx;
+    height:90rpx;
+}
+.leftPic{
+    width:70rpx;
+}
+.box .install-item:last-child .rightCon{
+    border-bottom:0;
+}
+.rightCon{
+    width:650rpx;
+    line-height:90rpx;
+    border-bottom:2rpx solid #ebebeb;
+}
+.leftPic image{
+    width:39rpx;
+    height:40rpx;
+    margin-top:20rpx;
+
+}
+.rightCon image{
+  width:15rpx;
+  height:25rpx;
+  margin-top:32rpx;
+  margin-right:30rpx;
+
+}
+.signOut{
+    height:90rpx;
+    background:#fff;
+    text-align:center;
+    line-height:90rpx;
+    margin-top:50rpx;
+}

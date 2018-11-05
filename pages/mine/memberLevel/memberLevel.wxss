@@ -1,0 +1,135 @@
+/* pages/mine/memberLevel/memberLevel.wxss */
+page{
+    background: #f8f8f8;
+}
+.topAll{
+    position: relative;
+}
+.topBack{
+    height:300rpx;
+    background: #b61c25;
+    margin-bottom: 123rpx;
+}
+.topBox{
+    position: absolute;
+    top:110rpx;
+    left:20rpx;
+}
+.topBox image{
+  width:710rpx;
+  height:292rpx; 
+}
+.memberLevel image{
+    width:202rpx;
+    height:172rpx;
+}
+.memberback image{
+    width:334rpx;
+    height:138rpx;
+}
+.memberback{
+    position: absolute;
+    left:208rpx;
+    top:0;
+    z-index:10;
+}
+.memberLevel{
+    position: absolute;
+    top:0;
+    left:274rpx;
+    z-index: 1000;
+}
+
+.userLevel{
+    width:610rpx;
+    height:150rpx;
+    position: absolute;
+    left:70rpx;
+    top:211rpx;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+}
+.userLevel image{
+    width:82rpx;
+    height:84rpx;
+    margin-bottom: 20rpx;
+}
+.userLevel>view.active image{
+    width:100rpx;
+    height:100rpx;
+    margin-top:-11rpx;
+}
+.userLevel>view{
+    width:110rpx;
+    height:110rpx;
+    text-align: center;
+
+}
+.userLevel>view view{
+    color:#333;
+    font-size:26rpx;
+}
+.borderline{
+    border:1rpx solid #ebebeb;
+    width:435rpx;
+    position: absolute;
+    top:253rpx;
+    left:140rpx;
+    z-index:100;
+}
+.topRule{
+    margin-bottom:20rpx;
+    background: #fff;
+}
+.topTitle{
+    height:90rpx;
+    line-height: 90rpx;
+    color:#333;
+    font-size:30rpx;
+    border-bottom:2rpx solid #f2f2f2;
+    padding:0 26rpx;
+    background: #fff;
+}
+.topCon{
+    height:100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 26rpx;
+}
+.apply{
+    width:130rpx;
+    height:50rpx;
+    line-height: 50rpx;
+    border:1rpx solid #b61c25;
+    border-radius: 14rpx;
+    text-align: center;
+    font-size:26rpx;
+    color:#b61c25;
+}
+.list{
+    display: flex;
+    padding: 0 26rpx;
+    height:194rpx;
+    align-items: center;
+    margin-bottom: 20rpx;
+    background: #fff;
+}
+.list>image{
+    width:122rpx;
+    height:122rpx;
+    margin-right:28rpx;
+}
+.description>view:first-child{
+    color:#333;
+    font-size:32rpx;
+    margin-bottom: 18rpx;
+}
+.description>view:last-child{
+    color:#747474;
+    font-size:26rpx;
+}
+.description{
+    width:550rpx;
+}

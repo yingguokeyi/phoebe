@@ -1,0 +1,48 @@
+ <!--pages/register/register.wxml-->
+    <!-- 大背景色 -->
+ <view class='register-image'>
+        <image src='../../../image/person/dribs.png'></image> 
+</view> 
+<view class = "register-logo">
+        <image mode="aspectFit" src="../../../image/person/palm.png"></image>
+</view>
+<view class="content">
+<view class='forget-tit'>
+     <text>请输入注册时的手机号</text>
+</view>
+    <form bindsubmit="formSubmit">
+        <view class="input-area">
+            <view class="input-log">  
+            <!-- <image class="userinfo-logIcon" src="../../../image/phone.png"></image>    -->
+                <input id="username" name="username" maxlength='11' type="number"  placeholder="请输入手机号" placeholder-style="color:#999" bindinput="getPhoneNum" bindblur="phoneMove" />
+            </view>  
+    <!--图片验证码  -->
+        <view class='piccode'>
+               <!-- <image class="userinfo-logIcon" src="../../../image/code.pplaceholderng"></image>  -->
+              <input id="picCode" name="picCode" maxlength='6' type="number" placeholder="请输入图片验证码" placeholder-style="color:#999" bindinput ="picGaph" bindblur="picCodeInput"/>
+                <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.74:8056/uranus/user?method=getImgCode&key={{key}}"></image>   -->
+                <image bindtap='changeCode' class='Imgcode' src="https://jiangshidi.top/user?method=getImgCode&key={{key}}"></image>      
+               <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.2.112/uranus/user?method=getImgCode&key={{key}}"></image>  -->
+
+               <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.85:8055/uranus/user?method=getImgCode&key={{key}}"></image>  -->
+          </view>
+        </view>         
+        
+
+          <!-- <view class="smsCode">
+            <image class="userinfo-verifiIcon" src="../../../image/code.png"></image>
+            <input id="smsCode" name="smsCode" maxlength='6' type="number" placeholder="验证码" />
+             <button bindtap="getSmsCode" class="getSmsCodeBtn" disabled="{{smsCodeDisabled}}" style="color:{{getSmsCodeBtnColor}}">{{getSmsCodeBtnTxt}}</button>  -->
+            <!-- <button bindtap = "getSmsCode" disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}"   class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</button> -->
+          <!-- </view> -->
+       
+          <!--新密码  -->
+          <!-- <view class="input-log">  
+            <image class="userinfo-logIcon" src="../../../image/code.png"></image>
+            <input id="password" name="password" maxlength='20' type="password" placeholder="新密码（大于6位的字母和数字）" />
+          </view> -->
+             <!--保存  -->
+            <!-- <button class='next-btn' formType="submit" disabled="{{saveBtnDisabled}}"  style="background:{{saveBtnBack}};color:#b3b3b3" loading="{{btnLoading}}">下一步</button> -->
+        <button class="next-btn" formType="submit" disabled="{{nextBtnDisabled}}" hover-class="none"  style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}" loading="{{btnLoading}}">下一步</button>
+    </form>
+</view>

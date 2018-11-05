@@ -1,0 +1,132 @@
+<!--pages/pddCommon/pddCommon.wxml-->
+<!--pages//common/common.wxml-->
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+
+<scroll-view style="height:100%;" class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}"   bindscroll="scroll">
+  <view class="all" style="{{choose_modal == 'block' || share_modal == 'block' ? 'position:fixed;top:0;left:0;right:0;bottom:0;' : '' }}">
+      <!-- 基本信息 -->
+    <view class="{{selected?'show':'hidden'}}">
+      <view class="container">
+        <!-- 轮播图-->
+        <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" indicator-color="transparent" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height:750rpx;">
+          <block wx:for="{{detail_Imgs}}" wx:key="item">
+            <swiper-item>
+              <image style="width:100%;height:750rpx;"  src="{{item.path}}" data-index="{{index}}" mode="aspectFit" bindtap="clickImage"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+
+        <!-- 限时秒抢的标题栏 -->
+        <view class='redSeal' wx:if="{{plan_group == 1 }}">
+            <view class='redmark-left'>
+              <text class='rightDown'>限时秒杀：</text>
+              <text class='symbol'>￥</text>
+              <text class='wallet'>{{filters.toFix(marke_price/100)}}</text>
+            </view>
+            <view class='redmark-right' wx:if="{{columnShow==1}}">
+              <text class='finish'>离开始还有：</text>
+              <text class='endTime'>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+            </view>
+            <view class='redmark-right' wx:if="{{columnShow==2}}">
+              <text class='finish'>离结束还有：</text>
+              <text class='endTime'>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+            </view>                  
+        </view>
+
+        <!-- 商品介绍 -->
+      <view>
+        <!-- 商品名称 -->
+        <view class="detail-pro-title">
+          <view class="detail-pro-left">
+            <text class="detail-pro-texts">{{name}}</text>
+          </view>
+        </view>
+
+        <view class='cuponPrice'>
+          <view class='left'>
+            <text style='font-size:34rpx;color:#666'>券后价</text>
+            <text style='font-size:34rpx;color:#e40012;margin:0 5rpx;'>￥</text>
+            <text style='font-size:52rpx;color:#e40012'>{{filters.toFix((gPrice-count)/100)}}</text>
+          </view>
+          <view class='right'>
+            <view class='picBorder'>
+              <image src="../../image/new/arch.png"></image>
+              <view class='cuponCon'>
+                <text>券</text>
+                <text>￥{{count/100}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+          <!-- 价格显示 -->
+        <view class='detail-money'>
+          <view class="detailMon" style="display:flex;">
+            <view style='text-decoration:line-through;color:#999'>
+              <text style='font-size:26rpx;vertical-align:middle'>原价 ￥</text>
+              <text class='money-price'>{{filters.toFix(gPrice/100)}}</text> 
+            </view>
+            <view class="saleNum">已售{{sold}}件</view>
+          </view>
+          
+        </view>
+          
+      </view>
+      <!-- 优惠券图片领取 -->
+      <!-- <view class="getCoupon">
+        <image src="../../image/new/get.png"></image>
+        <view class="leftCon">
+          <view style="font-size:28rpx;color:#fff;height:66rpx;">
+            ￥<text style="font-size:60rpx">{{count/100}}</text>
+          </view>
+          <text style="font-size:22rpx;">内部优惠券</text>
+        </view>
+        <view class="rightCon">
+          <view>券后价:￥<text style="font-size:30rpx;">{{(gPrice-count)/100}}</text></view>
+          <view>有效期:{{start}}至{{endTime}}</view>
+        </view>
+      </view> -->
+    
+          <!-- border样式 -->
+      <view style="height:25rpx;background:#f8f8f8;"></view>
+
+          <!-- 商品详情图片 -->
+      <view class="pro-detail">{{desc}}</view>
+              
+      </view>
+    </view>
+    <!-- 商品详情 -->
+    <!-- <view class="{{selected1?'show':'hidden'}}"> -->
+      <view class='tab-Image'>
+        <view wx:for="{{detail_Imgs}}" wx:key="img">
+          <image src="{{item.path}}" mode="widthFix"  style='width:750rpx;display:block;'></image>
+        </view>
+      </view> 
+      <!-- <view style='width:100%;height:20rpx;background:#f9f9f9; '></view> -->
+    <!-- </view> -->
+
+      <!-- 底部栏 -->
+    <view class="footer-box">
+      <button class="btn"  bindtap="buyMinus" disabled="{{canBuy}}" style="color:#{{fontColor}}">立即购买</button>
+    </view>
+  </view>
+   <!-- 回到首页 -->
+  <view class="goTop" bindtap="goTop" wx:if="{{floorstatus}}"> 
+    <image src="../../image/new/gotop.png"></image>
+  </view>  
+</scroll-view>
+
+
+  <!-- 回到首页 -->
+<view class="goHome" bindtap="goHome"> 
+  <image src="../../image/new/home.png"></image>
+</view>
+
+<!-- 收藏商品 -->
+<!-- <view class="collect" bindtap="Collecting"> 
+  <image src="../../image/new/nocoll.png"></image>
+</view> -->
+
+
+
+

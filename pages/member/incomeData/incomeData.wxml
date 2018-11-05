@@ -1,0 +1,42 @@
+<!--pages/member/myearnings/myearnings.wxml-->
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<!--头部月份 -->
+   <!-- <view class='myearn-header'>
+          <view class='moon' bindtap="showDatePicker">{{date}}</view>
+          <date-picker id="date-picker" value="{{datePickerValue}}" isShow="{{datePickerIsShow}}"  bindsureclick="datePickerOnSureClick" bindcancelclick="datePickerOnCancelClick" />
+          <view style='width:25rpx;height:20rpx;margin-top:-59rpx;margin-left:231px;' bindtap="showDatePicker">
+            <image src='../../../image/person/down.png' style='width:25rpx;height:20rpx;'></image>
+          </view>
+   </view> -->
+
+   <view wx:if='{{result!=""  &&   showDetails==false}}' > 
+     <view class='reminder' wx:if="{{showView}}">没有产生收益的日期不显示哦！</view>
+     <scroll-view  scroll-y="true" >
+    <!--收益  -->
+        <view wx:for="{{result}}" wx:key='item'>
+              <view class='myearn-share' data-time="{{item.day_time}}" data-money="{{item.day_money}}"  data-count="{{item.day_count}}" bindtap='daily'> 
+                  <view class='myearn-msg'>
+                        <view class='myearn-msg-list'>
+                            <text style='color:#333333'>{{filters.insert(item.day_time,'月',2)}}日预估收益</text>
+                        </view> 
+                    </view>
+                    <view class='myearn-share-top'>
+                        <view style='line-height:30px;font-size:24px;color:#e40012;margin-left:25px;' >
+                          <text style='font-size:24px;'>￥</text>{{filters.toFix(item.day_money/100)}}
+                        </view>
+                        <text style='line-height:30px;font-size:32rpx;color:#666;margin-right:40rpx;'>{{item.day_count}}单</text>
+                    </view>
+              </view>
+              <!-- 灰色间距 -->
+              <view class='box'></view>      
+        </view>  
+      </scroll-view>
+        
+  </view>
+
+  <view class='boxx'  wx:if='{{result == ""  && showDetails == true}}'>
+        <view class='writing'>您暂时还没有收益哦！</view>
+        <view class='case' bindtap='boxx'>去赚钱</view>
+  </view> 
+   
+  

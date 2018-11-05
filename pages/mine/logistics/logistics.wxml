@@ -1,0 +1,19 @@
+
+<view class="state">
+  <view wx:if="{{orderState == 0}}">在途中</view>
+  <view wx:if="{{orderState == 1}}">已揽收</view>
+  <view wx:if="{{orderState == 2}}">疑难</view>
+  <view wx:if="{{orderState == 3}}">已签收</view>
+  <view wx:if="{{orderState == 4}}">退签</view>
+  <view wx:if="{{orderState == 5}}">同城派送中</view>
+  <view wx:if="{{orderState == 6}}">退回</view>
+  <view wx:if="{{orderState == 7}}">转单</view>
+</view>
+<scroll-view  style="height: {{ windowHeight }}rpx; width: {{ windowWidth }}rpx;" scroll-y="true"  bindscrolltolower="onPullDownRefresh" lower-threshold="50">
+  <view class='logisticsMsg' wx:for="{{rps_data}}"  wx:for-index="index" wx:for-item="data" wx:key="unique">
+      <view class="listText">       
+        <view><text class="text_01" decode="{{true}}" space="{{true}}">{{data.time}}</text></view>
+        <view><text class="text_02" decode="{{true}}" space="{{true}}">{{data.context}}</text></view>
+      </view>  
+  </view> 
+</scroll-view>

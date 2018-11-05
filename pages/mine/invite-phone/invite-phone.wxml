@@ -1,0 +1,27 @@
+<view class='container' wx:if="{{parentUserHasMark==0}}">
+     <view class='invite-person'>
+        <text style='font-size:30rpx;color:#666;margin-top:10rpx;'>填写邀请人:</text>
+        <input type='number' placeholder='请输入邀请人电话' placeholder-style='font-size:22rpx;color:#b3b3b3;margin-left:20rpx;' bindinput ="mobile" bindblur="mobileTest" value="{{mobile}}"></input>
+     </view>
+   <!--  -->
+     <view class='toast'>
+        <text style='margin-left:30rpx;'>注：邀请人绑定后将不再解绑</text>
+     </view>
+    <!-- 保存 -->
+    <button class='save' bindtap='svaecode' disabled="{{isSave}}"  style="background:{{saveBtn}}">
+         <text >保存</text>
+    </button>
+</view>
+<view class='container' wx:if="{{parentUserHasMark==1}}">
+     <view class='invite-person'>
+        <!--<text style='font-size:30rpx;color:#666;margin-left:30rpx;margin-top:10rpx;'>亲，您已经有上级了......</text>-->
+        <text>填写邀请人：</text>
+        <text>{{inviteTel}}</text>
+     </view>
+   <!--  -->
+     <view class='toast'>
+        <text style='margin-left:30rpx;'>注：邀请人绑定后将不再解绑</text>
+     </view>
+</view>
+
+

@@ -1,0 +1,84 @@
+<!--pages/classify/Search/Search.wxml-->
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<import src="../wxSearch/wxSearch.wxml"/>
+<view class='inportWrap'>
+    <icon type="search" size='16' style='margin-left:12rpx;'/>
+    <view class="heard-search"> 
+        <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" class="wxSearch-input" name="searchstring" placeholder="精品优惠 实惠立返" 
+bindconfirm="wxSearchfirm" confirm-type="search" focus='focus'/>  
+    </view>
+</view>
+
+<template is="wxSearch" data="{{wxSearchData}}"/> 
+<view class="container">
+            <!--导航部分  -->
+       <view class="nav-wrapper" >
+              <view class="{{num==0?'selected':''}}" data-num="0" id="comprehensive" bindtap="changeFilterRules">综合</view>
+              <view class="{{num==1?'selected':''}}" data-num="1" id="sales" bindtap="changeFilterRules">销量</view>
+              <view class="{{num==2?'selected':''}} nav-price" data-num="2" bindtap="changeFilterRules">价格
+                <!--============这个是下箭头 误导了我很长时间================= -->
+                  <text class="top-arrow  {{sort_state === 1 ? 'top-arrow-slected' : ''}}" bindtap="HighToLowPrice"></text>
+                  <!--============这个是上箭头================= -->
+                  <text class="bottom-arrow  {{sort_state === 0 ? 'bottom-arrow-selected' : ''}}"  bindtap="lowToHighPrice"></text>
+              </view>
+       </view>
+
+
+      
+      <view class="cart-no"> 
+          <!--如果有数据，才遍历项-->
+          <view wx:if="{{sousuo.items=='' && searchstring!=''}}"></view>
+          <view class="cart-no-show" >
+            <block  wx:for="{{sousuo}}" wx:key="item"> 
+                <view  wx:if="{{item.source_code != 'PDD'}}">
+                    <view style="border-bottom:2rpx solid #f8f8f8;padding:20rpx 0" bindtap="toDetail" id="{{item.id}}" data-price="{{item.market_price}}">
+                        <view class="cargo-pro-image">
+                            <image src="{{item.pic_info_url}}"></image>
+                        </view>
+                        <view class="cargo-solid">
+                            <view class="cargo-pro-list">
+                                <view class="cargo-pro-title">
+                                    <text class="cargo-pro-texts">{{item.spu_name}}</text>
+                                </view>
+                                <view class="cargo-pro-desc">
+                                    <text>{{item.spu_attribute}}</text>
+                                </view>
+                                <view class="cargo-pro-money">
+                                    <text class="cargo-pro-price">￥ {{filters.toFix(item.market_price/100)}}</text> 
+                                </view>
+                            </view>  
+                        </view>
+                    </view>    
+                </view>
+                <view  wx:if="{{item.source_code == 'PDD'}}">
+                    <view style="border-bottom:2rpx solid #f8f8f8;padding:20rpx 0" bindtap="toPdd" data-source="{{item.source_code}}" data-id="{{item.goods_id}}" data-count="{{item.coupon_discount}}" data-endTime="{{item.coupon_end_time}}" data-minOrder="{{item.coupon_min_order_amount}}" data-start="{{item.coupon_start_time}}" data-name="{{item.goods_name}}" data-gPrice="{{item.min_group_price}}" data-nPrice="{{item.min_normal_price}}" data-sold="{{item.sold_quantity}}" data-image="{{item.goods_thumbnail_url}}" data-desc="{{item.goods_desc}}" data-swiper="{{item.goods_gallery_urls}}">
+                        <view class="cargo-pro-image">
+                            <image src="{{item.goods_thumbnail_url}}"></image>
+                        </view>
+                        <view class="cargo-solid">
+                            <view class="cargo-pro-list">
+                                <view class="cargo-pro-title">
+                                    <text class="cargo-pro-texts">{{item.goods_name}}</text>
+                                </view>
+                                <view class="cargo-pro-desc">
+                                    <text>{{item.spu_attribute}}</text>
+                                </view>
+                                <view class="cargo-pro-money">
+                                   <view>
+                                        <text style="font-size:28rpx;margin-right:5rpx;">券后</text>
+                                        <text class="cargo-pro-price">￥{{filters.toFix((item.min_group_price-item.coupon_discount)/100)}}</text>
+                                   </view> 
+                                   <view class="coupon">
+                                    <image src="../../../image/new/cupon.png"></image>
+                                    <text class="couponWords">立减{{item.coupon_discount/100}}元</text>
+                                    </view>
+                                </view>
+                            </view>  
+                        </view>
+                    </view>    
+                </view>
+            </block>   
+        </view> 
+      </view> 
+</view>
+

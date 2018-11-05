@@ -1,0 +1,75 @@
+page{
+  background-color: #f9f9f9;
+}
+
+.myaddress-wrap{
+  width: 100%;
+  height: auto;
+  border-top:1px solid #EDEDED;
+  padding-bottom:100rpx;
+  
+}
+.address-list{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-top: 20rpx;
+  position: relative;
+}
+.address-list-mes{
+  width: 100%;
+  height: auto;
+}
+.name-phone{
+  font-size: 32rpx;
+  padding: 20rpx 0 30rpx;
+  color: #333;
+}
+.adderss-content{
+  font-size: 32rpx;
+  height: auto;
+  color: #666;
+}
+
+.address-list-tab{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.set-default image:nth-child(1){
+  display:inline-block;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+}
+.set-default image:nth-child(2){
+  width:78rpx;
+  height:76rpx;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.bianji image{
+  display:inline-block;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+}
+.del-address image{
+  display:inline-block;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+}.add_address{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 100rpx;
+  background: #b61c25;
+  color: #fff;
+  border-radius:0;
+  text-align: center;
+  line-height: 100rpx;
+}

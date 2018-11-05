@@ -1,0 +1,18 @@
+<!--pages/common/payment/payment.wxml-->
+<view class='payment-pay'>
+      <view>
+        <image src='../../../image/payment.png'></image>
+      </view>
+      <view>
+              <text>支付成功</text>
+      </view>
+      <view class='pay-btn'>
+        <view bindtap="buysubmit">
+        再去逛逛
+
+        </view>
+        <view bindtap="submitoder">
+        查看订单详情           
+        </view>
+      </view>
+</view>

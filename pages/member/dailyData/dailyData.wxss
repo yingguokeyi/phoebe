@@ -1,0 +1,225 @@
+page{
+  background:#f8f8f8;
+}
+
+/* 头部月份 */
+.myearn-header{
+  width: 100%;
+  height:80rpx;
+  border-bottom:1px solid #ebebeb;
+  background: #fff;
+  
+}
+.myearn-header .moon{
+  width:218rpx;
+  height: 80rpx;
+  font-size:30rpx;
+  color:#333;
+  line-height: 80rpx;
+  margin-left: 280rpx;
+}
+/* 空白隔样式 */
+.sky{
+  height: 20rpx;
+  background: #f8f8f8;
+}
+/* 
+今日预估收益 */
+.estimator{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #ebebeb;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.estimator-left{
+  width: 54%;
+  height:80rpx; 
+  margin-left: 30rpx;
+}
+.estimator-right{
+  width: 50%;
+  height: 80rpx;
+}
+/* 佣金收益 */
+.commission{
+  height: 158rpx;
+  width: 100%;
+  border-top: 1rpx solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.commission-left{
+  width: 464rpx;
+  height: 158rpx;
+}
+.circle{
+  width: 93rpx;
+  height: 93rpx;
+  border-radius: 50%;
+  border:1rpx solid #b61c25;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  float: left;
+  margin-top:32rpx;
+  margin-left:30rpx;
+
+}
+.circle text{
+  width: 52rpx;
+  height: 64rpx;
+  color: #b61c25;
+  font-size: 24rpx;
+ 
+}
+/* //回填单 */
+.circles{
+  width: 93rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  border:1rpx solid #b61c25;
+  text-align: center;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column; */
+  float: left;
+  margin-top:32rpx;
+  margin-left:30rpx;
+  line-height: 37rpx;
+  padding-top: 5rpx;
+
+}
+.circles text{
+  /* width: 52rpx; */
+  /* width: 33rpx; */
+  /* height: 64rpx; */
+  color: #b61c25;
+  font-size: 24rpx;
+  margin-left: 5rpx;
+  display: inline-block;
+ 
+}
+.article{
+  width: 339rpx;
+  height: 158rpx;
+  float: right;
+}
+.article .article-top{
+  font-size:26rpx;
+  color:#333333;
+  width:293rpx;
+  margin-top:37rpx;
+  margin-left: 20rpx;
+}
+.article .article-bottom{
+  font-size:26rpx;
+  color:#999999;
+  margin-top:24rpx;
+  margin-left: 20rpx;
+}
+
+.commission-right{
+  width: 258rpx;
+  height: 158rpx;
+}
+.commission-right .order-top{
+  color: #09bd3c;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+   margin-top:37rpx;
+}
+.commission-right .order-bottom{
+  color: #999999;
+  font-size: 22rpx;
+  margin-top:24rpx;
+  margin-left: 41rpx;
+}
+
+/* 返利收益 */
+.rebate{
+  color: #e40012;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+/* 奖金收益 */
+.bonus{
+  color: #e40012;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+/* 分享收益 */
+.commission-right .share-topp{
+  color: #e40012;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+.commission-right .share-tops{
+  color: #09bd3c;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+.commission-right .share-topt{
+  color: #999;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+.commission-right .share-top{
+  color: #999999;
+  font-size: 28rpx;
+  margin-left: 121rpx;
+  margin-top:37rpx;
+}
+
+.commission-right .share-bottom{
+  color: #999999;
+  font-size: 22rpx;
+  margin-top:24rpx;
+  margin-right: 48rpx;
+  text-align: right;
+}
+.commission-right .share-bottoms{
+  color: #999999;
+  font-size: 22rpx;
+  margin-top:24rpx;
+  margin-left: 107rpx;
+}
+
+/* 无数据进行赚钱的样式 */
+
+.boxx{
+  height: 319rpx;
+  text-align: center;
+}
+.writing{
+  width: 246rpx;
+  height: 31rpx;
+  color: #999999;
+  font-size: 24rpx;
+  margin-left:264rpx;
+  margin-top:150rpx;
+
+}
+.case{
+  width: 240rpx;
+  height: 78rpx;
+  background: #b61c25;
+  color: #fff;
+  border-radius: 6rpx;
+  font-size: 36rpx;
+  line-height: 78rpx;
+  margin-left:264rpx;
+  text-align: center;
+  margin-top:64rpx;
+}

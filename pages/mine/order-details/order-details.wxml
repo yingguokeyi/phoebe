@@ -1,0 +1,112 @@
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view class='container'>
+<view class='order-message'>
+  <text wx:if="{{statuscode == 101}}">待支付</text>
+  <text wx:if="{{statuscode == 106 || statuscode == 103 || statuscode ==104 ||  statuscode ==102 ||  statuscode ==105}}">待收货</text>
+  <text wx:if="{{statuscode == 107 || statuscode == 108}}">已收货</text>
+  <text wx:if="{{statuscode == 110 || statuscode==111 || statuscode==112 || statuscode==113 || statuscode==109}}">已取消</text>
+</view>
+<view class="order-site">
+  <view class="order-site-logo">
+    <image src='../../../image/locations.png'></image>
+  </view>
+  <view class="order-site-text">
+    <view class="order-site-title">
+      <view class="order-on-title">
+        <text>收货人:</text>
+        <text class='order-on-name'>{{buyer}}</text>
+      </view>
+      <view class="order-on-phone">
+        <text>{{phone}}</text>
+      </view>
+    </view>
+    <view class="order-site-list">
+      <text style='padding-right:10rpx;'>收货地点:</text>
+      <text>{{address}}</text>
+    </view>
+  </view>
+</view>
+
+<view style='background:#fff;'>
+  <image src='../../../image/caise.png' style='width:100%;height:8rpx;'></image>
+</view>
+
+
+
+<!--商品列表  -->
+
+<view class='order-solid'>
+  <text style='font-size:26rpx;color:#333;margin-left:30rpx;'>商品列表</text>
+</view>
+
+ <view class="cargo-list">
+    <view class="cargo-pro-image">
+            <image src='{{image}}'></image>             
+    </view>
+      <view class="cargo-solid"> 
+        <view class="cargo-pro-list">
+          <view class="cargo-pro-title">
+            <!--<text class="cargo-pro-name">自营</text>-->
+            <text wx:if="{{gift == 'LB'}}" class='textLB'>VIP礼包</text>  
+            <text class="cargo-pro-texts">{{name}}</text>
+          </view>
+          <view style="font-size:24rpx;height:37rpx;overflow:hidden">{{desc}}</view>
+            <view class="cargo-pro-money"><view> 
+              <text class="cargo-pro-price">￥{{filters.toFix(price/100)}}</text>
+              <!-- <text class="cargo-pro-symbol">(<text class='cargo-delete'>￥44.5</text>)</text> -->
+            </view>
+            <view class='cargo-pro-right' wx:if="{{backMoney != 0}}">
+              <text class="cargo-pro-explain">返现</text>
+              <text class="cargo-pro-price">￥{{filters.toFix(backMoney/10000)}}</text>
+            </view>
+          </view> 
+        </view> 
+      </view> 
+      
+ </view>
+ <!-- <view style="background:#fff;text-align:right">
+    <button class="applyMon">申请退款</button>
+  </view> -->
+<!--合计和实付金额  -->
+
+<view class='total-cash'>
+    <view  style='display: flex;justify-content: space-between;'>
+         <text style='margin-left:30rpx'>合计</text>
+         <text style='margin-right:30rpx;color:#b61c25'>￥{{filters.toFix(price/100)}}</text>    
+    </view>
+     <view style='margin-top:30rpx;display: flex;justify-content: space-between;'>
+          <text style='margin-left:30rpx'>实付金额</text>
+          <text style='margin-right:30rpx;color:#b61c25'>￥{{filters.toFix(price/100)}}</text>
+     </view>
+</view>
+
+<!--订单编码和下单时间  -->
+
+<view class='order-num'>
+
+     <view>
+         <text style='margin-left:30rpx'>订单编码：{{ordercode}}</text> 
+         <text class="copy" bindtap="copy">复制</text>   
+    </view>
+     <view style='margin-top:30rpx;'>
+          <text style='margin-left:30rpx'>下单时间：{{orderdate}}</text>
+     </view>
+
+</view>
+
+
+<!--支付方式  -->
+
+<view class='order-pay'>
+    <text style='margin-left:30rpx'>支付方式：微信支付</text>
+</view>
+
+<!--确认收货  -->
+
+<!-- <view class='order-getitem'>
+     <text style='background:#cca96a;color:#fff;margin-left:400rpx;'>确认收货</text>
+     <text style='border:1rpx solid #000;color:#333;margin-right:30rpx;'>查看物流</text>
+</view> -->
+
+
+</view>

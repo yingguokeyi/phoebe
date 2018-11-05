@@ -1,0 +1,78 @@
+<!--pages/member/accum-income/accum-income.wxml-->
+<view class='container'>
+    <!--累计收益金额  -->
+   <view class='myearn-header'>
+       <view class='myearn-header-left'>
+           <view style='font-size:30rpx;color:#333;'>累计收益金额</view>
+           <view style='margin-top:20rpx;color:#cca96a;font-size:76rpx;'><text style='font-size:32rpx;'>￥</text>16.72</view>
+       </view>
+       <view class='myearn-header-right' bindtap='tomyearn'>
+           <text>收益明细</text>
+       </view>
+   </view>
+
+   <!--今天收益  7天收益  30天内收益  -->
+
+    <view class='my-income-wrap'>
+        <view class='income-list'>
+           <text style='font-size:24rpx;color:#666;margin:20rpx 0;'>今日收益</text>
+           <text style='font-size:28rpx;color:#333;margin:0 0 20rpx;'>￥1.02</text>
+        </view>
+
+        <view class='income-list'>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0;'>7天内收益</text>
+           <text style='font-size:28rpx;color:#333;margin:0 0 20rpx;'>￥4.45</text>
+          
+        </view>
+
+        <view class='income-list'>
+           <text style='font-size:24rpx;color:#333;margin:20rpx 0;'>30天内收益</text>
+           <text style='font-size:28rpx;color:#333;margin:0 0 20rpx;'>￥68.02</text>
+     
+        </view>
+    </view>
+
+  <!-- 收益金额分布图 -->
+    <view class='distribute'>
+
+       <view class='distribute-tit'>
+          <text>— 收益金额分布图 —</text>  
+       </view>
+       <!--奖金收益  -->
+       <view class='bonus-income'>
+          <text style='color:#666'>奖金收益</text>
+          <text style='color:#edb905'>25%</text>
+       </view>
+       <!--返利  分布图  分享  -->
+       <view class='distribute-wrap'>
+           <view style='display: flex;flex-direction: column;font-size:24rpx;margin-top:120rpx;'>
+              <text style='color:#666;position:relative;left:50rpx;'>返利收益</text>
+              <text style='color:#edb905;position:relative;left:70rpx;'>50%</text>
+           </view>
+           <view class='distribute-pic'>
+               
+           </view>
+           <view style='display: flex;flex-direction: column;font-size:24rpx;margin-top:120rpx;'>
+               <text style='color:#666;position:relative;right:50rpx;'>分享收益</text>
+               <text style='color:#edb905;position:relative;right:30rpx;'>25%</text>
+           </view>
+       </view>
+    
+
+    </view>
+
+  <!--收益类型  全部数据  操作  -->
+  <view class='income-table'>
+     <view class='income-table-head'>
+         <view class='income-table-head-list'>收益类型</view>
+         <view class='income-table-head-list'>全部数据</view>
+         <view class='income-table-head-list'>操作</view>
+     </view>
+  
+  
+  </view>
+
+
+
+</view>
+

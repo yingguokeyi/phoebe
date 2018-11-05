@@ -1,0 +1,78 @@
+/* pages/mine/fans/fans.wxss */
+page{
+    background: #f8f8f8;
+}
+.topBack{
+    height:226rpx;
+    background: #b61c25;
+    text-align: center;
+    padding-top:20rpx
+  
+}
+.topBack view:first-child{
+    font-size: 30rpx;
+    color:#fff;
+    font-family: 'PingFangHK-Regular';
+    margin-bottom: 35rpx;
+}
+.topBack view:last-child{
+    font-size:76rpx;
+    font-family: 'PingFangHK-Medium';
+    color:#fff;
+}
+.navs{
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    height:140rpx;
+}
+
+.list view:first-child{
+    color:#333;
+    font-size:30rpx;
+    margin-bottom: 12rpx;
+    text-align: center;
+    line-height:35rpx;
+}
+.list{
+    position: relative;
+    height:80rpx;
+    padding: 35rpx 0;
+}
+.list view:nth-child(2){
+    color:#666;
+    font-size:24rpx;
+    text-align: center;
+    line-height:35rpx;
+}
+.title,.listCon>view{
+    display: flex;
+    justify-content: space-between;
+    height:88rpx;
+    align-items: center;
+    color:#333;
+    padding:0 84rpx;
+    font-size:28rpx;
+    border-bottom: 2rpx solid #f2f2f2;
+}
+.title{
+    padding:0 84rpx;
+}
+.content{
+    background: #fff;
+    margin-top:20rpx;
+}
+.listCon>view{
+    padding:0 70rpx;
+}
+.list.active>view:first-child,.list.active>view:nth-child(2){
+    color:#b61c25;
+}
+.chooseBorder{
+    width:74rpx;
+    height:0;
+    border-bottom: 4rpx solid #b61c25;
+    position: absolute;
+    bottom:0;
+    right:0;
+}

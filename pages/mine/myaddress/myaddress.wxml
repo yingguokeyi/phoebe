@@ -1,0 +1,41 @@
+<view class='myaddress-wrap'>
+  <!--地址列表  -->
+  <view class='address-list'wx:for="{{addressList}}" wx:for-index="index" wx:key="item" wx:if="{{index < 15}}">
+    <!--用户信息  -->
+    <view class='address-list-mes'  data-addId="{{item.id}}" bindtap="selectAdd">
+      <view class='name-phone'>
+        <text style='margin-left:50rpx;'>{{item.consignee}}</text>
+        <text style='margin-left:370rpx;'>{{item.consignee_tel}}</text>
+      </view>
+      <view class='adderss-content'>
+        <text style='margin-left:50rpx;'>{{item.delivery_address}}{{item.delivery_addressSec}}</text>
+      </view>
+    </view>
+    <!--操作地址  -->
+    <view class='address-list-tab'>
+      <view class='set-default' style='margin-left:50rpx;' bindtap='setdefault' data-id="{{item.id}}">
+        <image src='{{item.is_default==1?secondimg:firstimg}}'></image>
+        <image src='{{item.is_default==1?thirdimg:null}}'></image>
+        <text style='color:#b61c25;font-size:26rpx;margin-left:10rpx;'>设为默认</text>
+      </view>
+      <view class='bianji' style='margin-left:150rpx;' bindtap='toAddressEdit' data-addressId="{{item.id}}" data-index="{{index}}">
+        <image src='../../../image/bianji.png'></image>
+        <text style='color:#666;font-size:26rpx;margin-left:10rpx;'>编辑</text>
+      </view>
+      <view class='del-address' style='margin-right:50rpx;' bindtap='deladdress' data-id="{{item.id}}">
+        <image src='../../../image/del.png'></image>
+        <text style='color:#666;font-size:26rpx;margin-left:10rpx;'>删除</text>
+      </view>
+    </view>
+
+  </view>
+  <!--  -->
+
+  <!--新增收获地址  -->
+
+  <button class="add_address" bindtap="toAddressAdd">新增地址</button>
+
+
+
+
+</view>

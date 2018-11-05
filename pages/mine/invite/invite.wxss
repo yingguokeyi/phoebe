@@ -1,0 +1,216 @@
+.invite-wrap{
+  width: 100%;
+  /* height: 100%; */
+  background: #b61c25; 
+  padding-bottom:50rpx;
+ 
+}
+.invite-wrap>.whiteBack{
+  width:710rpx;
+  height:100%;
+  margin:0 20rpx;
+}
+.fenline{
+  position:absolute;
+  width:642rpx;
+  height:5rpx;
+  top:382rpx;
+  left:54rpx;
+
+}
+.invite-codes image{
+  width:114rpx;
+  height:14rpx;
+}
+
+
+.title{
+  text-align:center;
+  color:#5c7098;
+  font-size:34rpx;
+  
+}
+.invite-top{
+  width: 642rpx;
+  height: 300rpx;
+  position: absolute;
+  background: #fff;
+  top:50rpx;
+  left:54rpx;
+}
+
+.invite-code{
+   color:#b61c25;
+   font-size:42rpx;
+   margin:35rpx 0 42rpx 0;
+   text-align:center;
+}
+/*邀请码样式*/
+.invite-codes{
+  width:100%;
+  height:80rpx;
+  background-color:#fff;
+  font-size:30rpx;
+  line-height:80rpx;
+  color: #333333;
+  text-align:center;
+}
+.invite-codes text{
+  padding:0 30rpx;
+  color:#5c7098;
+  font-size:38rpx;
+  font-family:PingFangSC-Medium;
+  vertical-align:middle;
+}
+ button[class="btn"]::after {
+  border: 0;
+}  
+
+
+/*二维码*/
+.invite-ewm{
+  /*width: 200rpx;*/
+  /* width: 100%; */
+  height: auto;
+  margin-left: 214rpx;
+}
+.invite-ewm canvas{
+  width: 300rpx;
+}
+/*保存二维码*/
+.invite-ewm-save{
+  width: 160rpx;
+  height: 64rpx;
+  background: #b61c25;
+  border-radius: 15rpx;
+  margin: 0 auto 0;
+  color:#fff;
+  font-size:30rpx;
+  line-height: 64rpx;
+  text-align: center;
+}
+/*下半部分样式*/
+.invite-bottom{
+  width: 682rpx;
+  height: auto;
+  /* position: absolute;
+  top:400rpx;
+  left:34rpx; */
+  margin:-54rpx 0 0 34rpx;
+  text-align:center;
+  background:#fff;
+  min-height:800rpx;
+  border-radius:0 0 30rpx 30rpx;
+
+  /*left:44rpx;*/
+
+}
+/*我的邀请人*/
+.invite-person{
+  background: #fff;
+  padding-bottom:15rpx;
+  border-bottom:20rpx solid #f5f5f5;
+}
+.invite-person .invite-word{
+  margin:42rpx 0 22rpx 0;
+  background-color:#fff;
+  font-size:30rpx;
+  color:#666;
+  font-weight:bold;
+  line-height:43rpx;
+}
+/*请输入邀请人电话号*/
+.invite-person .invite-case{
+  width: 100%;
+  height: 80rpx;
+  background:#fff;
+  margin-bottom:38rpx;
+}
+.invite-person .invite-case .search_good{
+    height: 70rpx;
+    width: 400rpx;
+    line-height: 70rpx;
+    background:#f5f5f5;
+    outline: none;  
+    color: #999999;
+    text-align:center;
+    font-size: 24rpx;
+    border-radius:10rpx;
+    padding: 0 26rpx;
+   /* border: 2rpx solid #e1e1e1;*/
+}
+
+/*提醒语*/
+/*.invite-person .invite-toast{
+  padding:20rpx 0;
+
+}*/
+
+.invite-tit{
+  height: 90rpx;
+  line-height: 90rpx;
+  margin:0 auto 0;
+  text-align: center;
+  color:#666;
+  font-size: 28rpx;
+  font-weight: bold;
+  background: #fff;
+  border-top-left-radius:35rpx;
+ border-top-right-radius:35rpx;
+ border-top: 1rpx solid #f2f2f2;
+
+}
+
+.invite-tit-head{
+  width: 100%;
+  height: 80rpx;
+  background:#f5f5f5; 
+  /*margin-top: 30rpx;*/
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color:#666;
+   
+}
+.invite-tit-head text{
+  display:inline-block;
+  width:33%;
+  text-align:center;
+}
+/*我邀请的好友的列表*/
+.invite-list{
+  width: 100%;
+  height: 90rpx; 
+  display: flex;
+  justify-content: space-between;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  color:#666666;
+  border-bottom: 1px solid #EFEBE5
+} 
+.invite-bottom .invite-list:last-child{
+  border-bottom:0
+}
+.invite-list text{
+  width:239rpx;
+  height: 90rpx;
+  text-align: center;
+
+}
+
+/*分享按钮样式*/
+.invite-share{
+  width:75rpx;
+  height:44rpx;
+  line-height:44rpx;
+  border:1rpx solid #5c7098;
+  position:absolute;
+  top:16rpx;
+  left:438rpx;
+  font-size:23rpx;
+  color:#5c7098;
+  text-align:center;
+  border-radius:15rpx;
+
+}

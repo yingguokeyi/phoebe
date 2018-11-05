@@ -1,0 +1,44 @@
+<!--pages/mine/fans/fans.wxml-->
+<!-- <text>pages/mine/fans/fans.wxml</text> -->
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+
+
+<view class="container">
+    <view class="top">
+        <view class="topBack">
+            <view>粉丝量</view>
+             <view><text>{{ allFan }}</text>人</view>
+        </view>
+        <view class="navs">
+            <view class="list {{tabIndex == 1?'active':''}}" data-id="1" bindtap="changeTab">
+                <view>{{simpleNum}}人</view>
+                <view>普通会员</view>
+                <view wx:if="{{tabIndex == 1}}" class="chooseBorder"></view>
+            </view>
+            <view class="list {{tabIndex == 2?'active':''}}" data-id="2" bindtap="changeTab">
+                <view>{{smallNum}}人</view>
+                <view>小掌柜</view>
+                <view wx:if="{{tabIndex == 2}}" class="chooseBorder"></view>
+            </view>
+            <view class="list {{tabIndex == 3?'active':''}}"  data-id="3" bindtap="changeTab">
+                <view>{{bigNum}}人</view>
+                <view>大掌柜</view>
+                <view wx:if="{{tabIndex == 3}}" class="chooseBorder"></view>
+            </view>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="title">
+            <text>粉丝名称</text>
+            <text>邀请时间</text>
+        </view>
+        <view class="listCon">
+            <view wx:for="{{fanList}}" wx:key="item">
+                <text>{{item.nick_name}}</text>
+                <text>{{item.beInvite_date}}</text>
+            </view>
+             
+        </view>
+    </view>
+</view>

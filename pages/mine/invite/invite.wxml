@@ -1,0 +1,55 @@
+<!--pages/mine/invite/invite.wxml-->
+<view class="inviteCon">
+  <view class='invite-wrap'>
+    <image src='../../../image/new/whiteBack2.png' class="whiteBack" style='width:714rpx;height:358rpx;margin-top:20rpx;margin-left:18rpx;'></image>
+    <!-- <image src="../../../image/new/fenline.png" class="fenline"></image> -->
+    <!-- 上半部分 -->
+    <view class='invite-top'>
+      <!--邀请码  -->
+        <view class="invite-codes">
+          <image src="../../../image/new/leftPoint.png"></image>
+          <text>我的邀请码</text>
+          <image src="../../../image/new/rightPoint.png"></image>
+        </view>
+        <view class='invite-code'>{{invitecode}}</view>
+        <!--保存二维码  -->
+        <view class='invite-ewm-save'>
+          <text>分享</text>
+        </view>
+
+        <!--分享按钮-->
+        <!-- <view class='invite-share'>
+          <text>分享</text>
+        </view> -->
+    </view>
+    <!--下半部分  -->
+    <view class='invite-bottom'>
+      <!--我的邀请人-->
+        <view class='invite-person'>
+            <view class='invite-word'>
+              <text>我的邀请人</text>
+            </view>
+            <view class='invite-case'>
+              <button class="btn" type="text" wx:if="{{inviteTel == ''}}" bindtap="goInvite" class="search_good">   请输入邀请人的手机号</button>
+              <button class="btn" type="text" wx:if="{{inviteTel != ''}}" class="search_good">{{inviteTel}}</button>
+            </view>
+            <!-- <view class='invite-toast'><text style="margin-left:15px;color:#b61c25;">注：邀请人绑定后将不再解绑</text></view> -->
+        </view>
+
+        <!--我邀请的好友-->
+          <!-- <view class='invite-tit'>我的下级</view>
+          <view class='invite-tit-head'>
+              <text>日期</text>
+              <text>邀请人</text>
+              <text>联系电话</text>
+          </view>
+            
+          <view class='invite-list' wx:for='{{invitemes}}' wx:key='item'>
+            <text>{{item.beInvite_date}}</text>
+              <text>{{item.beInVite_name}}</text>
+              <text style='margin-right:0rpx;'>{{item.beInVite_phone}}</text>
+          </view> 
+          -->
+    </view>
+  </view>
+</view>

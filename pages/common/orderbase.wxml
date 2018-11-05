@@ -1,0 +1,58 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<template name="orderbase">
+     <view class="orderType" wx:if="{{item.order_type == 'PDD'}}"  bindtap="goPddPay"  data-id='{{item.order_no}}' data-sku = "{{item.sku_id}}" data-phone="{{item.consignee_tel}}" data-index="{{index}}">
+           <!--订单号  -->
+        <view class='order-list-first'>
+             <text style='font-size:28rpx;color:#999;margin-left:26rpx;'>订单号： {{item.order_no}}</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 101}}">待支付</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 102 || item.status == 103 || item.status == 104 ||item.status == 105 || item.status == 106}}">待收货</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 107 || item.status == 108}}">已收货</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 110 || item.status == 109 ||item.status == 111 || item.status == 112 || item.status == 113}}">已取消</text>
+        </view>
+        <!--商品图  -->
+        <view class='order-list-second' data-status='{{item.status}}' data-no='{{item.order_no}}' data-date='{{item.created_date}}' data-price='{{item.total_price}}' data-image='{{item.image}}' data-name='{{item.sku_name}}' data-gift = '{{item.order_type}}' data-desc = '{{item.spu_attribute}}' data-buyer="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}" data-back="{{item.backMoney}}">
+            <image style='width:142rpx;height:142rpx;margin:28rpx 26rpx;' src='{{item.image}}'></image>
+            <view class="cargo-pro-title">
+                    <!--<text class="cargo-pro-name">自营</text> -->
+                     <text wx:if="{{item.order_type == 'LB'}}" class='textLB'>VIP礼包</text>    
+                    <text class="text_nowrap">{{item.sku_name}}</text>
+                    <text class="cargo-pro-desc">{{item.spu_attribute}}</text>
+             </view>
+        </view>
+        <!--时间  商品件数  总额  -->
+        <view class='order-list-third'>
+             <text style='font-size:28rpx;color:#999;margin-left:26rpx;'>{{item.created_date}}</text>
+             <text style='font-size:28rpx;margin-left:130rpx;'>共  <text style='font-size:32rpx;color:#b61c25;'>{{item.sku_num}}</text>件商品</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;'>￥{{filters.toFix(item.total_price/100)}}</text>
+        </view>    
+      </view>
+
+      <view class="orderType" wx:if="{{item.order_type != 'PDD'}}"  bindtap="todetails"  data-id='{{item.order_no}}' data-status='{{item.status}}' data-no='{{item.order_no}}' data-date='{{item.created_date}}' data-price='{{item.total_price}}' data-image='{{item.image}}' data-name='{{item.sku_name}}' data-gift = '{{item.order_type}}' data-desc = '{{item.spu_attribute}}' data-buyer="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}" data-back="{{item.backMoney}}">
+           <!--订单号  -->
+        <view class='order-list-first'>
+             <text style='font-size:28rpx;color:#999;margin-left:26rpx;'>订单号： {{item.order_no}}</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 101}}">待支付</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 102 || item.status == 103 || item.status == 104 ||item.status == 105 || item.status == 106}}">待收货</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 107 || item.status == 108}}">已收货</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;' wx:if="{{item.status == 110 || item.status == 109 ||item.status == 111 || item.status == 112 || item.status == 113}}">已取消</text>
+        </view>
+        <!--商品图  -->
+        <view class='order-list-second' data-status='{{item.status}}' data-no='{{item.order_no}}' data-date='{{item.created_date}}' data-price='{{item.total_price}}' data-image='{{item.image}}' data-name='{{item.sku_name}}' data-gift = '{{item.order_type}}' data-desc = '{{item.spu_attribute}}' data-buyer="{{item.consignee}}" data-phone="{{item.consignee_tel}}" data-address="{{item.delivery_address}}" data-back="{{item.backMoney}}" >
+            <image style='width:142rpx;height:142rpx;margin:28rpx 26rpx;' src='{{item.image}}'></image>
+            <view class="cargo-pro-title">
+                    <!--<text class="cargo-pro-name">自营</text> -->
+                     <text wx:if="{{item.order_type == 'LB'}}" class='textLB'>VIP礼包</text>    
+                    <text class="text_nowrap">{{item.sku_name}}</text>
+                    <text class="cargo-pro-desc">{{item.spu_attribute}}</text>
+             </view>
+            <!--<image style='width:20rpx;height:20rpx;margin:80rpx 26rpx;' src='../../../image/right.png'></image>-->
+        </view>
+        <!--时间  商品件数  总额  -->
+        <view class='order-list-third'>
+             <text style='font-size:28rpx;color:#999;margin-left:26rpx;'>{{item.created_date}}</text>
+             <text style='font-size:28rpx;margin-left:130rpx;'>共  <text style='font-size:32rpx;color:#b61c25;'>{{item.sku_num}}</text>件商品</text>
+             <text style='font-size:28rpx;color:#b61c25;margin-right:26rpx;'>￥{{filters.toFix(item.total_price/100)}}</text>
+        </view>    
+      </view>
+</template>
+

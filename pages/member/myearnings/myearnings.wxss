@@ -1,0 +1,65 @@
+/* pages/member/myearnings/myearnings.wxss */
+.myearn-wrap{
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9;
+}
+.myearn-header{
+  width: 100%;
+  height: 210rpx;
+  border-top:1px solid #F0F0F0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.myearn-header-left{
+  width: 50%;
+  height: 210rpx;
+  margin: 30rpx;
+}
+.myearn-header-right{
+  width: 50%;
+  height: 210rpx;
+  margin: 30rpx;
+}
+.myearn-header-right text{
+  display: inline-block;
+  width: 200rpx;
+  height: 40rpx;
+  border: 1px solid #6F6F6F;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  float: right;
+}
+.myearn-share{
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  margin-top: 20rpx;
+
+}
+
+.myearn-share-top{
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+}
+.myearn-msg{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.myearn-msg-list{
+  width: 24%;
+  height: 120rpx;
+  border-right:1px solid #F0F0F0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}

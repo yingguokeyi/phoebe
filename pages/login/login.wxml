@@ -1,0 +1,130 @@
+
+    <!-- <view class='register-image'>
+           <image src='../../image/bac4.png'></image> 
+    </view>
+    <view class="content">
+        <view class = "register-logo">
+            <image mode="aspectFit" src="../../image/login.png"></image>
+        </view>
+        <form bindsubmit="formSubmit">
+            <view class="input-area">
+                <view class="input-log">  
+                  <image style='width:28rpx;height:36rpx;margin:0 24rpx;' src='../../image/phone.png'></image>
+                  <input wx:if="{{tele == ''}}" type='number' placeholder="手机号" name="phone" id="phone" maxlength='11' placeholder-style='color:#999'></input>
+                  <input wx:if="{{tele != ''}}" type='number' name="phone" id="phone" value="{{tele}}" maxlength='11' placeholder-style='color:#999'></input>
+                </view>  
+                <view class="input-log">  
+                   <image style='width:28rpx;height:36rpx;margin:0 24rpx;' src='../../image/code.png'></image>
+                   <input type='password'  placeholder="登录密码" id="password" name="password" maxlength='20' placeholder-style='color:#999'></input>
+                </view>    
+            </view> -->
+              <!--忘记密码  -->
+         <!-- <view class='forget-pass'> 
+            <text  bindtap='toforget'>忘记密码？</text>
+         </view>
+            <button class='login-btn' disabled = "{{loginDisabled}}" style="background:{{loginBtnColor}};color:#fff" formType="submit" loading="{{btnLoading}}" hover-class="btnClick" hover-start-time="10ms">登录</button>
+        </form>
+
+    </view> -->
+    <!-- 已有账号？请登录 -->
+      <!-- <view class="txt-area">
+             <navigator  url="/pages/register/register">
+                     <text class="register"> 如无账号，请先注册</text>
+            </navigator>
+     </view> -->
+
+
+     <!-- 改版的登录页面 -->
+      <!-- 大背景色 -->
+     <view class='register-image'>
+           <image src='../../image/person/dribs.png'></image> 
+    </view>
+    <view class = "register-logo">
+          <image mode="aspectFit" src="../../image/person/palm.png"></image>
+    </view>
+    <view class="content">
+        <form bindsubmit="formSubmit">
+            <view class="input-area">
+                <view class="input-log">  
+                  <!-- <image style='width:28rpx;height:36rpx;margin:0 24rpx;' src='../../image/phone.png'></image> -->
+                  <input wx:if="{{tele == ''}}" type='number' placeholder="请输入手机号" name="phone"  bindinput ="phoneInput" id="phone" bindblur='phoneMove' maxlength='11' placeholder-style='color:#999'></input>
+                  <input wx:if="{{tele != ''}}" type='number' name="phone"  bindinput ="phoneInput" id="phone" value="{{tele}}" maxlength='11' placeholder-style='color:#999'></input>
+                </view>  
+                <view class="input-log">  
+                   <!-- <image style='width:28rpx;height:36rpx;margin:0 24rpx;' src='../../image/code.png'></image> -->
+                   <input type='password'  placeholder="请输入密码" id="password" name="password" bindblur="pwdMove" bindinput ="picCodeInput" maxlength='20' placeholder-style='color:#999'></input>
+                </view>    
+            </view> 
+              <!--忘记密码  -->
+          <view class='forget-pass'> 
+            <text  bindtap='toforget'>忘记密码？</text>
+            <navigator  url="/pages/register/register" style="background:#fff">
+                <text class="register" style='width:63rpx;'> 注册</text>
+            </navigator>
+         </view>
+            <button class='login-btn' disabled = "{{loginDisabled}}" style="color:{{finishBtnColor}};background:{{finishBtnBgColor}}" formType="submit" loading="{{btnLoading}}" hover-class="btnClick" hover-start-time="10ms">登录</button>
+        </form>
+         <!-- 其他方式登录 -->
+       <view class='trigonal'>
+        <view class='wire'></view>
+        <view class='letter'>使用其他方式登录</view> 
+        <view class='we'></view>
+     </view>  
+     <!-- 微信图标 -->
+       <view class='w-ico'> 
+        <view class='w-image'>
+          <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style='background:#fff;width:40px;height:40px;padding-left:0rpx;padding-right:0rpx;'>
+            <image src='../../image/person/w.png' style="width:40px;height:40px;"></image> 
+          </button>      
+       </view> 
+       <!-- <button class='w-image' open-type="getPhoneNumber"  bindtap="trigger" bindgetphonenumber="getPhoneNumber" >
+         <image src='../../image/person/w.png' style="width:136rpx;height:136rpx;"></image> 
+       </button> -->
+        <!-- <view class='w-zi'  bindtap="trigger"> -->
+       <!-- <view class='w-zi'> -->
+        <button class='w-zi' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+          <text>微信</text>
+        </button>
+       </view>
+     </view> 
+    <!-- </view>   -->
+    <!-- 已有账号？请登录 -->
+        <!-- <view class="txt-area">
+              <navigator  url="/pages/register/register">
+                     <text class="register"> 注册</text>
+            </navigator>   -->
+             <!-- <navigator  url="/pages/register/after-registration/after-registration">
+                     <text class="register"> 注册</text>
+            </navigator> -->
+      <!-- </view>   -->
+     <!-- 阴影框 -->
+    <!-- <view class="modalDlg" wx:if="{{showModal}}">         
+       <view class='authorize'>微信授权</view> 
+      <view class="design">
+         <image src="../../image/hand.png"></image>
+         <view class="grown">掌大|购物省钱优质</view>
+      </view>   -->
+      <!-- 获取手机号 -->
+      <!-- <view class="p_phone">
+         <view class="dot">
+            <image src="../../image/person/d_03.jpg"></image>
+            <view class="d_right">申请获取你微信绑定的手机号</view>
+          </view>
+            <view class="m_meit">{{phone}}</view>    -->
+            <!-- 点击确定和取消按钮 -->
+        <!-- <view class="bot">
+            <view class='abrogate' bindtap="close_mask"  style='color:#000000;'>取消</view>
+            <view class='confim'  style='color:#29bb18;'>确认授权 -->
+              <!-- <navigator  url="/pages/login/bindphone/bindphone">确认授权</navigator> -->
+              <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确认授权</button> -->
+            <!-- </view>
+        </view>
+      </view>   -->
+         <!--  问号图标 -->
+    <!-- <view class="wil">
+      <image class="will_image" style='width:50rpx;height:50rpx;' src="../../image/person/wil.png"></image>
+  </view> 
+  </view> 
+           -->
+<!-- 黑色的遮罩框 -->
+<!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>    -->

@@ -1,0 +1,480 @@
+
+.login-btn{
+  width: 566rpx;
+  height: auto;
+  /* background: #b61c25; */
+  border-radius: 23rpx;
+  margin-left: 42rpx;
+  font-size: 36rpx;
+  color:#fff;
+  outline:none;
+  margin-top: 14rpx;
+  padding-left:0;
+  padding-right:0;
+}
+.canLogin{
+   background: #b61c25;
+
+}
+.cantLogin{
+  background:#cecece;
+}
+
+.txt-area {
+  position: absolute;
+  left: 95%;
+  /* bottom: 240rpx;   */
+  bottom: 459rpx;
+  transform: translate(-50%,0);
+  z-index: 99;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.forget-pass button[disabled]:not([type]){
+  background:#b61c25;
+}
+/* pages/register/register.wxss */
+
+
+
+/* .register-image image{
+   width:100%;
+  height:100%; 
+  position:absolute;
+  z-index:9;
+
+} */
+/* 新改版的注册页面----头部背景图 */
+
+.content {
+  width: 650rpx;
+  /* height: 760rpx; */
+  /* background:rgba(210,206,200,0.8); */
+  text-align: center;
+  margin:30rpx 0 0 50rpx;
+  border-radius: 14rpx;
+}
+
+.register-logo image {
+  width: 136rpx;
+  height: 136rpx;
+  position: absolute;
+  top:100rpx;
+  left:53%;
+}
+  .register-logo{
+    width:583rpx;
+    height:335rpx;
+    position:relative;
+  } 
+  .register-image image{
+  width:583rpx;
+  height:335rpx; 
+  position:absolute;
+  z-index:9;
+  /* top:20rpx; */
+  left: 83rpx;
+}
+/*中间控制input*/
+.input-area {
+  width: 566rpx;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.input-area input {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color:#b61c25;
+}
+/*input框*/
+.input-log{
+  height: 86rpx;
+  width: 566rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 23rpx;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #dedede;
+}
+/*图片验证码  */
+.piccode{
+  height: 96rpx;
+  width: 566rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  opacity: 1;
+  border-radius: 8rpx;
+  margin-bottom: 30rpx;
+}
+.Imgcode{
+  width: 250rpx;
+  height: 70rpx;
+}
+/*中间input*/
+.smsCode {
+  height: 96rpx;
+  width: 566rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  opacity: 1;
+}
+.smsCode input {
+  width: 336rpx;
+}
+/*按钮*/
+.smsCode .getSmsCodeBtn {
+  font-size: 30rpx;
+  color: #fff;
+  width: 250rpx;
+  box-sizing: border-box;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-right: 6rpx;
+}
+/*图标*/
+.userinfo-logIcon{
+  width: 28rpx;
+  height: 36rpx;
+  vertical-align: middle;
+  margin: 0 24rpx;
+}
+
+/*注册*/
+.btn-area {
+  width: 80%;
+  margin: 0 auto;
+}
+.btnClick{
+  background:#e3212c;
+}
+
+.btn-area button {
+  margin-top: 40rpx;
+  color: #fff;
+}
+.read-text{
+  font-family: "PingFangSC-Regular";
+  font-size: 18rpx;
+  color: #333333;
+  display: flex;
+  margin: 20rpx 0 50rpx 0;
+}
+.redad-content{
+  color: #f8222d;
+}
+.forget-pass{
+  /* padding-bottom: 20rpx; */
+  color:#666;
+  font-size: 24rpx;
+  /* text-align: right;
+  margin-right: 30rpx; */
+  text-align: left;
+  margin-left: 53rpx;
+}
+.forget-pass text{
+  display:inline-block;
+  width:150rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+.forget-pass navigator{
+  display:inline-block;
+  width:40rpx;
+  height:70rpx;
+  line-height:70rpx;
+  margin-left:368rpx;
+
+}
+.txt-area .register{
+  display:block;
+  width:260rpx;
+  height:55rpx;
+  line-height:55rpx;
+  font-size:24rpx;
+
+}
+/* 第三方登录 */
+.trigonal{
+  width:566rpx;
+  /* margin:0 auto; */
+  display:flex; 
+  justify-content:center; 
+  margin-top:160rpx; 
+ margin-left:15rpx;
+}
+.trigonal .wire{
+  width: 150rpx;
+  height: 1rpx;
+  background:linear-gradient(to
+ left,#efefef,#b6b6b6,#efefef);
+ margin-left:31rpx;
+
+
+}
+.trigonal .letter{
+   width: 291rpx;
+   height: 50rpx;
+   color: #666666;
+   margin-top:-19rpx;
+    margin-left:6px;
+
+}
+.trigonal .we{
+  width:140rpx;
+  height: 1rpx;
+  background:linear-gradient(to
+ left,#efefef,#b6b6b6,#efefef);
+}
+/* 微信小图标 */
+
+.w-icon{
+  width: 136rpx;
+  height: 300rpx;
+}
+.w-image{
+width:84rpx;
+height:85rpx;
+margin-left:279rpx;
+margin-top:52rpx;
+}
+/* .w-image image{
+
+width:136rpx;
+height:136rpx;
+} */
+.w-zi{
+  /* margin-top:3rpx;
+  width:121rpx;
+  height:10rpx;
+  line-height:10rpx;
+  margin-left:268rpx; */
+  background:#fff;
+  font-size:14px;
+  width:121rpx;
+  height:32px;
+  line-height:45rpx;
+  margin-left:269rpx;
+
+}
+.w-zi text{
+  margin-left:-20rpx;
+  color: #999999;
+}
+/* 阴影样式 */
+.s_shadow{
+  width: 750rpx;
+  height: 1195rpx;
+  opacity: 0.5;
+  background: #636161;
+  position:absolute;
+  top:13rpx;
+  z-index:109;
+}
+/* 阴影上的白框样式 */
+.h_boxes{
+  width: 555rpx;
+  /* height: 600rpx; */
+  background: #fff;
+  position: absolute;
+  z-index:214;
+  top:161rpx;
+  left:94rpx
+}
+/* 授权字的样式 */
+.authorize{
+  width: 555rpx;
+  height: 93rpx;
+  font-size: 40rpx;
+  color: #000000;
+  border-bottom: 1rpx solid #ebebeb;
+  text-align: center;
+  line-height: 93rpx;
+}
+.design{
+  width:479rpx;
+  height: 262rpx;
+  /* background: #979797; */
+  margin-left:36rpx;
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.design image{
+     width: 127rpx;
+     height: 127rpx;
+     line-height: 136rpx;
+     margin-top: 30rpx;
+     margin-left: 168rpx;
+}
+.grown{
+  width: 300rpx;
+  height: 82rpx;
+  line-height:82rpx;
+  text-align: center;
+  font-size: 33rpx;
+  color: #000000;
+  margin-top:12rpx;
+  margin-left:85rpx;
+
+}
+/*申请获取你微信绑定的手机号样式*/
+.p_phone{
+  width: 555rpx;
+  height: 152rpx;
+  border-bottom: 1rpx solid #ebebeb;
+
+}
+.dot{
+  width: 555rpx;
+  /* height: 300rpx; */
+  margin-bottom: 22rpx;
+
+}
+.dot image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left:28rpx;
+  margin-top:42rpx;
+
+}
+.d_right{
+  width: 339rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #999999;
+  margin-left:66rpx;
+  margin-top: -37rpx;
+}
+.m_meit{
+  width: 120rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 71rpx;
+}
+/*取消和确定按钮*/
+.bot{
+  width: 556rpx;
+
+}
+.abrogate{
+  width: 278rpx;
+  height: 103rpx;
+  line-height: 103rpx;
+  float: left;
+  overflow: hidden;
+  border-right:1rpx solid #ededed;
+  margin-top:28rpx;
+  text-align:center;
+  color: #000000;
+
+}
+.abrogate:hover{ color:#2fb725; }
+/*弹窗结束  */  
+  .abrogate::after{  
+  border:none;  
+  }  
+.confim{
+  width:276rpx;
+  height: 103rpx;
+  line-height: 103rpx;
+  float: left;
+  overflow: hidden;
+  margin-top:28rpx;
+  text-align:center;
+  color: #000000;
+}
+.confim:hover{ color:#2fb725;}
+ .confim::after{  
+  border:none;  
+  }  
+/*问号图标*/
+.wil{
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute; */
+  /* top:123rpx;
+  left:476rpx; */
+  margin-left: 442rpx;
+  margin-top: -385rpx;
+  z-index:300;
+
+}
+.hide{
+display: none;
+}
+.show{
+display: block;
+}
+
+
+
+/*网上资料样式*/
+/* 点击充值弹窗 */  
+ .mask{  
+    width: 100%;  
+    height: 100%;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    background: #3d3d3d;  
+    z-index: 9000;  
+    opacity: 0.7;  
+ }  
+  
+.modalDlg{  
+    width: 580rpx;  
+    height:610rpx;  
+    position: fixed;  
+    top: 50%;  
+    left: 0;  
+    z-index: 9999;  
+    margin: -370rpx 85rpx;  
+    background-color: #fff;  
+    border-radius: 10rpx;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+}  
+.recharge_amount{  
+color:#aaa;  
+width:450rpx;  
+height:80rpx;  
+background:#f1f1f1;  
+text-align:center;  
+border-radius:12rpx;  
+margin-top:56rpx;  
+text-indent:0;  
+}  
+.save_money{  
+color:#fff;  
+width:270rpx;  
+height:80rpx;  
+line-height: 80rpx;  
+background:#d95155;  
+text-align:center;  
+border-radius:12rpx;  
+margin-top:80rpx;  
+font-size: 28rpx;  
+text-indent: 0em;  
+}  
+.close_mask{  
+  color:#000;  
+  position:relative;  
+  left:40%;   
+  top: -82%;  
+  font-size:32rpx;  
+} 
+/*弹窗结束  */  
+  button::after{  
+  border:none;  
+ } 

@@ -1,0 +1,36 @@
+<wxs module="filters" src="../../../../utils/addmul.wxs"></wxs>
+ <!-- 头部 -->
+    <!-- <view class='myearn-header'>
+        <view class='moon' bindtap="showDatePicker">{{date}}
+            <view style='width:25rpx;height:20rpx;' bindtap="showDatePicker">
+              <image src='../../../../image/person/down.png' style='width:22rpx;height:18rpx;'></image>
+            </view>
+        </view>
+        <date-picker id="date-picker" value="{{datePickerValue}}" isShow="{{datePickerIsShow}}"  bindsureclick="datePickerOnSureClick" bindcancelclick="datePickerOnCancelClick" />
+        <view class='account'>入账：<text style='color:#e40012;'>￥ 800.09</text></view>          
+    </view> -->
+    <!-- 佣金收益 -->
+<view wx:if='{{result!="" && showDetails==false}}'>
+  <view>
+
+    <view wx:for="{{result}}" wx:key='item'>
+
+        <view class='commission_li'>
+            <view class='commission'>
+              <view class='commission-left'>回填单奖励金</view>
+              <view class='commission-right'>+ {{filters.toFix(item.member_self_money/100)}}</view>
+            </view>
+            <view class='commission-time'>
+              <view class='commission-top'>收益时间：{{item.created_date}} </view>
+              <view class='commission-bottom'>入账时间：{{item.operator_time}}</view>
+            </view>
+        </view>
+        
+    </view>
+  </view>
+</view>
+
+ <view class='boxx'  wx:if='{{result == ""  &&  showDetails==true}}'>
+    <view class='writing'>暂时还没有入账记录哦！</view>
+    <view class='case' bindtap='boxx'>去赚钱</view>
+</view>

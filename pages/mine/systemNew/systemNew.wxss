@@ -1,0 +1,95 @@
+/* pages/mine/newsList/newsList.wxss */
+page{
+    background: #f8f8f8;
+
+}
+/* 系统通知 */
+.noNews image{
+    width:80rpx;
+    height:80rpx;
+    margin:0 auto;
+}
+.news image{
+    width:80rpx;
+    height:80rpx;
+    margin-right:24rpx;
+
+}
+.systemList .title{
+    display: flex;
+    margin-bottom: 15rpx;
+    align-items: center;
+    justify-content: space-between;
+}
+.systemList .title image{
+    height:76rpx;
+    width:76rpx;
+}
+.systemList .newCon{
+    background: #fff;
+    padding:24rpx;
+}
+.systemList .time{
+    text-align: center;
+    height:70rpx;
+    line-height: 70rpx;
+    font-size: 24rpx;
+}
+.systemList .title>view{
+    height:40rpx;
+    overflow:hidden;    
+    white-space:nowrap;  
+    text-overflow:ellipsis;
+    font-size: 30rpx;
+    color:#333;
+    width:600rpx;
+}
+.systemList .desc{
+    color:#666;
+    font-size: 26rpx;
+    line-height: 40rpx;
+}
+
+/* 优惠活动 */
+.cuponAct .time{
+    height:70rpx;
+    line-height: 70rpx;
+    font-size:24rpx;
+    text-align:center;
+}
+.noNews{
+    text-align: center;
+}
+.news image{
+    width:80rpx;
+    height:80rpx;
+    margin:0 auto;
+    
+}
+.noNews image{
+    width:80rpx;
+    height:80rpx;
+    margin-top:30rpx;
+}
+page{
+    background: #f8f8f8;
+}
+.favorItem image{
+    width:698rpx;
+    height:316rpx;
+    
+}
+.favorItem{
+    padding:24rpx 26rpx 28rpx;
+    background: #fff;
+}
+.favorItem .title{
+    font-size:28rpx;
+    color:#333;
+    margin:28rpx 0 18rpx 0;
+}
+.favorItem .desc{
+    color:#666;
+    font-size: 24rpx;
+    line-height:37rpx;
+}

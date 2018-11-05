@@ -1,0 +1,332 @@
+/* pages/mine/mine.wxss */
+.myContainer{
+  width: 100%;
+  height: 1110rpx;
+  background: #F9F9F9; 
+
+}
+.header-Top{
+ width: 100%;
+ height:337rpx;
+ /*display:flex;
+ justify-content:space-between;*/
+ background:#b61c25;
+}
+.header-Datum{
+  display:flex;
+  align-items:center;  
+  height: 145rpx;
+  background:#b61c25;
+
+}
+.header-Image{
+  width:108rpx;
+  height:108rpx;
+  margin-left: 30rpx;
+}
+.copy{
+  display: inline-block;
+  width:64rpx;
+  height:32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  color:#fff;
+  border:1px solid #fff;
+  border-radius: 4rpx;
+  font-size: 26rpx;
+  margin-left:16rpx;
+}
+.header-Image image{
+  width:108rpx;
+  height:108rpx;
+  border-radius:50%;
+}
+.goinfor image{
+  width:14rpx;
+  height:26rpx;
+  margin-left:21rpx;
+  vertical-align:middle;
+}
+
+.header-Text{
+ margin-left: 26rpx;
+}
+.goinfor text{
+  color:#fff;
+  font-size:26rpx;
+}
+.header-userName{
+  width:556rpx;
+  display:flex;
+  /* flex-direction:column; */
+  font-size:28rpx;
+  color:#fff;
+  font-family:"MicrosoftYaHei";
+  justify-content: space-between;
+}
+button[class="header-Datum"]::after{
+  border:0;
+}
+.header-phone{
+  margin-top: 10rpx;
+  /* display: block;s */
+  color:#fff;
+  font-size:26rpx;
+}
+.header-QRcode{
+ width: 64rpx;
+ height: 64rpx;
+ position: relative;
+ top:60rpx;
+ right: 50rpx;
+}
+.header-QRcode image{
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.myItems{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+}
+.myItems-inner{
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx;
+}
+.item-about{
+  display: flex;
+  flex-direction:column;
+  color:#666;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  text-align: center;
+  line-height:55rpx; 
+}
+.myOrder{
+  width: 100%;
+  height: 150rpx;
+  background: #fff;
+  /*margin-top: 20rpx;*/
+}
+.myOrder-inner{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.order-about{
+  width: 25%;
+  height: 150rpx;
+  text-align: center;
+  color:#666;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+}
+.order-about image{
+  width: 56rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.my-bottom{
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+}
+.li{
+  width: 100%;
+  height: 89rpx;
+  background: #fff;
+  border-bottom: 1px solid #F9F9F9;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color:#333;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .li text{
+  margin-left: 24rpx; 
+  /* font-weight: bold; */
+} 
+.li .newDiv .news{
+  width: 44rpx;
+  height: 40rpx;
+  margin-left:30rpx;
+  margin-bottom:-10rpx;
+  
+
+}
+.jiantou{
+  width: 14rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 40rpx;
+}
+
+.logout {
+  width:80%;
+  margin-top:12rpx;
+  line-height:70rpx;
+  text-align: center;
+  background:#A5772C;
+  color:white;
+}
+.my-bottom .li_friend{
+  margin-top:20rpx;
+}
+.bottom-area {
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; 
+  font-size: 8rpx;
+  text-align: center;
+}
+
+/* 钱包。收藏，优惠卷 */
+.collect{
+  width: 100%;
+  height: 120rpx;
+  margin-top: 10rpx;
+}
+.collect-inner{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.collect-about{
+  width: 25%;
+  height: 150rpx;
+  text-align: center;
+  color:#666;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+}
+.collect-about image{
+  width: 56rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+/*我的订单*/
+.order{
+  width:750rpx;
+  height: 95rpx;
+  background-color: #fff;
+  border-top-left-radius:50rpx;
+  border-top-right-radius:50rpx;
+  border-bottom: 1px solid #F9F9F9;
+}
+.order .order-inner{
+  width: 750epx;
+  height: 95rpx;
+   border-top-left-radius:50rpx;
+  border-top-right-radius:50rpx;
+}
+.order .order-inner .or_li{
+  width: 750rpx;
+  height: 95rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #F9F9F9;
+  line-height: 95rpx;
+  font-size: 30rpx;
+  color:#333;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius:50rpx;
+  border-top-right-radius:50rpx;
+
+}
+.or_li text{
+  /* margin-left:39rpx; */
+  margin-top:5rpx;
+
+  /* font-weight: bold; */
+} 
+.or_li .or_jiantou{
+  width:14rpx;
+  height:26rpx;
+  /* margin-top:37rpx; */
+  margin-bottom:-1rpx; 
+  margin-right:40rpx;
+ 
+}
+/*头部下面的的总div*/
+.r_metter{
+  width: 100%;
+  position: absolute;
+  top:190rpx;
+
+}
+
+.radiusImg{
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  float: left;
+}
+.noAuth{
+  display: inline-block;
+  width:14rpx;
+  height:26rpx;
+  margin-left:30rpx;
+  vertical-align:middle;
+
+}
+
+/* 9/7号新增的粉丝 */
+.myFans{
+  background: #fff;
+  padding-right:0;
+  margin-top: 20rpx;
+}
+.fansTitle{
+  display: flex;
+  justify-content: space-between;
+  height:90rpx;
+  line-height: 90rpx;
+  padding-left:30rpx;
+  border-bottom:2rpx solid #f8f8f8;
+}
+.lookDetail{
+  color:#999;
+  font-size:26rpx;
+  margin-right:10rpx;
+}
+.fansLevel{
+
+  height:140rpx;
+}
+.fansLevel>view{
+  display: inline-block;
+  width:250rpx;
+  margin-top:30rpx;
+  border-left:2rpx solid #f2f2f2;
+  box-sizing:border-box;
+
+}
+.fansLevel>view text:first-child{
+  color:#333;
+  font-size:30rpx;
+}
+.fansLevel>view text:last-child{
+  color:#666;
+  font-size:24rpx;
+}
+.fansLevel text{
+  display: block;
+  text-align: center;
+  line-height: 40rpx;
+}
+button.header-Datum{
+  text-align: left;
+  line-height: 37rpx;
+  padding-left:0;
+  padding-right:0;
+}

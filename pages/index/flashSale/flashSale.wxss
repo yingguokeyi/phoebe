@@ -1,0 +1,244 @@
+/* pages/buy/goodslist/goodslist.wxss */
+page{
+  background-color: #f9f9f9;
+}
+/* 限时抢够规则 */
+.rule{
+  height: 70rpx;
+  font-size: 22rpx;
+  color: #666666;
+  background: #fff;
+  line-height: 70rpx;
+}
+/* 限时抢购时间 
+*/
+.time{
+  height: 70rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.time_left{
+  width: 375rpx;
+  height: 70rpx;
+  background: #ffc2c8;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+}
+.time_right{
+  width: 375rpx;
+  height: 70rpx;
+  background: #ffc2c8;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+}
+.red{
+  background: #ff99a3;
+  color: #fff;
+   }
+.show{
+  display:block;
+  }
+.hidden{
+  display:none;
+  }
+/* 商品列表 */
+.cargo-list{
+  width: 100%;
+  height:308rpx;
+  display:flex;
+  background: #fff;
+  border-bottom: 1rpx solid #ebebeb;
+}
+.cargo-pro-image{
+  /* width: 150rpx;
+ margin:30rpx 20rpx 30rpx 30rpx; */
+  width: 240rpx;
+  height: 240rpx;
+  margin:30rpx 0 0 30rpx;
+  position:relative;
+}
+.cargo-pro-image image{
+  width: 244rpx;
+  height: 244rpx;
+  border: 1rpx solid #ebebeb;
+}
+/* 按钮 */
+.keypad{
+  width: 146rpx;
+  height: 50rpx;
+  background: #b61c25;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius:6rpx; 
+  margin-left:278rpx;
+  line-height:50rpx;
+  text-align:center;
+  /* margin-top:20rpx; */
+
+}
+/* 已售完按钮 */
+.keypads{
+  width: 146rpx;
+  height: 50rpx;
+  background: #ebebeb;
+  color: #b3b3b3;
+   font-size: 24rpx;
+  border-radius:6rpx; 
+   margin-left:278rpx; 
+  line-height:50rpx;
+  text-align:center;
+   /* margin-top:20rpx;  */
+  /* position: absolute;
+  top:216rpx;
+  left: 549rpx; */
+
+}
+/* 遮挡层
+ */
+ .blank{
+   width: 240rpx;
+   height: 240rpx;
+   background: #000000;
+   opacity: 0.7; 
+   position: absolute; 
+   margin-left:34rpx;
+   margin-top:35rpx;
+
+ }
+ .blank image{
+   width: 198rpx;
+   height: 198rpx;
+   margin-left:22rpx;
+   margin-top:22rpx;
+
+ }
+.cargo-solid{
+  width: 600rpx;
+  height: 308rpx;
+}
+.cargo-pro-title{
+    font-family:'PingFangSC-Regular'; 
+    font-size:28rpx;
+    color:#9c9b9b;
+    margin-top:20rpx;
+    display: -webkit-box; 
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    /* line-height:54rpx; */
+    line-height:35rpx;
+    }
+ .cargo-pro-list{
+  /* margin:0 30rpx 0 99rpx; */
+  margin:0 30rpx 0 30rpx;
+  height: 205rpx;
+} 
+ .cargo-pro-name{
+  width:60rpx;
+  height:30rpx;
+  line-height:30rpx;
+  text-align:center;
+  background:#f8f5e4;
+  border-radius:2rpx;
+  font-size:22rpx;
+  color:#c8a200;
+  display:inline-block; 
+  margin-right:18rpx; 
+  position: relative;
+  bottom:4rpx;  
+  font-weight: bold;
+}
+.cargo-pro-texts{
+  font-family:"PingFangHK-Regular"; 
+  font-size:26rpx;
+  color: #595757;
+  line-height:45rpx;
+}
+.cargo-pro-desc{
+  font-size:24rpx;
+  color:#acacac;
+  height:30rpx;
+   overflow: hidden; 
+   text-overflow: ellipsis;
+   line-height:30rpx;
+
+}
+.cargo-pro-state{
+  font-size: 24rpx;
+  color: #999999;
+}
+.cargo-pro-money{
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 8rpx; 
+}
+.cargo-pro-price{
+  font-size: 28rpx;
+  color: #e40012;
+  /* color: #b61c25; */
+  /* position: relative;
+  top:25rpx; */
+  font-weight: bold;
+}
+.cargo-pro-cancel{
+  font-size: 22rpx;
+  color: #727171;
+  text-decoration:line-through;
+  font-weight: bold;
+  margin-top: 7rpx;
+  margin-left: 12rpx;
+}
+.cargo-pro-backtrack{
+  font-size: 28rpx;
+  color: #727171;
+  font-weight: bold;
+}
+.cargo-pro-symbol{
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 12rpx;
+  text-decoration:line-through;
+}
+.cargo-pro-explain{
+  font-size: 24rpx;
+}
+.cargo-pro-explain{
+  font-size: 24rpx;
+  color: #696969;
+}
+
+
+.commission{
+
+  width: 250rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  background: #FDDEDB;
+  text-align: center;
+  line-height: 50rpx;
+  color: #E3514D;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  
+}
+
+/* 没有秒杀的商品显示 */
+.boring{
+  text-align: center;
+  width: 337rpx;
+  height: 31rpx;
+  color: #999999;
+  font-size: 24rpx;
+  margin-left:227rpx;
+  margin-top:150rpx;
+}

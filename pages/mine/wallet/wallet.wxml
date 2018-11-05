@@ -1,0 +1,49 @@
+<!--pages/mine/wallet/wallet.wxml-->
+
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view class='wallet-wrap'>
+    <view class='wallet-header'>
+   <!--收付款  -->
+       <view class='wallet-header-left' style='width:50%;' bindtap='toprmoney'>           
+           <view class='remain'>账户可提现余额</view>
+       </view>
+    <!--余额  -->
+       <view class='wallet-header-right' style='width:50%;' bindtap='togetbalance'>       
+           <!-- <view style='font-size:32rpx;color:#fff;margin-left:90rpx;'>￥ {{balance}}</view> -->
+            <view class='wallet'>￥ {{filters.toFix(balance/100)}}</view>         
+       </view>
+   </view>
+
+<!--账单明细  -->
+  <view class='my-bottom'>
+        <view class='li' bindtap="togetbalance">
+          <view class='newDiv'>
+            <image class='news'  src='../../../image/member/withdraw.png'></image>
+            <text>提现</text>
+          </view>
+          <view>
+            <image class='jiantou' src='../../../image/right.png'></image>
+          </view>
+        </view>
+        <view class='li' style='margin-top:20rpx;' bindtap='toprmoney'>
+          <view class='newDiv'>
+            <image class='news'  src='../../../image/member/record.png'></image>
+            <text>提现记录</text>
+          </view>
+          <view>
+            <image class='jiantou' src='../../../image/right.png'></image>
+          </view>
+        </view>
+        <view class='li' bindtap='accounting'>
+          <view class='newDiv'>
+            <image class='news'  src='../../../image/member/account.png'></image>
+            <text>入账记录</text>
+          </view>
+          <view>
+            <image class='jiantou' src='../../../image/right.png'></image>
+          </view>
+        </view>
+  
+  </view>
+    
+</view>

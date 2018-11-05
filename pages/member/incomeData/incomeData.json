@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#b61c25",
+  "navigationBarTitleText": "全部收入数据",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "date-picker": "../../../components/date-picker/date-picker"
+  }
+}

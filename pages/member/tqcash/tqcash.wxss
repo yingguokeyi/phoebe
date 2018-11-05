@@ -1,0 +1,188 @@
+/* pages/my/cash/recharge.wxss */
+.tqcash-wrap{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  position: absolute;
+}
+.tqcash-tit{
+  width: 100%;
+  height: 80rpx;
+  background: #FFF2DF;
+}
+.tqcash-content{
+  width: 690rpx;
+  height: 660rpx;
+  background: #fff;
+  margin: 40rpx  30rpx;
+}
+.tqcash-wx{
+  display:flex;
+  height: 150rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 32rpx;
+  color:#333;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0 50rpx;
+
+}
+.accredit image{
+  width:19rpx;
+  height:22rpx;
+  margin-top:15rpx;
+}
+.intro,.accredit{
+  height:100rpx;
+  line-height:55rpx;
+}
+.tqcash-je{
+  width: 590rpx;
+  height: 126rpx;
+  border-bottom: 1px solid #eee;
+  padding:50rpx;
+  /* line-height: 166rpx; */
+  /* display: flex;
+  justify-content: space-between;  */
+}
+
+.writecash{
+  display: inline-block;
+  width: 400rpx;
+  vertical-align: middle;
+  height:90rpx;
+  /* height: 166rpx;
+  font-size: 56rpx; */
+}
+.tqcash-surplus{
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 44rpx 0;
+  font-size: 28rpx;
+}
+.button-sp-area{
+  width: 570rpx;
+  height: 96rpx;
+  /* background: #EBEBEB; */
+  border-radius: 6rpx;
+  margin-left: 60rpx;
+}
+.button-sp-area button{
+  font-size: 36rpx;
+  color:#b3b3b3;
+  background: #ebebeb;
+  border:0;
+}
+.button-sp-area button[class='btn']::after{
+  border:0
+}
+
+.promptFont{
+  color:#999;
+  font-size:28rpx;
+}
+.userMation image{
+  width:80rpx;
+  height:80rpx;
+  border-radius:50%;
+  margin:0 20rpx 0 -100rpx;
+  vertical-align: middle
+}
+.userMation text{
+  display: inline-block;
+  max-width:275rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+.userMation{
+  width:300rpx;
+ 
+}
+.moreWarn{
+  font-size:28rpx;
+  color:#b61c25;
+  padding:44rpx 0 44rpx 50rpx;
+ 
+}
+.mask{
+  width:750rpx;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:10;
+  position:fixed;
+  top:0;
+  opacity:0.8;
+
+}
+.sureAgain,.requestSmsCode{
+  position: absolute;
+  width:524rpx;
+  height:362rpx;
+  border-radius: 12rpx 12rpx 0 0;
+  top:426rpx;
+  left:113rpx;
+  background:#fff;
+  z-index:1000;
+}
+.topInfo{
+  text-align:center;
+  color:#333;
+}
+.topInfo image{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+}
+.activeSure{
+  position: absolute;
+  /* display: flex; */
+  left:0;
+  bottom:0;
+  height:80rpx;
+}
+button[class="btn"]::after{
+  border:0;
+}
+.activeSure view,.activeSure button{
+  display: inline-block;
+  width:261rpx;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+  border-top:2rpx solid #ebebeb;
+  /* box-sizing: border-box; */
+  background:#fff;
+  border-radius:0;
+}
+.accredit{
+  background:#fff;
+}
+button[class="accredit"]::after{
+  border:0;
+}
+.numInput{
+  padding:0 25rpx;
+}
+.numInput input{
+  display: inline-block;
+  width:58rpx;
+  height:58rpx;
+  margin-right:25rpx;
+  border-bottom:2rpx solid #b3b3b3;
+  margin-top:10rpx;
+}
+.numInput input:last-child{
+  margin-right:0;
+}
+.ipt{
+  width:0;
+  height:0;
+  position: absolute;
+}
+.finishText{
+  text-align:right;
+  padding:0 30rpx;
+  line-height:65rpx;
+  font-size:28rpx;
+}

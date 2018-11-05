@@ -1,0 +1,15 @@
+/* pages/mine/ser-center/ser-center.wxss */
+.ser-wrap{
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+}
+.ser-li{
+  width: 100%;
+  height:auto;
+  padding: 25rpx 0;
+  border-bottom: 1px solid #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}

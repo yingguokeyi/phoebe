@@ -1,0 +1,31 @@
+<!--pages/member/balance/inbalance/inbalance.wxml-->
+<view class='container'>
+<!--金额  -->
+   <view class='inbal-head'>
+       <text style='font-size:40rpx;'>￥</text>
+       <text style='font-size:76rpx;'>150.72</text>
+   </view>
+    <view class='wallet-bill'>
+       <text style='margin-left:26rpx;'>2018年2月份账单</text>
+   </view>
+   <!--账单明细  -->
+   <view class='bill-msg'>
+       <view class='bill-msg-list'>
+       <!--账单日期  -->
+          <view class='bill-msg-date'>
+             <text style='margin-left:26rpx;'>2018-02-10</text><text style='margin-left:16rpx;'>14:03:27</text>
+          </view>
+       <!--账单来源  -->
+          <view class='bill-msg-source'>         
+             <view style='padding:24rpx 0;'>
+                  <text style='margin-left:26rpx;font-size:28rpx;color:#333;'>购买【淘淘领】商品返还</text>
+                  <text style='margin-left:300rpx;font-size:28rpx;color:#B7945D;'>+5.20</text>
+             </view>
+          </view>
+       
+       </view>
+   
+   
+   </view>
+
+</view>

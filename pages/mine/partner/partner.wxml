@@ -1,0 +1,9 @@
+<!--pages/mine/partner/partner.wxml-->
+<!-- <text>pages/mine/partner/partner.wxml</text> -->
+
+<view class="container">
+    <image src="../../../image/person/banner.png"></image>
+    <view class="foot" bindtap="partner">
+        <image src="../../../image/person/partner.png"></image>
+    </view>
+</view>

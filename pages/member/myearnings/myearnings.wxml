@@ -1,0 +1,87 @@
+<!--pages/member/myearnings/myearnings.wxml-->
+<view class='myearn-wrap'>
+<!--预估收益  -->
+   <view class='myearn-header'>
+       <view class='myearn-header-left'>
+           <view style='font-size:30rpx;color:#333;'>今日预估收益</view>
+           <view style='margin-top:20rpx;color:#cca96a;font-size:76rpx;'><text style='font-size:32rpx;'>￥</text>16.72</view>
+       </view>
+       <view class='myearn-header-right'>
+           <text>2018年02月15日</text>
+       </view>
+   </view>
+<!--分享收益  -->
+  <view class='myearn-share'> 
+      <view class='myearn-share-top'>
+          <text style='line-height:80rpx;font-size:32rpx;color:#666;margin-left:30rpx;'>日期：2018-02-15</text>
+          <text style='line-height:80rpx;font-size:32rpx;color:#666;margin-right:30rpx;'>全部收益</text>
+      </view>
+
+      <view class='myearn-msg'>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         
+         </view>
+         <view class='myearn-msg-list'>
+            <text style='color:#999999'>类型</text>
+            <text style='margin-top:10rpx;'>分享收益</text>
+         
+         </view>
+      </view>
+
+  </view>
+
+<!--  -->
+
+
+<!--分享收益  -->
+  <view class='myearn-share'> 
+      <view class='myearn-share-top'>
+          <text style='line-height:80rpx;font-size:32rpx;color:#666;margin-left:30rpx;'>日期：2018-02-15</text>
+          <text style='line-height:80rpx;font-size:32rpx;color:#666;margin-right:30rpx;'>全部收益</text>
+      </view>
+
+      <view class='myearn-msg'>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>类型</text>
+             <text style='margin-top:10rpx;'>分享收益</text>
+         
+         </view>
+         <view class='myearn-msg-list'>
+            <text style='color:#999999'>类型</text>
+            <text style='margin-top:10rpx;'>分享收益</text>
+         
+         </view>
+      </view>
+
+  </view>
+
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+</view>

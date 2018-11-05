@@ -1,0 +1,35 @@
+<template name="wxSearch">
+  <view class="wxSearch"  style="display:{{wxSearchData.view.isShow ? 'block':'none'}};">
+    <view  class="wxSearchInner">
+        <view class="wxSearchHistory" style="display:{{wxSearchData.view.isShowSearchHistory ? 'block':'none'}}">
+         <view style="display:{{wxSearchData.his[0]?'block':'none'}}" > 
+            <text class="wxSearch-Title">最近搜索</text>
+            <view class="wxSearchHistoryList">
+                <block wx:for="{{wxSearchData.his}}"  wx:if="{{index<6}}" wx:key='item'>
+                    <view class="wxSearchHistoryItem" bindtap="wxSearchKeyTap" data-key="{{item}}">
+                        <text data-key="{{item}}">{{item}}</text> 
+                    </view>
+                </block>
+            </view>
+         </view> 
+        </view>
+        <!--<view class="wxSearchKey" style="display:{{wxSearchData.view.isShowSearchKey ? 'block':'none'}}">
+        <view class="wxSearch-hot">
+            <view class="wxSearch-Title">热门搜索</view>
+            <view class="wxSearch-change">换一换</view>
+        </view>
+            <view class="wxSearchKeyList">
+                <block wx:for="{{wxSearchData.keys}}" wx:key='keys'>
+                    <view class="wxSearchKeyItem" bindtap="wxSearchKeyTap" data-key="{{item}}">{{item}}</view>
+                </block>
+            </view>
+        </view>-->
+        
+        <view class="wxSearchDeleteAllBtn" bindtap="wxSearchDeleteAll" style="display:{{wxSearchData.his[0]?'block':'none'}}">
+            <text>清空搜索记录</text>
+        </view>
+    </view>
+  </view>
+</template>
+
+

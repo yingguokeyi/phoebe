@@ -1,0 +1,118 @@
+/* pages/buy/goodslist/goodslist.wxss */
+page{
+  background-color: #f9f9f9;
+}
+
+.cargo-list{
+  width: 100%;
+  height: 230rpx;
+  display:flex;
+  background: #fff;
+  margin-top: 10rpx;
+}
+.cargo-pro-image{
+  width: 150rpx;
+ margin:30rpx 20rpx 30rpx 30rpx;
+  position:relative;
+}
+.cargo-pro-image image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.cargo-solid{
+  width: 600rpx;
+}
+.cargo-pro-title{
+    font-family:'PingFangSC-Regular'; 
+    font-size:28rpx;
+    color:#9c9b9b;
+    margin-top:20rpx;
+    display: -webkit-box; 
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    line-height:54rpx;
+    }
+ .cargo-pro-list{
+  margin:0 30rpx 0 18rpx;
+} 
+ .cargo-pro-name{
+  width:60rpx;
+  height:30rpx;
+  line-height:30rpx;
+  text-align:center;
+  background:#f8f5e4;
+  border-radius:2rpx;
+  font-size:22rpx;
+  color:#c8a200;
+  display:inline-block; 
+  margin-right:18rpx; 
+  position: relative;
+  bottom:4rpx;  
+  font-weight: bold;
+}
+.cargo-pro-texts{
+  font-family:"PingFangHK-Regular"; 
+  font-size:30rpx;
+  color: #595757;
+ 
+  /* line-height: 15rpx; */
+}
+.cargo-pro-desc{
+  font-size:24rpx;
+  color:#acacac;
+  height:30rpx;
+   overflow: hidden; 
+   text-overflow: ellipsis;
+   line-height:30rpx;
+
+}
+.cargo-pro-state{
+  font-size: 24rpx;
+  color: #999999;
+}
+.cargo-pro-money{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rpx; 
+}
+.cargo-pro-price{
+  font-size: 28rpx;
+  color: #b61c25;
+  /* position: relative;
+  top:25rpx; */
+  font-weight: bold;
+}
+.cargo-pro-symbol{
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 12rpx;
+  text-decoration:line-through;
+}
+.cargo-pro-explain{
+  font-size: 24rpx;
+}
+.cargo-pro-explain{
+  font-size: 24rpx;
+  color: #696969;
+}
+
+
+.commission{
+
+  width: 250rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  background: #FDDEDB;
+  text-align: center;
+  line-height: 50rpx;
+  color: #E3514D;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  
+}

@@ -1,0 +1,78 @@
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view class='click-counter'>
+  <!--  -->
+  <view class='totalearn-header'>
+     <view class='totalearn-wrap'>
+          <view class='back-money'> 
+             <text style='margin:20rpx 0;font-size:32rpx;color:#333;'>收益</text>
+             <text style='font-size:36rpx;color:#333;' wx:if="{{todayCommission != ''&&todayCommission !=undefined}}">￥{{filters.toFix(todayCommission/100)}}</text>
+             <text style='font-size:36rpx;color:#333;' wx:if="{{commission != ''&&commission !=undefined}}">￥{{filters.toFix(commission/100)}}</text>
+          </view>
+          <view class='get-money'>
+             <text style='margin:20rpx 0;font-size:32rpx;color:#333;'>分享赚钱</text>
+             <text style='font-size:36rpx;color:#333;'>￥0.00</text>
+          </view>
+     </view>
+  
+  </view>
+  <!--  -->
+
+   <!--订单查询日期  -->
+   <view class='click-header' wx:if="{{commission != ''&&commission !=undefined}}">
+       <view class='click-all'>全部</view>  
+       <view class='click-date'>
+            <picker mode="date" value="{{stratdate}}"  bindchange="bindDateChangea">
+                           <text style='margin-left:10rpx;'>{{startdate}}</text> 
+           </picker>
+            —
+           <picker mode="date" value="{{enddate}}"  bindchange="bindDateChangeb">
+                          <text style='margin-right:50rpx;'>{{enddate}}</text>
+           </picker>
+       </view>
+   </view>
+<!-- 订单号查询 -->
+   <view class='order-search'>
+       <input placeholder="请输入订单号查询" placeholder-style="color: #999;font-size:28rpx;" value="{{orderNo}}"  bindinput ="orderNoInput"></input>
+        <!-- <input type='button' placeholder="查看" placeholder-style="color: #fff;font-size:28rpx;text-align:center"></input>  -->
+        <view class='chakan' bindtap='look'>查看</view> 
+   </view>
+<!--  -->
+<!--商品总金额  -->
+  <view class='myearn-share' wx:for='{{List}}' wx:key='item'> 
+      <view class='myearn-share-top'>
+          <text style='line-height:80rpx;font-size:32rpx;color:#666;margin-left:30rpx;'>日期：{{item.create_time}}</text>
+      </view>
+
+      <view class='myearn-msg'>
+         <view class='myearn-msg-list1'>
+             <text style='color:#999999'>订单号</text>
+             <text style='margin-top:10rpx;color:#333;font-size:24rpx;'>{{item.order_no}}</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>商品总金额</text>
+             <text style='margin-top:10rpx;color:#333;font-size:24rpx;'>￥{{filters.toFix(item.money/100)}}</text>
+         </view>
+         <view class='myearn-msg-list'>
+             <text style='color:#999999'>收益来源</text>
+             <text style='margin-top:10rpx;' wx:if="{{item.profit_source == 1}}">返现</text>
+             <text style='margin-top:10rpx;' wx:if="{{item.profit_source == 2}}">佣金</text>
+             <text style='margin-top:10rpx;' wx:if="{{item.profit_source == 3}}">奖金</text>
+         </view>
+  
+      </view>
+
+  </view>
+
+<!--  -->
+
+<!--  -->
+
+
+
+
+
+
+
+
+</view>
+

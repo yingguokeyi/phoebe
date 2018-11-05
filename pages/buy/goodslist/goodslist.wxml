@@ -1,0 +1,29 @@
+<wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
+<view wx:if="{{goodList != ''}}">
+   <scroll-view style="height:1400rpx; width:100%;" scroll-y="true" bindscrolltolower="onPullDownRefresh" lower-threshold="6">
+    <view class="cargo-list" wx:for="{{goodList}}" wx:key="item" bindtap='tocommon' id="{{item.id}}" data-price="{{item.market_price}}">
+      <view class="cargo-pro-image">
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class="cargo-solid">
+        <view class="cargo-pro-list">
+          <view class="cargo-pro-title">
+        <!--<text class="cargo-pro-name">自营</text> -->
+            <text class="cargo-pro-texts">{{item.spu_name}}</text>contentlistTem
+          </view>
+          <view class="cargo-pro-desc">
+            <text>{{item.spu_attribute}}</text>
+          </view>
+          <view class="cargo-pro-money">
+            <text class="cargo-pro-price">￥ {{filters.toFix(item.market_price/100)}}</text>
+            <view style="font-family:PingFangHK-Regular;font-size:28rpx;color:#595757" wx:if="{{item.member_parent != 0 && memberLevel > 0}}">返现<text style="color:#b61c25">￥{{filters.toFix(item.cash_back*item.member_parent/10000)}}</text></view>
+            <view style="font-family:PingFangHK-Regular;font-size:28rpx;color:#595757" wx:if="{{item.outsider_parent != 0 && memberLevel == 0}}">返现<text style="color:#b61c25">￥{{filters.toFix(item.cash_back*item.member_parent/10000)}}</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if="{{goodList == ''}}">
+    
+</view>

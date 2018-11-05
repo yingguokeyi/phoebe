@@ -1,0 +1,40 @@
+page{
+  background-color: #f9f9f9;
+}
+.container{
+  width: 100%;
+  height: auto;
+}
+.invite-person{
+  width: 94%;
+  height: auto;
+  background-color: #fff;
+  border-top: 1rpx solid #EBEBEB; 
+  padding: 3%;
+  font-size:30rpx;
+}
+.invite-person input{
+  display:inline-block;
+  width: 300rpx;
+  height: 62rpx;
+  background-color: #f3f3f3;
+  vertical-align:middle;
+  margin-left:10rpx;
+}
+
+.toast{
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  color:#999;
+}
+.save{
+  width: 150rpx;
+  height: 70rpx;
+  background-color: #b61c25;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70rpx;
+  color:#fff;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+}
