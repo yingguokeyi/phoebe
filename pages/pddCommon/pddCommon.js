@@ -249,24 +249,27 @@ Page({
         url: '/pages/login/login',
       })
     } else {     //已经登录
-      let good = '['+that.data.good_id+']';
-      if(that.data.phone == ''){
+
+      let good = '[' + that.data.good_id + ']';
+      if (that.data.phone == '') {
         App.globalData.hasLogin = false;
         wx.navigateTo({
           url: '/pages/login/login',
         })
-        return ;
+        return;
       }
       let data = {
         url_type: 'pdd',
         method: 'getUrlGenerate',
-        goods_id_list:good,
-        phone:that.data.phone
+        goods_id_list: good,
+        phone: that.data.phone
       }
       api.reqData({
         data,
         success: (res) => {
-          let appData = res.data.result.rs[0].result.goods_promotion_url_generate_response.goods_promotion_url_list[0].we_app_info;      
+          console.log(res.data, 'df')
+          //拿到的路径     
+          let appData = res.data.result.rs[0].result.goods_promotion_url_generate_response.goods_promotion_url_list[0].we_app_info;
           console.log(appData)
           wx.navigateToMiniProgram({
             appId: appData.app_id,
@@ -282,9 +285,11 @@ Page({
           })
         },
       })
+
     }
+   
   },
-  
+
 /**
 * 用户点击右上角分享
 */  
@@ -332,7 +337,7 @@ Page({
       }
     }
   },
-
+ 
   
   /**
    * 生命周期函数--监听页面初次渲染完成

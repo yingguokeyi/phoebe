@@ -25,6 +25,7 @@
                <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.2.112/uranus/user?method=getImgCode&key={{key}}"></image>  -->
 
                <!-- <image bindtap='changeCode' class='Imgcode' src="http://10.1.1.85:8055/uranus/user?method=getImgCode&key={{key}}"></image>  -->
+                   <!-- <image bindtap='changeCode' class='Imgcode' src="http:///10.1.0.19:8055/uranus/user?method=getImgCode&key={{key}}"></image>   -->
           </view>
         </view>         
         

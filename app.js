@@ -6,7 +6,7 @@ var WXBizDataCrypt = require('utils/RdWXBizDataCrypt.js')
 App({
   globalData: {
     // url_base:'http://10.1.1.96:8084/uranus/', //烟火的
-    // url_base:'http://10.1.1.85:8055/uranus/',    //小沐的
+    // url_base:'http://10.1.0.19:8055/uranus/',    //小沐的
     // url_base:'http://10.1.2.113:8082/uranus/',  //测试服务器
       url_base:'https://jiangshidi.top/',
     //  url_base :'http://10.1.1.74:8056/uranus/',//花生的

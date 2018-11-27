@@ -105,5 +105,8 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wx32540bd863b27570"
+  ]
 }
