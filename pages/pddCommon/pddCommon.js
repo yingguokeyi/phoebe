@@ -130,7 +130,7 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(options)
+    // console.log(options,'品多')
     var that = this;
     let detail_img = options.swiper;
     detail_img = detail_img.substring(1,detail_img.length-1);
@@ -165,7 +165,7 @@ Page({
       desc:decodeURIComponent(options.desc),
       detail_Imgs:imgStr
     })
-    console.log(that.data.detail_Imgs)
+    console.log(that.data.count,'ll')
     
     /** 判断场景值，1044 为转发场景，包含shareTicket 参数 */
     // if (options.scene == 1047 || options.scene == 1048) {
@@ -267,7 +267,7 @@ Page({
       api.reqData({
         data,
         success: (res) => {
-          console.log(res.data, 'df')
+          // console.log(res.data, 'df')
           //拿到的路径     
           let appData = res.data.result.rs[0].result.goods_promotion_url_generate_response.goods_promotion_url_list[0].we_app_info;
           console.log(appData)
@@ -294,7 +294,7 @@ Page({
 * 用户点击右上角分享
 */  
   onShareAppMessage: function (res) {
-    console.log(res);
+    // console.log(res,'小xiao');
     
     //转发设withShareTicket为true,可以二次转发
     wx.showShareMenu({
@@ -310,7 +310,8 @@ Page({
     var url = currentPage.route
     url=url+'?code='+this.data.invitecode
     console.log(url)
-    var title = "￥" + (this.data.contrast[0].market_price/100).toFixed(2)+' '+this.data.goods_data.spu_name;
+    // var title = "￥" + (this.data.contrast[0].market_price/100).toFixed(2)+' '+this.data.goods_data.spu_name;
+    var title = "￥" + ((this.data.gPrice - this.data.count )/ 100).toFixed(2) + ' ' + this.data.name;
     return {
       title: title,
       // path:link,

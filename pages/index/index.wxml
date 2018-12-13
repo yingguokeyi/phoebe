@@ -13,15 +13,15 @@
 
  <view id="limitBuy">
      <!-- 限时秒抢-->
-  <view class='deseno' wx:if="{{ message == 1}}">
-      <view class='ms' wx:if='{{result!= ""}}' bindtap='products'>
+  <!-- <view class='deseno' wx:if="{{ message == 1}}"> -->
+      <!-- <view class='ms' wx:if='{{result!= ""}}' bindtap='products'> -->
           <!-- 开抢时间 -->
-          <view class='bonus' >
+          <!-- <view class='bonus' >
             <image class='img'  src='{{imagePath}}'></image>
             <view class='bonus_s'>{{sekillStartTime}}开抢</view>  
-          </view>  
+          </view>   -->
           <!-- 倒计时时间 -->
-          <view class='countdown'> 
+          <!-- <view class='countdown'> 
             <view class='chance'>{{countDownHour}}</view>
               <view class='partition'>
                 <view class='partition_a'></view>
@@ -34,9 +34,9 @@
               </view>
               <view class='sec'>{{countDownSecond}}</view>
           </view>
-      </view> 
+      </view>  -->
       <!-- 商品列表 -->
-      <view class='setMeal' >
+      <!-- <view class='setMeal' >
         <view class='setMeal-inner'>
           <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
             <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products' id='{{item.category}}' data-uri='{{item.uri}}'> 
@@ -44,24 +44,24 @@
                   <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
                   <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
             </view>     
-          </scroll-view>     
+          </scroll-view>      -->
           <!--分割线  -->
-          <view class='line'></view>
+          <!-- <view class='line'></view>
         </view>
       </view> 
-  </view>     
+  </view>      -->
 
   <!-- 限时秒抢今天场次结束 -->
-  <view class='deseno'  wx:if="{{ message == 2}}">
-      <view class='ms' wx:if='{{result!= ""}}'>
+  <!-- <view class='deseno'  wx:if="{{ message == 2}}">
+      <view class='ms' wx:if='{{result!= ""}}'>-->
           <!-- 开抢时间 -->
-          <view class='bonus' >
+          <!-- <view class='bonus' >
             <image class='img'  src='{{imagePath}}'></image>
             <view class='over' >今日场次已结束</view>  
           </view>  
-      </view> 
+      </view>   -->
       <!-- 商品列表 -->
-      <view class='setMeal' >
+      <!-- <view class='setMeal' >
         <view class='setMeal-inner'>
           <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
             <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products2' data-id="{{item.seckillId}}"  id='{{item.category}}' data-uri='{{item.uri}}'> 
@@ -69,24 +69,24 @@
                   <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
                   <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
             </view>     
-          </scroll-view>     
+          </scroll-view>      -->
           <!--分割线  -->
-          <view class='line'></view>
+          <!-- <view class='line'></view>
         </view>
       </view> 
   </view>
- </view>      
+ </view>       -->
 
 <!-- 限时秒抢所有场次结束 -->
-<view class='deseno'  wx:if="{{ message == 3}}">
-    <view class='ms' wx:if='{{result!= ""}}' bindtap='products'>
+<!-- <view class='deseno'  wx:if="{{ message == 3}}">
+    <view class='ms' wx:if='{{result!= ""}}' bindtap='products'> -->
         <!-- 开抢时间 -->
-        <view class='bonus' >
+        <!-- <view class='bonus' >
           <image class='img'  src='{{imagePath}}'></image>
           <view class='bonus_s'>{{sekillStartTime}}开抢</view>  
-        </view>  
+        </view>   -->
         <!-- 倒计时时间 -->
-        <view class='countdown'> 
+        <!-- <view class='countdown'> 
          <view class='chance'>{{countDownHour}}</view>
             <view class='partition'>
               <view class='partition_a'></view>
@@ -99,9 +99,9 @@
             </view>
             <view class='sec'>{{countDownSecond}}</view>
         </view>
-    </view> 
+    </view>  -->
     <!-- 商品列表 -->
-    <view class='setMeal'>
+    <!-- <view class='setMeal'>
       <view class='setMeal-inner'>
         <scroll-view scroll-x style="width: 100%" class='setMeal-inner-items'>
           <view class='setMeal-itemlist'wx:for='{{setmeal}}' wx:key="item" bindtap='products' id='{{item.category}}' data-uri='{{item.uri}}'> 
@@ -109,12 +109,12 @@
                 <view class='setMeal-text' style='font-size:22rpx;color:#e40012;'>￥{{filters.toFix(item.market_price/100)}}</view>
                 <view class='setMeal-text' style='text-decoration:line-through ;font-size:18rpx;color:#999999;'>￥{{filters.toFix(item.original_price/100)}}</view>
           </view>     
-        </scroll-view>     
+        </scroll-view>      -->
         <!--分割线  -->
-        <view class='line'></view>
+        <!-- <view class='line'></view>
       </view>
     </view> 
-</view>      
+</view>       -->
 
   <!-- 社区服务中心 -->
   <!-- <view class='community'>
@@ -167,9 +167,22 @@
         </swiper-item> 
       </swiper> -->
       <!-- 遮罩层 -->
-      <!-- <view class='ward'></view>
-  </view>   -->
-
+      <!-- <view class='ward'></view> -->
+  </view>  
+<!-- 一个商品大图 -->
+<!-- 商品列表 -->
+      <!-- <view class='setMeal-inner'>
+        <view class='setMeal-inner-i'>
+          <view class='setMeal-item'wx:for='{{setmeal}}' wx:key="item" bindtap='products' id='{{item.category}}' data-uri='{{item.uri}}'>  -->
+                <!-- <image class='largerMap' src='{{item.image}}' mode='aspectFit'></image>  -->
+                  <!-- <image class='largerMap' src="../../image/tellkf.png"></image> -->
+          <!-- </view>     
+        </view>       -->
+        <view wx:for='{{setmeal}}' wx:key="item" style='width:701rpx;height:200rpx;margin-left:26rpx;'><image class='largerMap' src='{{item.image}}' style='width:100%;height:100%;'></image></view>
+        <!--分割线  -->
+         <!-- <view class='line'></view> -->
+      <!-- </view> -->
+  
   <!--分割线  -->
   <view class='line'></view>
   <!-- 商品分类及商品  -->

@@ -68,6 +68,7 @@ Page({
     api.reqData({
       data,
       success:function(res){
+        console.log(res,'拼多多')
         data,
         wx.hideLoading()
         let pddGood = res.data.result.rs[0].pddGoods.result.rs;
@@ -244,6 +245,7 @@ Page({
   },
 
   toDetail:function(e){
+console.log(e,'jk')
     let goodId = e.currentTarget.dataset.id;
     let count = e.currentTarget.dataset.count;
     let endTime = e.currentTarget.dataset.endtime;

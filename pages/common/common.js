@@ -195,7 +195,8 @@ Page({
     api.reqData({
       data,
       success: (res) => {
-        console.log(res.data.result.rs)
+        // console.log(res,'哈哈')
+        console.log(res.data.result.rs,'商品详情')
         let goodSpu = res.data.result.rs[5].sku;//商品的属性
         let goodTime = res.data.result.rs[4].planGroupInfo;//获得商品的倒计时
         var goodPrice;
@@ -709,7 +710,7 @@ Page({
 * 用户点击右上角分享
 */  
   onShareAppMessage: function (res) {
-    console.log(res);
+    // console.log(res,'转发');
     
     //转发设withShareTicket为true,可以二次转发
     wx.showShareMenu({
@@ -731,7 +732,7 @@ Page({
       // path:link,
       success: function (res) {
         // 转发成功
-        console.log(res);
+        // console.log(res,'jh');
         var shareTickets = res.shareTickets
         if (shareTickets) {
           if (shareTickets.length == 0) {
