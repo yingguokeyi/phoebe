@@ -1,5 +1,5 @@
 <!--pages/classify/classify.wxml-->
-<view class="heard">
+<!-- <view class="heard">
   <view class='heard-Search'>
     <navigator url="/pages/classify/Search/Search">
       <view class='inportWrap'>
@@ -12,25 +12,25 @@
       </view>
     </navigator>
   </view>
-</view>
+</view> -->
 
-<view class="container">
+<!-- <view class="container"> -->
   <!--左侧栏-->
-  <view class="nav_left">
+  <!-- <view class="nav_left">
     <scroll-view scroll-y style="height: 100%;">
       <view wx:for="{{navLeftItems}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{curIndex === index?'on':''}}">{{item.dict_data_name}}</view>
     </scroll-view>
-  </view>
+  </view> -->
   <!--右侧栏-->
-  <view class="nav_right">
-    <scroll-view scroll-y style="height: 100%;">
+  <!-- <view class="nav_right">
+    <scroll-view scroll-y style="height: 100%;"> -->
       <!--如果有数据，才遍历-->
-      <view style="height:188rpx;background:#f8f8f8;padding:0 30rpx">
+      <!-- <view style="height:188rpx;background:#f8f8f8;padding:0 30rpx">
          <image src="https://jiangshidi.top/hestia/banner/3.png"  style="width:490rpx;height:188rpx;object-fit:cover"></image>
-      </view>
+      </view> -->
       <!-- <view wx:if="{{navRightItems[toView].next_data[0]}}"> -->
-        <block wx:for="{{navRightItems[toView].next_data}}" wx:key="item">
-          <view class="cateTitle">
+        <!-- <block wx:for="{{navRightItems[toView].next_data}}" wx:key="item">
+          <view class="cateTitle"> -->
              <!--<view>
                     <image src='../../image/surbase1.png'></image>
                   </view>
@@ -40,7 +40,7 @@
                   <view>
                     <image src='../../image/surbase2.png'></image>
                   </view>-->
-              <text>{{item.dict_data_name}}</text>
+              <!-- <text>{{item.dict_data_name}}</text>
               
            </view>
           <view class="product">
@@ -52,11 +52,14 @@
               </view>
               <view wx:if="{{item.next_data == ''}}">暂无商品</view>
           </view>
-        </block>
+        </block> -->
       <!-- </view> -->
       <!--如果无数据，则显示数据-->
       <!-- <view wx:else></view> -->
-    </scroll-view>
+    <!-- </scroll-view>
   </view>
 
+</view> -->
+<view style='margin:200rpx 0;width:100%;text-align:center;'>
+  <text>该功能暂时无法开放</text>
 </view>
