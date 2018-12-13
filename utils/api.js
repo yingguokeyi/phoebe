@@ -57,7 +57,6 @@ const reqData = (params) => {
    //路径切换时注意注册和登录验证码图片路径修改一致的问题
 
     var url_test = 'https://jiangshidi.top/';   //线上服务器
-
   // var url_test = 'http://10.1.0.9:8056/uranus/'; // 新测试服务器
   // var url_test = 'http://10.1.0.112:80/uranus/'; // 新测试服务器
   // var url_test = 'http://10.1.0.19:8055/uranus/';//小沐

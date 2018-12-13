@@ -158,11 +158,11 @@ Page({
       image:options.image,
       minOrder:options.minOrder,    //优惠券的门槛价格
       nPrice:options.nPrice,      //商品的单独购买价格
-      name:options.name,      //商品的标题
+      name:decodeURIComponent(options.name),      //商品的标题
       sold:options.sold,      //商品售卖数量
       start:util.js_date_time(options.start),     //优惠券使用的开始时间
       count:options.count,     //优惠券的面额
-      desc:options.desc,
+      desc:decodeURIComponent(options.desc),
       detail_Imgs:imgStr
     })
     console.log(that.data.detail_Imgs)
