@@ -370,9 +370,9 @@ Page({
     api.reqData({
       data:data,
       success: (res) => {
-        //  console.log(res)
+        // console.log(res,'倒计时')
          var resultLis =res.data.result.rs;
-        //  console.log(typeof(resultLis))
+          console.log(typeof(resultLis))
          var message = resultLis[0].planGroup0.message;
         //  console.log(message)
          if (resultLis != '') {

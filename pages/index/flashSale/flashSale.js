@@ -37,7 +37,7 @@ Page({
       seckillId: options.seckillId,
     })
 
-    console.log(that.data.seckillId)
+    console.log(that.data.seckillId,'jh')
     // that.selected()
     that.startPanicBuying()//调取限时秒抢的开枪时间接口
     that.productList()//调取限时秒抢的商品列表的接口
@@ -85,9 +85,9 @@ Page({
     api.reqData({
       data,
       success: (res) => {
-        console.log(res);
+        // console.log(res);
         var resultList = res.data.result.rs;
-        console.log(resultList)
+        // console.log(resultList)
         for(var i=0 ; i < resultList.length; i ++){
           if(that.data.seckillId == resultList[i].id){
             that.setData({
