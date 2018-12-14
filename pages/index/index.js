@@ -344,22 +344,22 @@ console.log(e,'jk')
     let category = e.currentTarget.id;
     let uri = e.currentTarget.dataset.uri;
     // console.log(uri)
-    if (category == 1) {
+    // if (category == 1) {
       //商品详情页 1
-      wx.navigateTo({
-        url: '/pages/common/common?' + uri,
-      })
-    } else if (category == 2) {
+    //   wx.navigateTo({
+    //     url: '/pages/common/common?' + uri,
+    //   })
+    // } else if (category == 2) {
       //商品列表 2
-      wx.navigateTo({
-        url: '/pages/buy/goodslist/goodslist?' + uri,
-      })
-    } else if (category == 3) {
+    //   wx.navigateTo({
+    //     url: '/pages/buy/goodslist/goodslist?' + uri,
+    //   })
+    // } else if (category == 3) {
       //跳到活动页面
-      wx.navigateTo({
-        url: '/pages/index/vacancy/vacancy?site=' + uri,
-      })
-    }
+      // wx.navigateTo({
+      //   url: '/pages/index/vacancy/vacancy?site=' + uri,
+      // })
+    // }
    
   },
   //限时秒抢倒时和图片接口
