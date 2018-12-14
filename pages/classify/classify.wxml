@@ -61,5 +61,5 @@
 
 </view> -->
 <view style='margin:200rpx 0;width:100%;text-align:center;'>
-  <text>该功能暂时无法开放</text>
+  <text>该功能暂未开放</text>
 </view>

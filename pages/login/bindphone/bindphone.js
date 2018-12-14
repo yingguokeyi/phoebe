@@ -37,7 +37,7 @@ Page({
     console.log(app.globalData.wxcode)
     this.setData({
       mobile: options.phone,
-      prevPage:options.prevPage
+      prevPage: (options.prevPage == null) ? null: options.prevPage
     })
     this.getpiccode()
    
