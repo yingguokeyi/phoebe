@@ -132,7 +132,7 @@ Page({
   onLoad: function (options) {
     // console.log(options,'品多')
     var that = this;
-    let detail_img = options.swiper;
+    let detail_img = decodeURIComponent(options.swiper);
     detail_img = detail_img.substring(1,detail_img.length-1);
     detail_img = detail_img.replace(/"/g,'');
     detail_img = detail_img.split(',');
