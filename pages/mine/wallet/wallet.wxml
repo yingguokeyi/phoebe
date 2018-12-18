@@ -2,21 +2,59 @@
 
 <wxs module="filters" src="../../../utils/addmul.wxs"></wxs>
 <view class='wallet-wrap'>
-    <view class='wallet-header'>
+    <!-- <view class='wallet-header'> -->
    <!--收付款  -->
-       <view class='wallet-header-left' style='width:50%;' bindtap='toprmoney'>           
+       <!-- <view class='wallet-header-left' style='width:50%;' bindtap='toprmoney'>           
            <view class='remain'>账户可提现余额</view>
-       </view>
+       </view> -->
     <!--余额  -->
-       <view class='wallet-header-right' style='width:50%;' bindtap='togetbalance'>       
+       <!-- <view class='wallet-header-right' style='width:50%;' bindtap='togetbalance'>        -->
            <!-- <view style='font-size:32rpx;color:#fff;margin-left:90rpx;'>￥ {{balance}}</view> -->
-            <view class='wallet'>￥ {{filters.toFix(balance/100)}}</view>         
+            <!-- <view class='wallet'>￥ {{filters.toFix(balance/100)}}</view>         
        </view>
-   </view>
+   </view> -->
+     <view class="memberTop">
+        <view class="backPic">
+            <image src="../../../image/red.png"></image>
+            <view class="actItem">
+               
+                <view class="leftPull">
+                    <view style="font-size:48rpx;color:#f1e9df;">￥{{filters.toFix(balance/100)}}</view>
+                    <view style="font-size:24rpx;color:#f1e9df;margin-top:21rpx;">可提现金额</view>
+                    <view class="cash" bindtap='togetbalance'>去提现</view>
+                </view>
+                <view class="rightPull">
+                    
+                     <view class='vip-examine member'  bindtap='getearnings'>
+                        <text style='margin-right:27rpx;'>全部收入数据</text>
+                        <image style='width:16rpx;height:26rpx;margin-right:27rpx;margin-bottom:-3rpx;' src='../../../image/yellow.png'></image>
+                    </view>
+                     <view style="clear:both"></view> 
+                    <view class="brokerage" bindtap='unopened'>去赚钱</view>
+                </view>
+            </view>
+        </view>  
+        <!-- 预计可提现金额和回填单累计收益   -->
+        <view class='predict'>
+            <view class='predict-internet'>
+              <view class='predict-left'>
+                 <view class='Withdraw-top'>预计可提现金额</view>
+                 <view class='Withdraw-bottom'><text style='font-size:50rpx;color:#b61c25;'>￥{{filters.toFix(totalPreIncome/100)}}</text></view>
+              </view>
+              <view class='predict-wire'></view>
+              <view class='predict-right'>
+                 <view class='predict-top'>累计收益</view>
+                 <view class='predict-bottom'><text style='font-size:50rpx;color:#b61c25;'>￥{{filters.toFix( totalIncome/100)}}</text></view>
+              </view>
+            </view>
+        </view>
+
+           
+        </view>
 
 <!--账单明细  -->
   <view class='my-bottom'>
-        <view class='li' bindtap="togetbalance">
+        <!-- <view class='li' bindtap="togetbalance">
           <view class='newDiv'>
             <image class='news'  src='../../../image/member/withdraw.png'></image>
             <text>提现</text>
@@ -24,7 +62,7 @@
           <view>
             <image class='jiantou' src='../../../image/right.png'></image>
           </view>
-        </view>
+        </view> -->
         <view class='li' style='margin-top:20rpx;' bindtap='toprmoney'>
           <view class='newDiv'>
             <image class='news'  src='../../../image/member/record.png'></image>

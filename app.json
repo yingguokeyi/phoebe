@@ -59,7 +59,8 @@
     "pages/mine/memberLevel/memberLevel",
     "pages/mine/fans/fans",
     "pages/mine/systemNew/systemNew",
-    "pages/mine/partner/partner"
+    "pages/mine/partner/partner",
+    "pages/classify/activities/activities"
   ],
   "window": {
     "backgroundTextStyle": "light",

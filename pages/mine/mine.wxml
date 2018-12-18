@@ -194,7 +194,7 @@
        <image class='jiantou' src='../../image/right.png'></image>
       </view>
     </view>
-    <view class='li' bindtap='no'>
+    <view class='li' bindtap='customerService'>
       <view class='newDiv'>
         <image class='news'  src='../../image/person/service.png'></image>
         <text>联系客服</text>
@@ -241,5 +241,28 @@
 
 </view>
   <!--  -->
+  <!-- 弹框 -->
+    <view>
+        <view class="zhezao" hidden="{{flag}}">
+          <view class="t_w">
+            <!--右上角图标开始-->
+              <view class="t_image" bindtap="conceal">
+                <image class="t_image1" src='../../image/quxiao.png'></image>
+              </view>
+              <!--右上角图标结束-->
+              <!--弹出框开始-->
+            <view class="tanchu_view">
+              <view class='s_character'>
+                <view class="bg_view">客服</view>
+                <view class="txtys">
+                  <image class="image" src="{{ kefu}}"  mode="widthFix"  data-src="{{ kefu}}" bindtap="previewImage" ></image>
+                </view>
+            <!--确定结束-->
+              </view>
+            </view>
+          <!--弹出框结束-->
+          </view>
+        </view>
+    </view>
  
 </view>

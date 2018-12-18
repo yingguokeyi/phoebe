@@ -311,9 +311,12 @@ Page({
     url=url+'?code='+this.data.invitecode
     console.log(url)
     // var title = "￥" + (this.data.contrast[0].market_price/100).toFixed(2)+' '+this.data.goods_data.spu_name;
-    var title = "￥" + ((this.data.gPrice - this.data.count )/ 100).toFixed(2) + ' ' + this.data.name;
+    // var title = "￥" + ((this.data.gPrice - this.data.count )/ 100).toFixed(2) + ' ' + this.data.name;
+    var title = "券后价：￥"+ ((this.data.gPrice - this.data.count) / 100).toFixed(2) + this.data.name;
+    // var title = "【掌小龙】"++ ' ' + "券后价：" + "￥" + ((this.data.gPrice - this.data.count) / 100).toFixed(2) + '' + "原价：" + "￥" + ((this.data.gPrice) / 100).toFixed(2);
     return {
       title: title,
+      // desc: desc,
       // path:link,
       success: function (res) {
         // 转发成功

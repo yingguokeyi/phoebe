@@ -8,7 +8,10 @@ Page({
    */
   data: {
      walletlist:"",
-     balance:'',   
+     balance:'',   //可提现金额 
+    totalIncome: '',       //累计效益  
+    totalPreIncome: '',   //预计可提现金额
+    zdzMoney: ''        //回填单累计收益
   },
 
 
@@ -38,6 +41,22 @@ Page({
       url: '/pages/member/tqcash/tqcash?balance='+this.data.balance,
     })
   },
+  //跳转全部收入数据
+  getearnings: function () {
+    wx.navigateTo({
+      url: '/pages/member/incomeData/incomeData',
+    })
+
+  },
+  //未开放
+  unopened: function () {
+    wx.showToast({
+      title: '暂未开放',
+      icon: 'none',
+      duration: 2000
+    })
+
+  },
   //跳转入账记录页面
   accounting: function () {
     // wx.showToast({
@@ -54,14 +73,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getmember()                  //调取判断是否是会员方法
    
    
   },
 
   
   //得到会员信息
-  getmember(){
+  // getmember(){
+  //   var that = this;
+  //   let data = {
+  //     method: 'findMyself',
+  //     token: app.globalData.Apptoken,
+  //     url_type: 'myself'
+  //   }
+  //   api.reqData({
+  //     data,
+  //     success: function(res) {
+  //       var requestData = res.data.result.rs[0].result.result.rs;
+  //       if(res.data.success == 1){
+  //         if(requestData.length != 0){
+  //           that.setData({
+  //             balance : requestData[0].money,   //可提现金额
+  //           })
+  //         }else{
+  //           that.setData({
+  //             balance:0,
+  //           })
+  //         } 
+  //       }
+  //     }
+  //   })
+  // },
+  //得到会员信息
+  getmember() {
     var that = this;
     let data = {
       method: 'findMyself',
@@ -70,23 +115,46 @@ Page({
     }
     api.reqData({
       data,
-      success: function(res) {
+      success: function (res) {
         var requestData = res.data.result.rs[0].result.result.rs;
-        if(res.data.success == 1){
-          if(requestData.length != 0){
+        if (res.data.success == 1) {
+          if (requestData.length != 0) {
             that.setData({
-              balance : requestData[0].money,   //可提现金额
+              balance: requestData[0].money,   //可提现金额
+              // cashBack : requestData.cashBack,
+              // commission : requestData.commission,
+              // orderAmount : requestData.orderAmount,
+              // orderNum : requestData.orderNum,
+              // preMonthMoney : requestData.preMonthMoney,
+              // preTodayMoney : requestData.preTodayMoney,
+              // putForward : requestData.putForward,
+              totalIncome: requestData[0].totalIncome,
+              totalPreIncome: requestData[0].totalPreIncome,      //预计可提现金额 
+              zdzMoney: requestData[0].zdz_money    //回填单累计收益
             })
-          }else{
+          } else {
             that.setData({
-              balance:0,
+              balance: 0,
+              totalPreIncome: 0,
+              zdzMoney: 0
             })
-          } 
+          }
         }
       }
     })
   },
-
+  //跳转提现
+  tqcash: function () {
+    if (app.globalData.hasLogin == false) {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+      return false;
+    }
+    wx.navigateTo({
+      url: '/pages/mine/wallet/wallet',
+    })
+  },
 //调用我的钱包接口
 
   getwallet(){

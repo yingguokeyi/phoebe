@@ -29,7 +29,7 @@
             <view class="actItem">
                
                 <view class="leftPull">
-                    <view style="font-size:48rpx;color:#f1e9df;">￥{{filters.toFix(canPutForward/100)}}</view>
+                    <view style="font-size:48rpx;color:#f1e9df;">￥{{filters.toFix(balance/100)}}</view>
                     <view style="font-size:24rpx;color:#f1e9df;margin-top:21rpx;">可提现金额</view>
                     <view class="cash" bindtap='tqcash'>去提现</view>
                 </view>

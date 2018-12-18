@@ -9,6 +9,7 @@ Page({
     mLevel:'',
     hasLogin:false,
     isAuth:false,     //是否微信头像授权
+    kefu:'',
     tabs: [
       {
         name: "待付款",
@@ -30,6 +31,7 @@ Page({
     simpleNum:'',
     smallNum:'',
     bigNum:'',
+    flag: true,// 客服弹框
   },
 
   goAll:function(){
@@ -155,6 +157,7 @@ Page({
       icon: 'none',
       duration: 2000
     })
+   
   },
 
   orderArea:function(){
@@ -248,10 +251,32 @@ Page({
       duration: 2000
     })
   },
+
+  // 客服出现弹框
+  customerService:function(){
+    this.setData({ flag: false })
+  },
+  // 遮罩层隐藏
+  conceal: function () {
+    this.setData({ flag: true })
+  },
+
   // 进入消息页面
   goNews:function(){
     wx.navigateTo({
       url:'/pages/mine/news/news'
+    })
+  },
+  /**
+  *  图片预览方法
+  *  此处注意的一点就是，调用 "wx.previewImage"时，第二个参数要求为数组形式哦
+  *  当然，做过图片上传功能的应该会注意到，如果涉及到多张图片预览，图片链接数组集合即为参数 urls！
+  */
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current,
+      urls: [current]
     })
   },
   //获取手机号
@@ -375,9 +400,11 @@ Page({
     api.reqData({
       data,
       success:function(res){
+        console.log(res,'ll')
         app.globalData.mLevel = res.data.result.rs[0].result.result.rs[0].member_level
         that.setData({
-          mLevel:res.data.result.rs[0].result.result.rs[0].member_level
+          mLevel:res.data.result.rs[0].result.result.rs[0].member_level,
+          kefu: res.data.result.rs[1].kefu
         })
       }
     })

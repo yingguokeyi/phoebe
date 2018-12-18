@@ -1214,8 +1214,10 @@
   background: #f8f8f8;
 }
 .coupon image{
-  width:100rpx;
-  height:31rpx;
+  /* width:100rpx; */
+  /* height:31rpx; */
+  width:110rpx;
+  height:39rpx;
 }
 .coupon{
   position: relative;
@@ -1231,10 +1233,13 @@
 .couponWords{
   display: inline-block;
   vertical-align: bottom;
-  width:100rpx;
-  height:31rpx;
+  /* width:100rpx; */
+  /* height:31rpx; */
+  width:110rpx;
+  height:39rpx;
   text-align: center;
-  line-height: 41rpx;
+  /* line-height: 41rpx; */
+  line-height: 36rpx;
   color:#fff;
   font-size:20rpx;
   position: absolute;

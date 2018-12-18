@@ -290,12 +290,15 @@
 }
 .coupon image{
   width:186rpx;
-  height:31rpx;
+  /* height:31rpx; */
+  height:40rpx;
 }
 .coupon{
   width:190rpx;
-  height:31rpx;
-  margin:15rpx 0 32rpx 0;
+  /* height:31rpx; */
+  height:40rpx;
+  /* margin:15rpx 0 32rpx 0; */
+  margin:3.8rpx 0 32rpx 0;
   position: relative;
 }
 .couponWords{

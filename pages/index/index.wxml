@@ -178,7 +178,7 @@
                   <!-- <image class='largerMap' src="../../image/tellkf.png"></image> -->
           <!-- </view>     
         </view>       -->
-        <view wx:for='{{setmeal}}' wx:key="item" style='width:701rpx;height:200rpx;margin-left:26rpx;'><image class='largerMap' src="../../image/miaosha.jpg" style='width:100%;height:100%;'></image></view>
+        <!-- <view wx:for='{{setmeal}}' wx:key="item" style='width:701rpx;height:200rpx;margin-left:26rpx;'><image class='largerMap' src="../../image/miaosha.jpg" style='width:100%;height:100%;'></image></view> -->
         <!--分割线  -->
          <!-- <view class='line'></view> -->
       <!-- </view> -->

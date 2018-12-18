@@ -15,7 +15,8 @@ Page({
     iseyes:0,                   //邀请码是否可见
     eyesno:"../../image/eyes1.png",
     eyescan: "../../image/eyes2.png",
-    canPutForward:'',  //可提现金额
+    // canPutForward:'',  //可提现金额
+    balance: '',  //可提现金额
     cashBack:'',  //返现
     commission:'',     //佣金
     orderAmount:'',   //订单金额
@@ -142,9 +143,13 @@ Page({
       })
       return false;
     }
+    // wx.navigateTo({
+    //   url: '/pages/mine/wallet/wallet',
+    // })
     wx.navigateTo({
-      url: '/pages/mine/wallet/wallet',
+      url: '/pages/member/tqcash/tqcash?balance=' + this.data.balance,
     })
+
   },
  //跳转累计收益页面
   accimIncome : function(){
@@ -181,7 +186,7 @@ Page({
         if(res.data.success == 1){
           if(requestData.length != 0){
             that.setData({
-              canPutForward : requestData[0].money,   //可提现金额
+              balance : requestData[0].money,   //可提现金额
               // cashBack : requestData.cashBack,
               // commission : requestData.commission,
               // orderAmount : requestData.orderAmount,
@@ -195,7 +200,7 @@ Page({
             })
           }else{
             that.setData({
-              canPutForward:0,
+              balance:0,
               totalPreIncome:0,
               zdzMoney:0
             })

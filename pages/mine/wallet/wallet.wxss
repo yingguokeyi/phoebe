@@ -92,3 +92,146 @@ page{
   font-size: 8rpx;
   text-align: center;
 }
+
+/* 新的钱包样式 */
+.memberTop{
+  width:690rpx;
+  /* height:440rpx; */
+  padding:30rpx 30rpx 0;
+  background:#fff;
+  border-bottom:20rpx solid #f9f9f9;
+
+  /* position:absolute; */
+
+}
+.backPic{
+  position:relative;
+  margin-top:26rpx;
+
+}
+.backPic>image{
+  width:690rpx;
+  height:286rpx;
+}
+.actItem{
+  width:590rpx;
+  height:286rpx;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0 50rpx;
+  font-family:PingFangSC-Medium;
+}
+.actItem .leftPull{
+  padding-top:50rpx;
+}
+.actItem .rightPull{
+  /* padding:40rpx 0; */
+  padding:35rpx 0;
+  margin-right: -25rpx;
+}
+
+.actItem .leftPull .cash{
+  float:left;
+  width:130rpx;
+  height:42rpx;
+  font-size:24rpx;
+  border-radius:14rpx;
+  text-align:center;
+  line-height:42rpx;
+  font-family:PingFangSC-Medium;
+  margin-top: 40rpx;
+}
+.actItem .rightPull .cash,.actItem .rightPull .brokerage{
+  float:right;
+  width:130rpx;
+  height:42rpx;
+  font-size:24rpx;
+  border-radius:14rpx;
+  text-align:center;
+  line-height:42rpx;
+  font-family:PingFangSC-Medium;
+}
+.actItem .leftPull .cash{
+  background:#f1e9df;
+  color:#d24647;
+
+}
+.actItem .rightPull .brokerage{
+ margin-right: 27rpx;
+  color:#d24647;
+  /* margin-top:28rpx; */
+  background:#f1e9df;
+  margin-top: 41rpx;
+}
+/* 预计可提现金额和回填单累计收益 */
+.predict{
+  height: 188rpx;
+  background: #fff;
+
+}
+.predict-internet{
+  width: 690rpx;
+  height: 188rpx;
+  display: flex;
+  flex-direction: row;
+}
+.predict-left{
+  width: 339rpx;
+  display: flex;
+  flex-direction:column;
+}
+ .Withdraw-top{
+    width: 235rpx;
+    font-size: 26rpx;
+    color: #666666;
+    margin-top: 31rpx;
+    margin-left: 63rpx;
+} 
+.Withdraw-bottom{
+  width: 190rpx;
+  height: 62rpx;
+  font-size:30rpx;
+  color: #b61c25; 
+  margin-top: 27rpx;
+  margin-left: 63rpx;
+}
+.predict-wire{
+  width: 2rpx;
+  height: 99rpx;
+  background: #efefef;
+   margin-top: 44rpx;
+}
+.predict-right{
+  width: 350rpx;
+}
+.predict-top{
+    width: 235rpx;
+    font-size: 26rpx;
+    color: #666666;
+    margin-top: 31rpx;
+    margin-left: 96rpx;
+} 
+.predict-bottom{
+  width: 190rpx;
+  height: 62rpx;
+  font-size:30rpx;
+  color: #b61c25; 
+  margin-top: 27rpx;
+  margin-left: 96rpx;
+}
+.vip-examine{
+  /* width: 100%; */
+  /* height: auto; */
+  /* background: #fff; */
+  float:right;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  font-size: 24rpx;
+  color:#f1e9df;
+  /* padding: 30rpx 0; */
+  text-align:right;
+  margin-top: 103rpx;
+  margin-right: -16rpx;
+
+}
