@@ -209,6 +209,7 @@ Page({
       success: (res) => {
         var searchData = res.data;
         var sousuo = searchData.result.rs[1].searchGoods.result.rs;
+        console.log(sousuo,'uy')
         if(sousuo.length != 0 || searchData.result.rs[0].searchPddGoods.result.rs.length!= 0){
           for (var i = 0; i < sousuo.length; i++) {
             sousuo[i].pic_info_url = sousuo[i].image.replace("https", "http")

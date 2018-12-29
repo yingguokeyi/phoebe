@@ -18,9 +18,10 @@ Page({
   onLoad: function (options) {
     console.log(options)
     this.setData({
-      site: options.site
+      // site: options.site
+      site:decodeURIComponent(options.site)
     })
-    console.log(this.data.site)
+    console.log(this.data.site,"aaa")
   },
  
   /**

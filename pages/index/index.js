@@ -468,7 +468,7 @@ console.log(e,'jk')
       if (minStr.length == 1) minStr = '0' + minStr;
 
       // 秒位
-      var sec = second - day * 3600 * 24 - hr * 3600 - min * 60;;
+      var sec = second - day * 3600 * 24 - hr * 3600 - min * 60;
       var secStr = sec.toString();
       if (secStr.length == 1) secStr = '0' + secStr;
       

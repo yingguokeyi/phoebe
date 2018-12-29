@@ -2,18 +2,18 @@
 
 <view class='m_must'>
   <!-- <scroll-view class="scroll-view_H" scroll-y style="width: 100%" scroll-top="{{scrollLeft}}" scroll-with-animation="false"> -->
-    <!-- <view class='m_matter'> -->
-      <!-- <view class='m_ul'> -->
+    <view class='m_matter'>
+      <view class='m_ul'  wx:for="{{activities}}" wx:key="item"  data-image="{{item.image}}" data-title="{{item.article_title}}" data-content="{{item.article_content}}" data-uri="{{item.link_address}}"  bindtap="goLink">
         <!-- 时间 -->
-        <!-- <view class='m_time'>2018-07-13</view> -->
+        <view class='m_time'>{{item.edit_time}}</view>
         <!-- 图文 -->
-        <!-- <view class='image-text'> -->
+        <view class='image-text'>
           <!-- 图片 -->
-            <!-- <image class='m_image' src='../../../image/person/banner.jpg'></image> -->
+            <image class='m_image' src='{{item.image}}'></image>
             <!-- 透明文字 -->
-            <!-- <view class='lucency'>网购更加规范便捷，阿里标准化附能电商良信发展</view>
+            <view class='lucency'>{{item.article_title}}</view>
             <view class='main_content_li'>
-              <view class='main_content_a_right'>新零售的人工智能要如何做到？这几个电商大咖说到电商人的我们心坎里去了吧的觉悟离看是你吹牛看万事大吉文档结尾看到几位看地位</view>
+              <view class='main_content_a_right'>{{item.article_content}}</view>
               <view class='main_content_a_left'>
                 <image src='../../../image/hand.png'></image>
               </view>
@@ -21,47 +21,11 @@
         </view>
       </view>
 
-      <view class='m_ul'> -->
-        <!-- 时间 -->
-        <!-- <view class='m_time'>2018-07-13</view> -->
-        <!-- 图文 -->
-        <!-- <view class='image-text'> -->
-          <!-- 图片 -->
-            <!-- <image class='m_image' src='../../../image/person/banner.jpg'></image> -->
-            <!-- 透明文字 -->
-            <!-- <view class='lucency'>网购更加规范便捷，阿里标准化附能电商良信发展</view>
-            <view class='main_content_li'>
-              <view class='main_content_a_right'>新零售的人工智能要如何做到？这几个电商大咖说到电商人的我们心坎里去了吧的觉悟离看是你吹牛看万事大吉文档结尾看到几位看地位</view>
-              <view class='main_content_a_left'>
-                <image src='../../../image/hand.png'></image>
-              </view>
-            </view>
-        </view>
-      </view> -->
 
-
-      <!-- <view class='m_ul'> -->
-        <!-- 时间 -->
-        <!-- <view class='m_time'>2018-07-13</view> -->
-        <!-- 图文 -->
-        <!-- <view class='image-text'> -->
-          <!-- 图片 -->
-            <!-- <image class='m_image' src='../../../image/person/banner.jpg'></image> -->
-            <!-- 透明文字 -->
-            <!-- <view class='lucency'>网购更加规范便捷，阿里标准化附能电商良信发展</view>
-            <view class='main_content_li'>
-              <view class='main_content_a_right'>新零售的人工智能要如何做到？这几个电商大咖说到电商人的我们心坎里去了吧的觉悟离看是你吹牛看万事大吉文档结尾看到几位看地位</view>
-              <view class='main_content_a_left'>
-                <image src='../../../image/hand.png'></image>
-              </view>
-            </view>
-        </view>
-      </view> -->
-
-    <!-- </view> -->
+    </view>
   <!-- </scroll-view> -->
   <!-- 抽奖图片样式 -->
-  <view class='drawVolume'>
+  <!-- <view class='drawVolume'>
     <image class='po' src='../../../image/choujiang.jpg'></image>
-  </view>
+  </view> -->
 </view>
