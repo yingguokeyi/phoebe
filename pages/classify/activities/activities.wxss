@@ -15,8 +15,8 @@ page{
 /* 时间样式 */
 .m_time{
   width: 100%;
-  height: 70rpx;
-  line-height: 70rpx;
+  height: 120rpx;
+  line-height: 180rpx;
   background: #f8f8f8;
   text-align: center;
   font-size: 24rpx;
@@ -24,8 +24,9 @@ page{
 }
 .image-text{
   width: 100%;
-  height: 464rpx;
+  height: 190rpx;
   background: #ffffff;
+  border-bottom: 1rpx solid #ebebeb;
 }
 /* 图片 */
 image{
@@ -59,25 +60,26 @@ image{
 /* 文字 */
 .main_content_li{
   width: 698rpx;
-  height: 122rpx;
+  height: 190rpx;
   margin-left: 26rpx;
+  border-bottom: 1rpx solid #ebebeb;
 }
 .main_content_li .main_content_a_right{
-  width: 586rpx;
-  height: 72rpx;
+  width: 503rpx;
+  height: 67rpx;
   float: left;
   font-size: 26rpx;
   color: #333333;
-  margin-top: 32rpx;
+  margin-top: 58rpx;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  margin-left: 20rpx;
 }
 .main_content_li .main_content_a_left{
-  width: 86rpx;
-  height: 86rpx;
-  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
   float: left;
   margin-left: 26rpx;
   margin-top: 18rpx;

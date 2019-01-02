@@ -2,17 +2,17 @@
 
 <view class='m_must'>
   <!-- <scroll-view class="scroll-view_H" scroll-y style="width: 100%" scroll-top="{{scrollLeft}}" scroll-with-animation="false"> -->
-    <view class='m_matter'>
-      <view class='m_ul'  wx:for="{{activities}}" wx:key="item"  data-image="{{item.image}}" data-title="{{item.article_title}}" data-content="{{item.article_content}}" data-uri="{{item.link_address}}"  bindtap="goLink">
+    <!-- <view class='m_matter'>
+      <view class='m_ul'  wx:for="{{activities}}" wx:key="item"  data-image="{{item.image}}" data-title="{{item.article_title}}" data-content="{{item.article_content}}" data-uri="{{item.link_address}}"  bindtap="goLink"> -->
         <!-- 时间 -->
-        <view class='m_time'>{{item.edit_time}}</view>
+        <!-- <view class='m_time'>{{item.edit_time}}</view> -->
         <!-- 图文 -->
-        <view class='image-text'>
+        <!-- <view class='image-text'> -->
           <!-- 图片 -->
-            <image class='m_image' src='{{item.image}}'></image>
+            <!-- <image class='m_image' src='{{item.image}}'></image> -->
             <!-- 透明文字 -->
-            <view class='lucency'>{{item.article_title}}</view>
-            <view class='main_content_li'>
+            <!-- <view class='lucency'>{{item.article_title}}</view> -->
+            <!-- <view class='main_content_li'>
               <view class='main_content_a_right'>{{item.article_content}}</view>
               <view class='main_content_a_left'>
                 <image src='../../../image/hand.png'></image>
@@ -21,8 +21,27 @@
         </view>
       </view>
 
+    </view> -->
 
+
+     <!-- 新页面的样式 -->
+    <view class='m_matter'>
+          <view class='m_ul' wx:for="{{actList}}" wx:key="item"  wx:for-index="actListindex">
+            <!-- 时间 -->
+            <view class='m_time'>{{item.edit_time}}</view>
+            <!-- 图文 -->
+            <view class='image-text' wx:for="{{item.list}}"  wx:for-item="cell"  wx:key="cell"  wx:for-index="cellindex"  data-image="{{cell.image}}" data-title="{{cell.article_title}}"  data-uri="{{cell.link_address}}"  bindtap="goLink">
+                <view class='main_content_li'>
+                 <view class='main_content_a_left'>
+                    <image src='{{cell.image}}'></image>
+                  </view>
+                  <view class='main_content_a_right'>{{cell.article_title}}</view>
+                 
+                </view>
+            </view>
+          </view>
     </view>
+    
   <!-- </scroll-view> -->
   <!-- 抽奖图片样式 -->
   <!-- <view class='drawVolume'>
