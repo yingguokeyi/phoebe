@@ -25,6 +25,7 @@
 
 
      <!-- 新页面的样式 -->
+    <!-- 如果多条数据 -->
     <view class='m_matter'>
           <view class='m_ul' wx:for="{{actList}}" wx:key="item"  wx:for-index="actListindex">
             <!-- 时间 -->
@@ -35,8 +36,10 @@
                  <view class='main_content_a_left'>
                     <image src='{{cell.image}}'></image>
                   </view>
-                  <view class='main_content_a_right'>{{cell.article_title}}</view>
-                 
+                  <view class='outerLayer'>
+                    <view class='main_content_a_right'>{{cell.article_title}}</view>
+                  </view>
+
                 </view>
             </view>
           </view>

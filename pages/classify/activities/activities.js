@@ -48,7 +48,7 @@ Page({
     api.reqData({
       data: data,
       success: function (res) {
-        console.log(res)
+      //  console.log(res)
         var activitiesList = res.data.result.rs[0].result;
 
         if (activitiesList.length != 0){
@@ -65,7 +65,7 @@ Page({
             var str6 = str.substr(12, 2) //秒
             // var total = str1 + '-' + str2 + '-' + str3 + ' ' + str4 + ':' + str5 + ':' + str6
             if ((Month != str2 && date != str3) || (Month == str2 && date != str3)){//
-              console.log((Month != str2 && date != str3) || (Month == str2 && date != str3),'ss')
+              // console.log((Month != str2 && date != str3) || (Month == str2 && date != str3),'ss')
               total = str1 + '-' + str2 + '-' + str3;
 
             } else {
