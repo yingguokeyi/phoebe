@@ -78,7 +78,7 @@ image{
 }
 .main_content_li  .outerLayer{
   width: 460rpx; 
-  height:167.9997rpx;
+  height:166rpx;
   float: left;
   border-bottom: 1rpx solid #ebebeb;
 }
